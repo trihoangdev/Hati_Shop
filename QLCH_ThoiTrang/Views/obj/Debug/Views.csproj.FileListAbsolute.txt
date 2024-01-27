@@ -1,0 +1,11 @@
+E:\HatiStore\QLCH_ThoiTrang\Views\bin\Debug\Views.exe.config
+E:\HatiStore\QLCH_ThoiTrang\Views\bin\Debug\Views.exe
+E:\HatiStore\QLCH_ThoiTrang\Views\bin\Debug\Views.pdb
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.csproj.AssemblyReference.cache
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.LoginFrm.resources
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.Properties.Resources.resources
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.csproj.GenerateResource.cache
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.csproj.CoreCompileInputs.cache
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.exe
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.pdb
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.RegisterFrm.resources
