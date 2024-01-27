@@ -22,8 +22,8 @@ namespace Views
         {
             var msg = "Bạn có chắc chắn muốn thoát?";
             var caption = "Thông báo";
-            var result = MessageBox.Show(msg,caption,MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
-            if(result == DialogResult.OK)
+            var result = MessageBox.Show(msg, caption, MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
             {
                 Application.Exit();
             }
@@ -31,11 +31,11 @@ namespace Views
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {
-                this.WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Minimized;
         }
         private void txtAccount_MouseClick(object sender, MouseEventArgs e)
         {
-            if(txtAccount.Text == "TÊN ĐĂNG NHẬP:")
+            if (txtAccount.Text == "TÊN ĐĂNG NHẬP:")
                 txtAccount.Text = "";
         }
 
@@ -50,7 +50,7 @@ namespace Views
 
         private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBoxShowPassword.Checked) 
+            if (checkBoxShowPassword.Checked)
             {
                 txtPassword.PasswordChar = '\0';
             }
