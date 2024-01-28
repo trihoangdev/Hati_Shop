@@ -9,3 +9,7 @@ E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.csproj.CoreCompileInputs.cache
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.exe
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.pdb
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.RegisterFrm.resources
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.StaffHomeFrm.resources
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItPanelHome.resources
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItPanelBill.resources
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItPanelProduct.resources

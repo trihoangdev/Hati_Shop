@@ -46,11 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ItPanelHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItPanelHome.Designer.cs">
+      <DependentUpon>ItPanelHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItPanelBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItPanelBill.Designer.cs">
+      <DependentUpon>ItPanelBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItPanelProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItPanelProduct.Designer.cs">
+      <DependentUpon>ItPanelProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginFrm.Designer.cs">
       <DependentUpon>LoginFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageHomeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageHomeFrm.Designer.cs">
+      <DependentUpon>ManageHomeFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,6 +84,21 @@
     <Compile Include="RegisterFrm.Designer.cs">
       <DependentUpon>RegisterFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaffHomeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffHomeFrm.Designer.cs">
+      <DependentUpon>StaffHomeFrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ItPanelHome.resx">
+      <DependentUpon>ItPanelHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItPanelBill.resx">
+      <DependentUpon>ItPanelBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItPanelProduct.resx">
+      <DependentUpon>ItPanelProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,6 +113,9 @@
     </Compile>
     <EmbeddedResource Include="RegisterFrm.resx">
       <DependentUpon>RegisterFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffHomeFrm.resx">
+      <DependentUpon>StaffHomeFrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
