@@ -29,7 +29,17 @@
         private void InitializeComponent()
         {
             this.panelBill = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnBillFind = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtBillFind = new System.Windows.Forms.TextBox();
@@ -37,22 +47,12 @@
             this.comboBillFind = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.panelBill.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBill
@@ -69,6 +69,62 @@
             this.panelBill.Size = new System.Drawing.Size(810, 789);
             this.panelBill.TabIndex = 23;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Location = new System.Drawing.Point(15, 197);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(770, 61);
+            this.panel3.TabIndex = 21;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(624, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 28);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Trị giá";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(380, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 28);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Ngày";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(102, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(123, 28);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Khách hàng";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(14, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 28);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Số HĐ";
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.panel4);
@@ -76,6 +132,62 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(774, 496);
             this.flowLayoutPanel1.TabIndex = 20;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(140)))), ((int)(((byte)(110)))));
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(770, 61);
+            this.panel4.TabIndex = 22;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.label7.Location = new System.Drawing.Point(588, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(156, 28);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "4.800.000 VNĐ";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.label8.Location = new System.Drawing.Point(299, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(229, 28);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "01/01/2024 12:00 A.M";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.label9.Location = new System.Drawing.Point(103, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(147, 28);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Nguyễn Văn A";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.label10.Location = new System.Drawing.Point(27, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(24, 28);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "1";
             // 
             // btnBillFind
             // 
@@ -155,118 +267,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ĐƠN HÀNG";
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(15, 197);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(770, 61);
-            this.panel3.TabIndex = 21;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(14, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 28);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Số HĐ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(102, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 28);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Khách hàng";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(380, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 28);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Ngày";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(624, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 28);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Trị giá";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(140)))), ((int)(((byte)(110)))));
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Location = new System.Drawing.Point(3, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(770, 61);
-            this.panel4.TabIndex = 22;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.label7.Location = new System.Drawing.Point(588, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(156, 28);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "4.800.000 VNĐ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.label8.Location = new System.Drawing.Point(299, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(229, 28);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "01/01/2024 12:00 A.M";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.label9.Location = new System.Drawing.Point(103, 16);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 28);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Nguyễn Văn A";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.label10.Location = new System.Drawing.Point(27, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(24, 28);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "1";
-            // 
             // ItPanelBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -280,15 +280,15 @@
             this.Text = "ItPanelProduct";
             this.panelBill.ResumeLayout(false);
             this.panelBill.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
