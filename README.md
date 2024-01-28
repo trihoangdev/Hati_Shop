@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hati Shop</title>
 </head>
 <body>
   <h1>Hati Shop - Cửa hàng thời trang</h1>
