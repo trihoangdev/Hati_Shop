@@ -64,6 +64,18 @@
     <Compile Include="ItPanelProduct.Designer.cs">
       <DependentUpon>ItPanelProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItBillInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItBillInfo.Designer.cs">
+      <DependentUpon>ItBillInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItProductInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItProductInfo.Designer.cs">
+      <DependentUpon>ItProductInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +110,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ItPanelProduct.resx">
       <DependentUpon>ItPanelProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItBillInfo.resx">
+      <DependentUpon>ItBillInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItProductInfo.resx">
+      <DependentUpon>ItProductInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>

@@ -102,7 +102,7 @@
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.Controls.Add(this.comboGender);
             this.panel9.Location = new System.Drawing.Point(320, 120);
             this.panel9.Name = "panel9";
@@ -112,7 +112,7 @@
             // 
             // comboGender
             // 
-            this.comboGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.comboGender.BackColor = System.Drawing.Color.White;
             this.comboGender.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboGender.ForeColor = System.Drawing.Color.Gray;
             this.comboGender.FormattingEnabled = true;
@@ -124,10 +124,11 @@
             this.comboGender.Size = new System.Drawing.Size(273, 31);
             this.comboGender.TabIndex = 0;
             this.comboGender.Text = "Giới tính:";
+            this.comboGender.SelectedIndexChanged += new System.EventHandler(this.comboGender_SelectedIndexChanged);
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Controls.Add(this.txtPhoneNumber);
             this.panel8.Controls.Add(this.textBox3);
             this.panel8.Controls.Add(this.textBox6);
@@ -139,7 +140,7 @@
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtPhoneNumber.BackColor = System.Drawing.Color.White;
             this.txtPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhoneNumber.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -149,6 +150,7 @@
             this.txtPhoneNumber.Size = new System.Drawing.Size(263, 24);
             this.txtPhoneNumber.TabIndex = 7;
             this.txtPhoneNumber.Text = "Số điện thoại:";
+            this.txtPhoneNumber.TextChanged += new System.EventHandler(this.txtPhoneNumber_TextChanged);
             // 
             // textBox3
             // 
@@ -178,7 +180,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Controls.Add(this.txtEmail);
             this.panel7.Location = new System.Drawing.Point(24, 266);
             this.panel7.Name = "panel7";
@@ -188,7 +190,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -201,7 +203,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.txtAddress);
             this.panel6.Location = new System.Drawing.Point(24, 339);
             this.panel6.Name = "panel6";
@@ -211,7 +213,7 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtAddress.BackColor = System.Drawing.Color.White;
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAddress.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -224,7 +226,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.dateTimePickerBirthDate);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Location = new System.Drawing.Point(24, 193);
@@ -258,7 +260,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.txtFullName);
             this.panel4.Location = new System.Drawing.Point(24, 120);
             this.panel4.Name = "panel4";
@@ -268,7 +270,7 @@
             // 
             // txtFullName
             // 
-            this.txtFullName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtFullName.BackColor = System.Drawing.Color.White;
             this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFullName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtFullName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -278,10 +280,11 @@
             this.txtFullName.Size = new System.Drawing.Size(263, 24);
             this.txtFullName.TabIndex = 5;
             this.txtFullName.Text = "Họ và tên:";
+            this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged);
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.txtPassword);
             this.panel3.Location = new System.Drawing.Point(320, 47);
             this.panel3.Name = "panel3";
@@ -291,7 +294,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtPassword.BackColor = System.Drawing.Color.White;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -301,10 +304,11 @@
             this.txtPassword.Size = new System.Drawing.Size(263, 24);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.Text = "Mật khẩu:";
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel10.BackColor = System.Drawing.Color.White;
             this.panel10.Controls.Add(this.txtAccount);
             this.panel10.Location = new System.Drawing.Point(24, 47);
             this.panel10.Name = "panel10";
@@ -314,7 +318,7 @@
             // 
             // txtAccount
             // 
-            this.txtAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtAccount.BackColor = System.Drawing.Color.White;
             this.txtAccount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAccount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtAccount.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -324,14 +328,15 @@
             this.txtAccount.Size = new System.Drawing.Size(263, 24);
             this.txtAccount.TabIndex = 5;
             this.txtAccount.Text = "Tên đăng nhập:";
+            this.txtAccount.TextChanged += new System.EventHandler(this.txtAccount_TextChanged);
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(140)))), ((int)(((byte)(110)))));
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(206)))));
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(54)))));
             this.btnLogin.Location = new System.Drawing.Point(24, 419);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(579, 49);
@@ -355,11 +360,11 @@
             // 
             // btnAddAvatar
             // 
-            this.btnAddAvatar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(140)))), ((int)(((byte)(110)))));
+            this.btnAddAvatar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(206)))));
             this.btnAddAvatar.FlatAppearance.BorderSize = 0;
             this.btnAddAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAvatar.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAvatar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.btnAddAvatar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(54)))));
             this.btnAddAvatar.Location = new System.Drawing.Point(12, 316);
             this.btnAddAvatar.Name = "btnAddAvatar";
             this.btnAddAvatar.Size = new System.Drawing.Size(226, 49);
@@ -386,8 +391,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(140)))), ((int)(((byte)(110)))));
-            this.label1.Location = new System.Drawing.Point(474, 22);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(206)))));
+            this.label1.Location = new System.Drawing.Point(494, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 45);
             this.label1.TabIndex = 2;
@@ -395,9 +400,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(52, 135);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(147, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 

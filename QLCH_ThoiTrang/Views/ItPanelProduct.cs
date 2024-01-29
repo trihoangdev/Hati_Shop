@@ -22,5 +22,13 @@ namespace Views
             if (txtProductFind.Text == "Tìm kiếm:")
                 txtProductFind.Text = "";
         }
+
+        private void btnProductFind_Click(object sender, EventArgs e)
+        {
+            ItProductInfo f = new ItProductInfo();
+            f.TopLevel = false;
+            flowPanelProduct.Controls.Add(f);
+            f.Show();
+        }
     }
 }

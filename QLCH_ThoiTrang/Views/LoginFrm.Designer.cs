@@ -73,14 +73,14 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(60)))), ((int)(((byte)(106)))));
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(15)))));
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(233)))), ((int)(((byte)(214)))));
             this.splitContainer1.Panel2.Controls.Add(this.txtForgetPassword);
             this.splitContainer1.Panel2.Controls.Add(this.txtRegister);
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
@@ -100,8 +100,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.label2.Location = new System.Drawing.Point(41, 71);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(37, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(347, 45);
             this.label2.TabIndex = 2;
@@ -111,8 +111,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.label1.Location = new System.Drawing.Point(41, 22);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(37, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(205, 45);
             this.label1.TabIndex = 1;
@@ -133,7 +133,8 @@
             // 
             this.txtForgetPassword.AutoSize = true;
             this.txtForgetPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtForgetPassword.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.txtForgetPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtForgetPassword.LinkColor = System.Drawing.Color.Black;
             this.txtForgetPassword.Location = new System.Drawing.Point(217, 466);
             this.txtForgetPassword.Name = "txtForgetPassword";
             this.txtForgetPassword.Size = new System.Drawing.Size(181, 28);
@@ -145,7 +146,8 @@
             // 
             this.txtRegister.AutoSize = true;
             this.txtRegister.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegister.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.txtRegister.ForeColor = System.Drawing.Color.Black;
+            this.txtRegister.LinkColor = System.Drawing.Color.Black;
             this.txtRegister.Location = new System.Drawing.Point(17, 466);
             this.txtRegister.Name = "txtRegister";
             this.txtRegister.Size = new System.Drawing.Size(102, 28);
@@ -182,7 +184,7 @@
             // 
             this.checkBoxShowPassword.AutoSize = true;
             this.checkBoxShowPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxShowPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.checkBoxShowPassword.ForeColor = System.Drawing.Color.Black;
             this.checkBoxShowPassword.Location = new System.Drawing.Point(192, 338);
             this.checkBoxShowPassword.Name = "checkBoxShowPassword";
             this.checkBoxShowPassword.Size = new System.Drawing.Size(195, 32);
@@ -193,7 +195,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(140)))), ((int)(((byte)(110)))));
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -234,7 +236,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(239)))));
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(48, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(297, 45);
@@ -245,7 +247,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(239)))));
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(48, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(230, 45);
@@ -257,9 +259,9 @@
             this.btnExist.FlatAppearance.BorderSize = 0;
             this.btnExist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExist.Image = ((System.Drawing.Image)(resources.GetObject("btnExist.Image")));
-            this.btnExist.Location = new System.Drawing.Point(369, 1);
+            this.btnExist.Location = new System.Drawing.Point(371, 5);
             this.btnExist.Name = "btnExist";
-            this.btnExist.Size = new System.Drawing.Size(40, 35);
+            this.btnExist.Size = new System.Drawing.Size(32, 32);
             this.btnExist.TabIndex = 1;
             this.btnExist.UseVisualStyleBackColor = true;
             this.btnExist.Click += new System.EventHandler(this.btnExist_Click);
@@ -269,9 +271,9 @@
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(323, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(330, 5);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(40, 35);
+            this.btnMinimize.Size = new System.Drawing.Size(32, 32);
             this.btnMinimize.TabIndex = 0;
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);

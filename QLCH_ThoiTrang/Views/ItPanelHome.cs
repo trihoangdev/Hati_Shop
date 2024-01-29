@@ -27,8 +27,9 @@ namespace Views
         private void InitialPanelRevenueInDay()
         {
             // Tạo màu đầu và màu cuối cho gradient
-            Color startColor = Color.FromArgb(33, 228, 224);
-            Color endColor = Color.FromArgb(173, 141, 247);
+            Color startColor = Color.FromArgb(250, 241, 129);
+            Color endColor = Color.FromArgb(243, 119, 165);
+            
 
             // Gọi sự kiện Paint để vẽ gradient
             panelRevenueDay.Paint += (sender, e) =>
@@ -46,11 +47,11 @@ namespace Views
             txtRevenueDay.BackColor = System.Drawing.Color.Transparent;
         }
 
-        private void InitialPanelBillsInDay()
+        private void InitialPanelProductsInDay()
         {
             // Tạo màu đầu và màu cuối cho gradient
-            Color startColor = Color.FromArgb(255, 199, 76);
-            Color endColor = Color.FromArgb(255, 125, 4);
+            Color startColor = Color.FromArgb(124, 218, 243); 
+            Color endColor = Color.FromArgb(247, 224, 95);
 
             // Gọi sự kiện Paint để vẽ gradient
             panelProductDay.Paint += (sender, e) =>
@@ -68,11 +69,11 @@ namespace Views
             txtNumberOfBillDay.BackColor = System.Drawing.Color.Transparent;
         }
 
-        private void InitialPanelProductsInDay()
+        private void InitialPanelBillsInDay()
         {
             // Tạo màu đầu và màu cuối cho gradient
-            Color startColor = Color.FromArgb(186, 96, 224);
-            Color endColor = Color.FromArgb(95, 41, 255);
+            Color startColor = Color.FromArgb(123, 183, 245);
+            Color endColor = Color.FromArgb(235, 157, 150);
 
             // Gọi sự kiện Paint để vẽ gradient
             panelBillDay.Paint += (sender, e) =>
@@ -89,5 +90,7 @@ namespace Views
             label7.BackColor = System.Drawing.Color.Transparent;
             txtNumberOfProductDay.BackColor = System.Drawing.Color.Transparent;
         }
+
+        
     }
 }

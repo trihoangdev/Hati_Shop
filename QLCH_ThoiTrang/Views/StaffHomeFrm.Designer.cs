@@ -82,11 +82,11 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(140)))), ((int)(((byte)(110)))));
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(233)))), ((int)(((byte)(214)))));
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.Location = new System.Drawing.Point(3, 721);
@@ -99,11 +99,11 @@
             // 
             // btnImportGood
             // 
-            this.btnImportGood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(140)))), ((int)(((byte)(110)))));
+            this.btnImportGood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(233)))), ((int)(((byte)(214)))));
             this.btnImportGood.FlatAppearance.BorderSize = 0;
             this.btnImportGood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImportGood.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImportGood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.btnImportGood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
             this.btnImportGood.Image = ((System.Drawing.Image)(resources.GetObject("btnImportGood.Image")));
             this.btnImportGood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnImportGood.Location = new System.Drawing.Point(3, 407);
@@ -115,11 +115,11 @@
             // 
             // btnCustomer
             // 
-            this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(140)))), ((int)(((byte)(110)))));
+            this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(233)))), ((int)(((byte)(214)))));
             this.btnCustomer.FlatAppearance.BorderSize = 0;
             this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustomer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.btnCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
             this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
             this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCustomer.Location = new System.Drawing.Point(3, 351);
@@ -131,11 +131,11 @@
             // 
             // btnBill
             // 
-            this.btnBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(140)))), ((int)(((byte)(110)))));
+            this.btnBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(233)))), ((int)(((byte)(214)))));
             this.btnBill.FlatAppearance.BorderSize = 0;
             this.btnBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBill.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.btnBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
             this.btnBill.Image = ((System.Drawing.Image)(resources.GetObject("btnBill.Image")));
             this.btnBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBill.Location = new System.Drawing.Point(3, 239);
@@ -148,11 +148,11 @@
             // 
             // btnSetting
             // 
-            this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(140)))), ((int)(((byte)(110)))));
+            this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(233)))), ((int)(((byte)(214)))));
             this.btnSetting.FlatAppearance.BorderSize = 0;
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.btnSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
             this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
             this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSetting.Location = new System.Drawing.Point(3, 463);
@@ -164,11 +164,11 @@
             // 
             // btnProduct
             // 
-            this.btnProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(140)))), ((int)(((byte)(110)))));
+            this.btnProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(233)))), ((int)(((byte)(214)))));
             this.btnProduct.FlatAppearance.BorderSize = 0;
             this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProduct.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.btnProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
             this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
             this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProduct.Location = new System.Drawing.Point(3, 295);
@@ -181,11 +181,11 @@
             // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(140)))), ((int)(((byte)(110)))));
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(233)))), ((int)(((byte)(214)))));
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.Location = new System.Drawing.Point(3, 183);
@@ -199,29 +199,31 @@
             // txtRole
             // 
             this.txtRole.AutoSize = true;
-            this.txtRole.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRole.Location = new System.Drawing.Point(161, 68);
+            this.txtRole.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRole.Location = new System.Drawing.Point(161, 81);
             this.txtRole.Name = "txtRole";
-            this.txtRole.Size = new System.Drawing.Size(79, 23);
+            this.txtRole.Size = new System.Drawing.Size(47, 25);
             this.txtRole.TabIndex = 2;
-            this.txtRole.Text = "Chức vụ:";
+            this.txtRole.Text = "CEO";
             // 
             // txtName
             // 
             this.txtName.AutoSize = true;
-            this.txtName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.txtName.Location = new System.Drawing.Point(160, 28);
+            this.txtName.Location = new System.Drawing.Point(160, 53);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(134, 25);
+            this.txtName.Size = new System.Drawing.Size(183, 28);
             this.txtName.TabIndex = 1;
-            this.txtName.Text = "Nguyễn Văn A";
+            this.txtName.Text = "NGUYỄN HỮU TRÍ";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(22, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 

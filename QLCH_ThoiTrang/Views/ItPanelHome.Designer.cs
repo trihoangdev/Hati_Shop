@@ -39,8 +39,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panelProductDay = new System.Windows.Forms.Panel();
             this.txtNumberOfProductDay = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panelHome.SuspendLayout();
             this.panelBillDay.SuspendLayout();
             this.panelRevenueDay.SuspendLayout();
@@ -65,7 +65,7 @@
             this.panelBillDay.Controls.Add(this.label2);
             this.panelBillDay.Controls.Add(this.label1);
             this.panelBillDay.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panelBillDay.Location = new System.Drawing.Point(16, 35);
+            this.panelBillDay.Location = new System.Drawing.Point(16, 51);
             this.panelBillDay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelBillDay.Name = "panelBillDay";
             this.panelBillDay.Size = new System.Drawing.Size(245, 230);
@@ -110,7 +110,7 @@
             this.panelRevenueDay.Controls.Add(this.label4);
             this.panelRevenueDay.Controls.Add(this.label3);
             this.panelRevenueDay.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panelRevenueDay.Location = new System.Drawing.Point(283, 35);
+            this.panelRevenueDay.Location = new System.Drawing.Point(283, 51);
             this.panelRevenueDay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelRevenueDay.Name = "panelRevenueDay";
             this.panelRevenueDay.Size = new System.Drawing.Size(245, 230);
@@ -155,7 +155,7 @@
             this.panelProductDay.Controls.Add(this.label7);
             this.panelProductDay.Controls.Add(this.label6);
             this.panelProductDay.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panelProductDay.Location = new System.Drawing.Point(550, 35);
+            this.panelProductDay.Location = new System.Drawing.Point(550, 51);
             this.panelProductDay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelProductDay.Name = "panelProductDay";
             this.panelProductDay.Size = new System.Drawing.Size(245, 230);
@@ -172,17 +172,6 @@
             this.txtNumberOfProductDay.TabIndex = 5;
             this.txtNumberOfProductDay.Text = "0";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.label6.Location = new System.Drawing.Point(3, 70);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(243, 41);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "bán trong ngày:";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -193,6 +182,17 @@
             this.label7.Size = new System.Drawing.Size(196, 41);
             this.label7.TabIndex = 3;
             this.label7.Text = "Số sản phẩm";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.label6.Location = new System.Drawing.Point(3, 70);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(243, 41);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "bán trong ngày:";
             // 
             // ItPanelHome
             // 

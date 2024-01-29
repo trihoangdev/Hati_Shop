@@ -24,5 +24,15 @@ namespace Views
             if (txtBillFind.Text == "Tìm kiếm:")
                 txtBillFind.Text = "";
         }
+
+        private void btnBillCreate_Click(object sender, EventArgs e)
+        {
+            ItBillInfo f = new ItBillInfo();
+            f.TopLevel = false;
+            flowPanelBill.Controls.Add(f);
+            f.Show();
+        }
+
+
     }
 }

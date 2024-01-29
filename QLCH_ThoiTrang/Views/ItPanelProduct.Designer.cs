@@ -32,7 +32,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.comboFilter = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowPanelProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.btnProductFind = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtProductFind = new System.Windows.Forms.TextBox();
@@ -50,7 +50,7 @@
             // 
             this.panelProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(54)))));
             this.panelProduct.Controls.Add(this.panel5);
-            this.panelProduct.Controls.Add(this.flowLayoutPanel2);
+            this.panelProduct.Controls.Add(this.flowPanelProduct);
             this.panelProduct.Controls.Add(this.btnProductFind);
             this.panelProduct.Controls.Add(this.panel3);
             this.panelProduct.Controls.Add(this.panel4);
@@ -62,7 +62,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.comboFilter);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Location = new System.Drawing.Point(14, 102);
@@ -88,48 +88,50 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Bộ lọc";
             // 
-            // flowLayoutPanel2
+            // flowPanelProduct
             // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(14, 189);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(776, 585);
-            this.flowLayoutPanel2.TabIndex = 23;
+            this.flowPanelProduct.AutoScroll = true;
+            this.flowPanelProduct.Location = new System.Drawing.Point(0, 218);
+            this.flowPanelProduct.Name = "flowPanelProduct";
+            this.flowPanelProduct.Size = new System.Drawing.Size(810, 556);
+            this.flowPanelProduct.TabIndex = 23;
             // 
             // btnProductFind
             // 
-            this.btnProductFind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(140)))), ((int)(((byte)(110)))));
+            this.btnProductFind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(131)))));
             this.btnProductFind.FlatAppearance.BorderSize = 0;
             this.btnProductFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProductFind.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProductFind.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
             this.btnProductFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductFind.Location = new System.Drawing.Point(630, 102);
+            this.btnProductFind.Location = new System.Drawing.Point(645, 102);
             this.btnProductFind.Name = "btnProductFind";
-            this.btnProductFind.Size = new System.Drawing.Size(160, 73);
+            this.btnProductFind.Size = new System.Drawing.Size(145, 73);
             this.btnProductFind.TabIndex = 22;
             this.btnProductFind.Text = "TẠO";
             this.btnProductFind.UseVisualStyleBackColor = false;
+            this.btnProductFind.Click += new System.EventHandler(this.btnProductFind_Click);
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.txtProductFind);
-            this.panel3.Location = new System.Drawing.Point(352, 102);
+            this.panel3.Location = new System.Drawing.Point(363, 102);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(20, 20, 10, 10);
-            this.panel3.Size = new System.Drawing.Size(272, 73);
+            this.panel3.Size = new System.Drawing.Size(276, 73);
             this.panel3.TabIndex = 21;
             // 
             // txtProductFind
             // 
-            this.txtProductFind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.txtProductFind.BackColor = System.Drawing.Color.White;
             this.txtProductFind.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtProductFind.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtProductFind.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductFind.ForeColor = System.Drawing.Color.Gray;
             this.txtProductFind.Location = new System.Drawing.Point(20, 20);
             this.txtProductFind.Name = "txtProductFind";
-            this.txtProductFind.Size = new System.Drawing.Size(242, 31);
+            this.txtProductFind.Size = new System.Drawing.Size(246, 31);
             this.txtProductFind.TabIndex = 5;
             this.txtProductFind.Text = "Tìm kiếm:";
             this.txtProductFind.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtProductFind_MouseClick);
@@ -141,7 +143,7 @@
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(182, 102);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(164, 73);
+            this.panel4.Size = new System.Drawing.Size(175, 73);
             this.panel4.TabIndex = 20;
             // 
             // comboProductFind
@@ -155,6 +157,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label4.Location = new System.Drawing.Point(3, 3);
             this.label4.Name = "label4";
@@ -167,7 +170,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.label3.Location = new System.Drawing.Point(22, 22);
+            this.label3.Location = new System.Drawing.Point(4, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(197, 45);
             this.label3.TabIndex = 0;
@@ -202,7 +205,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.ComboBox comboFilter;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel flowPanelProduct;
         private System.Windows.Forms.Button btnProductFind;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtProductFind;
