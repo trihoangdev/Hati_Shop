@@ -17,3 +17,5 @@ E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItBillInfo.resources
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItProductInfo.resources
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItCustomerInfo.resources
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItPanelCustomer.resources
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItImportGoodInfo.resources
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItPanelImportGood.resources

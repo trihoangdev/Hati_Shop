@@ -30,6 +30,12 @@
           src="https://github.com/trihoangdev/Hati_Shop/blob/main/images/DemoApp/Staff_Bill.png"
         />
       </li>
+      <li>
+        Trang nhập hàng:
+        <img
+          src="https://github.com/trihoangdev/Hati_Shop/blob/main/images/DemoApp/Staff_ImportGood.png"
+        />
+      </li>
     </ul>
 </body>
 </html>

@@ -112,6 +112,7 @@
             this.btnImportGood.TabIndex = 15;
             this.btnImportGood.Text = "NHẬP HÀNG";
             this.btnImportGood.UseVisualStyleBackColor = false;
+            this.btnImportGood.Click += new System.EventHandler(this.btnImportGood_Click);
             // 
             // btnCustomer
             // 

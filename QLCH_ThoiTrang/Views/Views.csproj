@@ -52,6 +52,12 @@
     <Compile Include="ItCustomerInfo.Designer.cs">
       <DependentUpon>ItCustomerInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItImportGoodInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItImportGoodInfo.Designer.cs">
+      <DependentUpon>ItImportGoodInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItPanelCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="ItPanelBill.Designer.cs">
       <DependentUpon>ItPanelBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItPanelImportGood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItPanelImportGood.Designer.cs">
+      <DependentUpon>ItPanelImportGood.cs</DependentUpon>
     </Compile>
     <Compile Include="ItPanelProduct.cs">
       <SubType>Form</SubType>
@@ -117,6 +129,9 @@
     <EmbeddedResource Include="ItCustomerInfo.resx">
       <DependentUpon>ItCustomerInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ItImportGoodInfo.resx">
+      <DependentUpon>ItImportGoodInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ItPanelCustomer.resx">
       <DependentUpon>ItPanelCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ItPanelBill.resx">
       <DependentUpon>ItPanelBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItPanelImportGood.resx">
+      <DependentUpon>ItPanelImportGood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItPanelProduct.resx">
       <DependentUpon>ItPanelProduct.cs</DependentUpon>
