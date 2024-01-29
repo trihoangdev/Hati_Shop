@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -82,6 +83,12 @@
     <Compile Include="ItPanelImportGood.Designer.cs">
       <DependentUpon>ItPanelImportGood.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItPanelManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItPanelManage.Designer.cs">
+      <DependentUpon>ItPanelManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItPanelProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +100,18 @@
     </Compile>
     <Compile Include="ItBillInfo.Designer.cs">
       <DependentUpon>ItBillInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItPanelSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItPanelSetting.Designer.cs">
+      <DependentUpon>ItPanelSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItPanelStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItPanelStatistic.Designer.cs">
+      <DependentUpon>ItPanelStatistic.cs</DependentUpon>
     </Compile>
     <Compile Include="ItProductInfo.cs">
       <SubType>Form</SubType>
@@ -106,12 +125,6 @@
     <Compile Include="LoginFrm.Designer.cs">
       <DependentUpon>LoginFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageHomeFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManageHomeFrm.Designer.cs">
-      <DependentUpon>ManageHomeFrm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterFrm.cs">
@@ -120,11 +133,11 @@
     <Compile Include="RegisterFrm.Designer.cs">
       <DependentUpon>RegisterFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffHomeFrm.cs">
+    <Compile Include="HomeFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StaffHomeFrm.Designer.cs">
-      <DependentUpon>StaffHomeFrm.cs</DependentUpon>
+    <Compile Include="HomeFrm.Designer.cs">
+      <DependentUpon>HomeFrm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ItCustomerInfo.resx">
       <DependentUpon>ItCustomerInfo.cs</DependentUpon>
@@ -150,6 +163,12 @@
     <EmbeddedResource Include="ItBillInfo.resx">
       <DependentUpon>ItBillInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ItPanelSetting.resx">
+      <DependentUpon>ItPanelSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItPanelStatistic.resx">
+      <DependentUpon>ItPanelStatistic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ItProductInfo.resx">
       <DependentUpon>ItProductInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,8 +187,8 @@
     <EmbeddedResource Include="RegisterFrm.resx">
       <DependentUpon>RegisterFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaffHomeFrm.resx">
-      <DependentUpon>StaffHomeFrm.cs</DependentUpon>
+    <EmbeddedResource Include="HomeFrm.resx">
+      <DependentUpon>HomeFrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

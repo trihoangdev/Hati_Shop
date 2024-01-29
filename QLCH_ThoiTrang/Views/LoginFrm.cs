@@ -62,8 +62,16 @@ namespace Views
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            StaffHomeFrm f = new StaffHomeFrm();
-            f.ShowDialog();
+            if(txtAccount.Text == "admin")
+            {
+                HomeFrm f = new HomeFrm("admin");
+                f.ShowDialog();
+            }
+            else
+            {
+                HomeFrm f = new HomeFrm("staff");
+                f.ShowDialog();
+            }
         }
 
         private void txtRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

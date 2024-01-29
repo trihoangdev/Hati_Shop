@@ -77,29 +77,6 @@ namespace Views
             MessageBox.Show("Chức năng đang phát triển", "Thông báo");
         }
 
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void txtAccount_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFullName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboGender_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

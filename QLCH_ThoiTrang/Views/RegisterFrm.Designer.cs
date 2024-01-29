@@ -124,7 +124,6 @@
             this.comboGender.Size = new System.Drawing.Size(273, 31);
             this.comboGender.TabIndex = 0;
             this.comboGender.Text = "Giới tính:";
-            this.comboGender.SelectedIndexChanged += new System.EventHandler(this.comboGender_SelectedIndexChanged);
             // 
             // panel8
             // 
@@ -150,7 +149,7 @@
             this.txtPhoneNumber.Size = new System.Drawing.Size(263, 24);
             this.txtPhoneNumber.TabIndex = 7;
             this.txtPhoneNumber.Text = "Số điện thoại:";
-            this.txtPhoneNumber.TextChanged += new System.EventHandler(this.txtPhoneNumber_TextChanged);
+            this.txtPhoneNumber.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPhoneNumber_MouseClick);
             // 
             // textBox3
             // 
@@ -200,6 +199,7 @@
             this.txtEmail.Size = new System.Drawing.Size(559, 24);
             this.txtEmail.TabIndex = 5;
             this.txtEmail.Text = "Email:";
+            this.txtEmail.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtEmail_MouseClick);
             // 
             // panel6
             // 
@@ -223,6 +223,7 @@
             this.txtAddress.Size = new System.Drawing.Size(559, 24);
             this.txtAddress.TabIndex = 5;
             this.txtAddress.Text = "Địa chỉ:";
+            this.txtAddress.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAddress_MouseClick);
             // 
             // panel5
             // 
@@ -280,7 +281,7 @@
             this.txtFullName.Size = new System.Drawing.Size(263, 24);
             this.txtFullName.TabIndex = 5;
             this.txtFullName.Text = "Họ và tên:";
-            this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged);
+            this.txtFullName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtFullName_MouseClick);
             // 
             // panel3
             // 
@@ -304,7 +305,7 @@
             this.txtPassword.Size = new System.Drawing.Size(263, 24);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.Text = "Mật khẩu:";
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            this.txtPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPassword_MouseClick);
             // 
             // panel10
             // 
@@ -328,7 +329,7 @@
             this.txtAccount.Size = new System.Drawing.Size(263, 24);
             this.txtAccount.TabIndex = 5;
             this.txtAccount.Text = "Tên đăng nhập:";
-            this.txtAccount.TextChanged += new System.EventHandler(this.txtAccount_TextChanged);
+            this.txtAccount.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAccount_MouseClick);
             // 
             // btnLogin
             // 
