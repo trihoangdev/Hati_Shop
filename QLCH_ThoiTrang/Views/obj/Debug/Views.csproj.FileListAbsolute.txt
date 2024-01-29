@@ -20,3 +20,4 @@ E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItImportGoodInfo.resources
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItPanelImportGood.resources
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItPanelSetting.resources
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.HomeFrm.resources
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItPanelStatistic.resources

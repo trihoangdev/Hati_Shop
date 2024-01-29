@@ -93,6 +93,7 @@
             // 
             // panel11
             // 
+            this.panel11.BackColor = System.Drawing.Color.White;
             this.panel11.Controls.Add(this.button2);
             this.panel11.Controls.Add(this.panel12);
             this.panel11.Controls.Add(this.panel13);
@@ -117,6 +118,7 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel12.Controls.Add(this.txtPassword);
             this.panel12.Location = new System.Drawing.Point(303, 43);
             this.panel12.Name = "panel12";
@@ -133,7 +135,7 @@
             this.txtPassword.ForeColor = System.Drawing.Color.Gray;
             this.txtPassword.Location = new System.Drawing.Point(10, 10);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(237, 24);
+            this.txtPassword.Size = new System.Drawing.Size(235, 24);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.Text = "Mật khẩu:";
             this.txtPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPassword_MouseClick);
@@ -141,6 +143,7 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Controls.Add(this.txtAccount);
             this.panel13.Location = new System.Drawing.Point(14, 43);
             this.panel13.Name = "panel13";
@@ -157,7 +160,7 @@
             this.txtAccount.ForeColor = System.Drawing.Color.Gray;
             this.txtAccount.Location = new System.Drawing.Point(10, 10);
             this.txtAccount.Name = "txtAccount";
-            this.txtAccount.Size = new System.Drawing.Size(237, 24);
+            this.txtAccount.Size = new System.Drawing.Size(235, 24);
             this.txtAccount.TabIndex = 5;
             this.txtAccount.Text = "Tên đăng nhập:";
             this.txtAccount.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAccount_MouseClick);
