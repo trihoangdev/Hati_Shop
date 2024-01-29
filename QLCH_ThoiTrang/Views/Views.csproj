@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ItCustomerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItCustomerInfo.Designer.cs">
+      <DependentUpon>ItCustomerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItPanelCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItPanelCustomer.Designer.cs">
+      <DependentUpon>ItPanelCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItPanelHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +114,12 @@
     <Compile Include="StaffHomeFrm.Designer.cs">
       <DependentUpon>StaffHomeFrm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ItCustomerInfo.resx">
+      <DependentUpon>ItCustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItPanelCustomer.resx">
+      <DependentUpon>ItPanelCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ItPanelHome.resx">
       <DependentUpon>ItPanelHome.cs</DependentUpon>
     </EmbeddedResource>

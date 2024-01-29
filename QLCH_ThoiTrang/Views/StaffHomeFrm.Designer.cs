@@ -128,6 +128,7 @@
             this.btnCustomer.TabIndex = 14;
             this.btnCustomer.Text = "KHÁCH HÀNG";
             this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnBill
             // 
@@ -202,9 +203,9 @@
             this.txtRole.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRole.Location = new System.Drawing.Point(161, 81);
             this.txtRole.Name = "txtRole";
-            this.txtRole.Size = new System.Drawing.Size(47, 25);
+            this.txtRole.Size = new System.Drawing.Size(114, 25);
             this.txtRole.TabIndex = 2;
-            this.txtRole.Text = "CEO";
+            this.txtRole.Text = "NHÂN VIÊN";
             // 
             // txtName
             // 
@@ -213,9 +214,9 @@
             this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
             this.txtName.Location = new System.Drawing.Point(160, 53);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(183, 28);
+            this.txtName.Size = new System.Drawing.Size(185, 28);
             this.txtName.TabIndex = 1;
-            this.txtName.Text = "NGUYỄN HỮU TRÍ";
+            this.txtName.Text = "HOÀNG MINH TRÍ";
             // 
             // pictureBox1
             // 

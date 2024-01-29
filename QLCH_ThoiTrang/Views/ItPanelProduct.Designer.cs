@@ -33,7 +33,7 @@
             this.comboFilter = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.flowPanelProduct = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnProductFind = new System.Windows.Forms.Button();
+            this.btnProductCreate = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtProductFind = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -51,7 +51,7 @@
             this.panelProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(54)))));
             this.panelProduct.Controls.Add(this.panel5);
             this.panelProduct.Controls.Add(this.flowPanelProduct);
-            this.panelProduct.Controls.Add(this.btnProductFind);
+            this.panelProduct.Controls.Add(this.btnProductCreate);
             this.panelProduct.Controls.Add(this.panel3);
             this.panelProduct.Controls.Add(this.panel4);
             this.panelProduct.Controls.Add(this.label3);
@@ -96,21 +96,21 @@
             this.flowPanelProduct.Size = new System.Drawing.Size(810, 556);
             this.flowPanelProduct.TabIndex = 23;
             // 
-            // btnProductFind
+            // btnProductCreate
             // 
-            this.btnProductFind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(131)))));
-            this.btnProductFind.FlatAppearance.BorderSize = 0;
-            this.btnProductFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProductFind.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductFind.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.btnProductFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductFind.Location = new System.Drawing.Point(645, 102);
-            this.btnProductFind.Name = "btnProductFind";
-            this.btnProductFind.Size = new System.Drawing.Size(145, 73);
-            this.btnProductFind.TabIndex = 22;
-            this.btnProductFind.Text = "TẠO";
-            this.btnProductFind.UseVisualStyleBackColor = false;
-            this.btnProductFind.Click += new System.EventHandler(this.btnProductFind_Click);
+            this.btnProductCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(131)))));
+            this.btnProductCreate.FlatAppearance.BorderSize = 0;
+            this.btnProductCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductCreate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.btnProductCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductCreate.Location = new System.Drawing.Point(645, 102);
+            this.btnProductCreate.Name = "btnProductCreate";
+            this.btnProductCreate.Size = new System.Drawing.Size(145, 73);
+            this.btnProductCreate.TabIndex = 22;
+            this.btnProductCreate.Text = "TẠO";
+            this.btnProductCreate.UseVisualStyleBackColor = false;
+            this.btnProductCreate.Click += new System.EventHandler(this.btnProductFind_Click);
             // 
             // panel3
             // 
@@ -138,7 +138,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.comboProductFind);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(182, 102);
@@ -206,7 +206,7 @@
         private System.Windows.Forms.ComboBox comboFilter;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.FlowLayoutPanel flowPanelProduct;
-        private System.Windows.Forms.Button btnProductFind;
+        private System.Windows.Forms.Button btnProductCreate;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtProductFind;
         private System.Windows.Forms.Panel panel4;
