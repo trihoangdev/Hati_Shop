@@ -25,10 +25,13 @@ namespace Views
 
         private void btnProductFind_Click(object sender, EventArgs e)
         {
-            ItProductInfo f = new ItProductInfo();
+            ProductInfo_CreateFrm f = new ProductInfo_CreateFrm();
+            f.ShowDialog();
+
+            /*ItProductInfo f = new ItProductInfo();
             f.TopLevel = false;
             flowPanelProduct.Controls.Add(f);
-            f.Show();
+            f.Show();*/
         }
     }
 }

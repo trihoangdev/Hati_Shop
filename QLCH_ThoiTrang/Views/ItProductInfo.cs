@@ -36,5 +36,11 @@ namespace Views
             txtPrice.ForeColor = Color.Black;
 
         }
+
+        private void panelProduct_Paint(object sender, PaintEventArgs e)
+        {
+            ProductInfo_CreateFrm f = new ProductInfo_CreateFrm("show");
+            f.ShowDialog();
+        }
     }
 }

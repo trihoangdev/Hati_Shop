@@ -29,44 +29,25 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItProductInfo));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtName = new System.Windows.Forms.Label();
+            this.panelProduct = new System.Windows.Forms.Panel();
             this.txtPrice = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.txtName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelProduct
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.txtPrice);
-            this.panel1.Controls.Add(this.txtName);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(245, 280);
-            this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(45, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(161, 166);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // txtName
-            // 
-            this.txtName.AutoSize = true;
-            this.txtName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(62, 205);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(129, 25);
-            this.txtName.TabIndex = 1;
-            this.txtName.Text = "Tên sản phẩm";
+            this.panelProduct.BackColor = System.Drawing.Color.White;
+            this.panelProduct.Controls.Add(this.txtPrice);
+            this.panelProduct.Controls.Add(this.txtName);
+            this.panelProduct.Controls.Add(this.pictureBox1);
+            this.panelProduct.Location = new System.Drawing.Point(0, 0);
+            this.panelProduct.Name = "panelProduct";
+            this.panelProduct.Size = new System.Drawing.Size(245, 280);
+            this.panelProduct.TabIndex = 0;
+            this.panelProduct.Paint += new System.Windows.Forms.PaintEventHandler(this.panelProduct_Paint);
             // 
             // txtPrice
             // 
@@ -78,19 +59,39 @@
             this.txtPrice.TabIndex = 2;
             this.txtPrice.Text = "100.000 VNĐ";
             // 
+            // txtName
+            // 
+            this.txtName.AutoSize = true;
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(62, 205);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(129, 25);
+            this.txtName.TabIndex = 1;
+            this.txtName.Text = "Tên sản phẩm";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(45, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(161, 166);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // ItProductInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(253, 281);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelProduct);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ItProductInfo";
             this.Text = "ItProductInfo";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelProduct.ResumeLayout(false);
+            this.panelProduct.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -98,7 +99,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelProduct;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label txtName;
         private System.Windows.Forms.Label txtPrice;
