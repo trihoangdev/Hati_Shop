@@ -27,10 +27,8 @@ namespace Views
 
         private void btnBillCreate_Click(object sender, EventArgs e)
         {
-            ItBillInfo f = new ItBillInfo();
-            f.TopLevel = false;
-            flowPanelBill.Controls.Add(f);
-            f.Show();
+            BillCreateFrm f = new BillCreateFrm();
+            f.ShowDialog();
         }
 
 

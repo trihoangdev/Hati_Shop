@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillCreateFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillCreateFrm.Designer.cs">
+      <DependentUpon>BillCreateFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BillInfoFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     <Compile Include="HomeFrm.Designer.cs">
       <DependentUpon>HomeFrm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BillCreateFrm.resx">
+      <DependentUpon>BillCreateFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BillInfoFrm.resx">
       <DependentUpon>BillInfoFrm.cs</DependentUpon>
     </EmbeddedResource>
