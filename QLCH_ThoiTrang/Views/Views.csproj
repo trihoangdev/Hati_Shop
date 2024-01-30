@@ -119,6 +119,12 @@
     <Compile Include="ItProductInfo.Designer.cs">
       <DependentUpon>ItProductInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItStaffInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItStaffInfo.Designer.cs">
+      <DependentUpon>ItStaffInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     <EmbeddedResource Include="ItPanelImportGood.resx">
       <DependentUpon>ItPanelImportGood.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ItPanelManage.resx">
+      <DependentUpon>ItPanelManage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ItPanelProduct.resx">
       <DependentUpon>ItPanelProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ItProductInfo.resx">
       <DependentUpon>ItProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItStaffInfo.resx">
+      <DependentUpon>ItStaffInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>

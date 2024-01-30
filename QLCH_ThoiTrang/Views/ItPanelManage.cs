@@ -16,5 +16,13 @@ namespace Views
         {
             InitializeComponent();
         }
+
+        private void btnStaffCreate_Click(object sender, EventArgs e)
+        {
+            ItStaffInfo f = new ItStaffInfo();
+            f.TopLevel = false;
+            flowPanelStaff.Controls.Add(f);
+            f.Show();
+        }
     }
 }

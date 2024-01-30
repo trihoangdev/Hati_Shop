@@ -99,6 +99,7 @@
             this.btnManage.TabIndex = 20;
             this.btnManage.Text = "QUẢN LÝ";
             this.btnManage.UseVisualStyleBackColor = false;
+            this.btnManage.Click += new System.EventHandler(this.btnManage_Click);
             // 
             // btnStatistic
             // 

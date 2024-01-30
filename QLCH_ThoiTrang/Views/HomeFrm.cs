@@ -225,6 +225,27 @@ namespace Views
             f.Show();
             currentPanelForm = f;
         }
+
+        private void btnManage_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra xem trong Panel2 đã có Form nào chưa
+            if (currentPanelForm != null && !currentPanelForm.IsDisposed)
+            {
+                currentPanelForm.Close();  // Đóng Form trước khi Dispose
+                currentPanelForm.Dispose();
+            }
+            ItPanelManage f = new ItPanelManage();
+            if (f.Parent != null)
+            {
+                f.Parent.Controls.Remove(f);
+            }
+            // Thiết lập TopLevel, Dock và Parent cho UserControl
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(f);
+            f.Show();
+            currentPanelForm = f;
+        }
     }
 
 }
