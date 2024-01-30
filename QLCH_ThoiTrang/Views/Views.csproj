@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillInfoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillInfoFrm.Designer.cs">
+      <DependentUpon>BillInfoFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItCustomerInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,12 @@
     <Compile Include="ItPanelStatistic.Designer.cs">
       <DependentUpon>ItPanelStatistic.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItProductInBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItProductInBill.Designer.cs">
+      <DependentUpon>ItProductInBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItProductInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,9 @@
     <Compile Include="HomeFrm.Designer.cs">
       <DependentUpon>HomeFrm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BillInfoFrm.resx">
+      <DependentUpon>BillInfoFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ItCustomerInfo.resx">
       <DependentUpon>ItCustomerInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ItPanelStatistic.resx">
       <DependentUpon>ItPanelStatistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItProductInBill.resx">
+      <DependentUpon>ItProductInBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItProductInfo.resx">
       <DependentUpon>ItProductInfo.cs</DependentUpon>

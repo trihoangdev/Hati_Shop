@@ -16,5 +16,11 @@ namespace Views
         {
             InitializeComponent();
         }
+
+        private void ItBillInfo_Click(object sender, EventArgs e)
+        {
+            BillInfoFrm f = new BillInfoFrm();
+            f.ShowDialog();
+        }
     }
 }

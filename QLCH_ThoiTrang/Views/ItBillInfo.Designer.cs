@@ -93,6 +93,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ItBillInfo";
             this.Text = "ItProductInfo";
+            this.Click += new System.EventHandler(this.ItBillInfo_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 

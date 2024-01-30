@@ -23,3 +23,5 @@ E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.HomeFrm.resources
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItPanelStatistic.resources
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItPanelManage.resources
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItStaffInfo.resources
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.BillInfoFrm.resources
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItProductInBill.resources
