@@ -43,7 +43,6 @@ namespace Views
             };
             //set màu cho các chữ trong panel là trong suốt
             label3.BackColor = System.Drawing.Color.Transparent;
-            label4.BackColor = System.Drawing.Color.Transparent;
             txtRevenueDay.BackColor = System.Drawing.Color.Transparent;
         }
 
@@ -65,7 +64,6 @@ namespace Views
             };
             //set màu cho các chữ trong panel là trong suốt
             label1.BackColor = System.Drawing.Color.Transparent;
-            label2.BackColor = System.Drawing.Color.Transparent;
             txtNumberOfBillDay.BackColor = System.Drawing.Color.Transparent;
         }
 
@@ -86,7 +84,6 @@ namespace Views
                 e.Graphics.FillRectangle(brush, panelBillDay.ClientRectangle);
             };
             //set màu cho các chữ trong panel là trong suốt
-            label6.BackColor = System.Drawing.Color.Transparent;
             label7.BackColor = System.Drawing.Color.Transparent;
             txtNumberOfProductDay.BackColor = System.Drawing.Color.Transparent;
         }
