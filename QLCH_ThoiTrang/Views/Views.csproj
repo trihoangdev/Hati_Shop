@@ -65,6 +65,18 @@
     <Compile Include="CustomerInfo_CreateFrm.Designer.cs">
       <DependentUpon>CustomerInfo_CreateFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImportGoodCreateFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportGoodCreateFrm.Designer.cs">
+      <DependentUpon>ImportGoodCreateFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportGoodInfoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportGoodInfoFrm.Designer.cs">
+      <DependentUpon>ImportGoodInfoFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItCustomerInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +195,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerInfo_CreateFrm.resx">
       <DependentUpon>CustomerInfo_CreateFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportGoodCreateFrm.resx">
+      <DependentUpon>ImportGoodCreateFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportGoodInfoFrm.resx">
+      <DependentUpon>ImportGoodInfoFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItCustomerInfo.resx">
       <DependentUpon>ItCustomerInfo.cs</DependentUpon>

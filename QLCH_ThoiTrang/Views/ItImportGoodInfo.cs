@@ -16,5 +16,11 @@ namespace Views
         {
             InitializeComponent();
         }
+
+        private void panelImportGood_Paint(object sender, PaintEventArgs e)
+        {
+            ImportGoodInfoFrm f = new ImportGoodInfoFrm();
+            f.ShowDialog();
+        }
     }
 }

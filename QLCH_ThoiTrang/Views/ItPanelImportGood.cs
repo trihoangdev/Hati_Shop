@@ -19,10 +19,12 @@ namespace Views
 
         private void btnImportGoodCreate_Click(object sender, EventArgs e)
         {
-            ItImportGoodInfo f = new ItImportGoodInfo();
+            ImportGoodCreateFrm frm = new ImportGoodCreateFrm();
+            frm.ShowDialog();
+            /*ItImportGoodInfo f = new ItImportGoodInfo();
             f.TopLevel = false;
             flowPanelImportGood.Controls.Add(f);
-            f.Show();
+            f.Show();*/
         }
     }
 }

@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelImportGood = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel4.SuspendLayout();
+            this.panelImportGood.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel4
+            // panelImportGood
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(131)))));
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(770, 61);
-            this.panel4.TabIndex = 23;
+            this.panelImportGood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(131)))));
+            this.panelImportGood.Controls.Add(this.label6);
+            this.panelImportGood.Controls.Add(this.label7);
+            this.panelImportGood.Controls.Add(this.label8);
+            this.panelImportGood.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panelImportGood.Location = new System.Drawing.Point(0, 0);
+            this.panelImportGood.Name = "panelImportGood";
+            this.panelImportGood.Size = new System.Drawing.Size(770, 61);
+            this.panelImportGood.TabIndex = 23;
+            this.panelImportGood.Paint += new System.Windows.Forms.PaintEventHandler(this.panelImportGood_Paint);
             // 
             // label6
             // 
@@ -86,21 +87,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(131)))));
             this.ClientSize = new System.Drawing.Size(771, 63);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panelImportGood);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ItImportGoodInfo";
             this.Text = "ItImportGoodInfo";
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panelImportGood.ResumeLayout(false);
+            this.panelImportGood.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panelImportGood;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
