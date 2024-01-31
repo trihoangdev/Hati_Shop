@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.checkBoxAdmin = new System.Windows.Forms.CheckBox();
             this.txtForgetPassword = new System.Windows.Forms.LinkLabel();
             this.txtRegister = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -46,7 +47,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnExist = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
-            this.checkBoxAdmin = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -131,6 +131,18 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // checkBoxAdmin
+            // 
+            this.checkBoxAdmin.AutoSize = true;
+            this.checkBoxAdmin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxAdmin.ForeColor = System.Drawing.Color.Black;
+            this.checkBoxAdmin.Location = new System.Drawing.Point(21, 338);
+            this.checkBoxAdmin.Name = "checkBoxAdmin";
+            this.checkBoxAdmin.Size = new System.Drawing.Size(104, 32);
+            this.checkBoxAdmin.TabIndex = 3;
+            this.checkBoxAdmin.Text = "ADMIN";
+            this.checkBoxAdmin.UseVisualStyleBackColor = true;
+            // 
             // txtForgetPassword
             // 
             this.txtForgetPassword.AutoSize = true;
@@ -140,7 +152,7 @@
             this.txtForgetPassword.Location = new System.Drawing.Point(217, 466);
             this.txtForgetPassword.Name = "txtForgetPassword";
             this.txtForgetPassword.Size = new System.Drawing.Size(181, 28);
-            this.txtForgetPassword.TabIndex = 12;
+            this.txtForgetPassword.TabIndex = 7;
             this.txtForgetPassword.TabStop = true;
             this.txtForgetPassword.Text = "QUÊN MẬT KHẨU";
             // 
@@ -153,7 +165,7 @@
             this.txtRegister.Location = new System.Drawing.Point(17, 466);
             this.txtRegister.Name = "txtRegister";
             this.txtRegister.Size = new System.Drawing.Size(102, 28);
-            this.txtRegister.TabIndex = 11;
+            this.txtRegister.TabIndex = 6;
             this.txtRegister.TabStop = true;
             this.txtRegister.Text = "ĐĂNG KÝ";
             this.txtRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.txtRegister_LinkClicked);
@@ -178,7 +190,7 @@
             this.txtPassword.Location = new System.Drawing.Point(30, 20);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(306, 27);
-            this.txtPassword.TabIndex = 5;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.Text = "MẬT KHẨU:";
             this.txtPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPassword_MouseClick);
             // 
@@ -190,7 +202,7 @@
             this.checkBoxShowPassword.Location = new System.Drawing.Point(192, 338);
             this.checkBoxShowPassword.Name = "checkBoxShowPassword";
             this.checkBoxShowPassword.Size = new System.Drawing.Size(195, 32);
-            this.checkBoxShowPassword.TabIndex = 10;
+            this.checkBoxShowPassword.TabIndex = 4;
             this.checkBoxShowPassword.Text = "HIỆN MẬT KHẨU";
             this.checkBoxShowPassword.UseVisualStyleBackColor = true;
             this.checkBoxShowPassword.CheckedChanged += new System.EventHandler(this.checkBoxShowPassword_CheckedChanged);
@@ -205,7 +217,7 @@
             this.btnLogin.Location = new System.Drawing.Point(21, 386);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(366, 65);
-            this.btnLogin.TabIndex = 9;
+            this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "ĐĂNG NHẬP";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -230,7 +242,7 @@
             this.txtAccount.Location = new System.Drawing.Point(30, 20);
             this.txtAccount.Name = "txtAccount";
             this.txtAccount.Size = new System.Drawing.Size(306, 27);
-            this.txtAccount.TabIndex = 5;
+            this.txtAccount.TabIndex = 1;
             this.txtAccount.Text = "TÊN ĐĂNG NHẬP:";
             this.txtAccount.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAccount_MouseClick);
             // 
@@ -264,7 +276,7 @@
             this.btnExist.Location = new System.Drawing.Point(371, 5);
             this.btnExist.Name = "btnExist";
             this.btnExist.Size = new System.Drawing.Size(32, 32);
-            this.btnExist.TabIndex = 1;
+            this.btnExist.TabIndex = 9;
             this.btnExist.UseVisualStyleBackColor = true;
             this.btnExist.Click += new System.EventHandler(this.btnExist_Click);
             // 
@@ -276,21 +288,9 @@
             this.btnMinimize.Location = new System.Drawing.Point(330, 5);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(32, 32);
-            this.btnMinimize.TabIndex = 0;
+            this.btnMinimize.TabIndex = 8;
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // checkBoxAdmin
-            // 
-            this.checkBoxAdmin.AutoSize = true;
-            this.checkBoxAdmin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxAdmin.ForeColor = System.Drawing.Color.Black;
-            this.checkBoxAdmin.Location = new System.Drawing.Point(21, 338);
-            this.checkBoxAdmin.Name = "checkBoxAdmin";
-            this.checkBoxAdmin.Size = new System.Drawing.Size(104, 32);
-            this.checkBoxAdmin.TabIndex = 13;
-            this.checkBoxAdmin.Text = "ADMIN";
-            this.checkBoxAdmin.UseVisualStyleBackColor = true;
             // 
             // LoginFrm
             // 

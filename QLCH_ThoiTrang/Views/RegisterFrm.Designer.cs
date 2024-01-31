@@ -52,7 +52,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.txtAccount = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.btnMinimize = new System.Windows.Forms.Button();
             this.btnAddAvatar = new System.Windows.Forms.Button();
             this.btnExist = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -74,7 +73,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(54)))));
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.btnMinimize);
             this.panel1.Controls.Add(this.btnAddAvatar);
             this.panel1.Controls.Add(this.btnExist);
             this.panel1.Controls.Add(this.label1);
@@ -100,7 +98,7 @@
             this.panel2.Location = new System.Drawing.Point(264, 70);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(627, 515);
-            this.panel2.TabIndex = 17;
+            this.panel2.TabIndex = 0;
             // 
             // checkBoxType
             // 
@@ -109,7 +107,7 @@
             this.checkBoxType.Location = new System.Drawing.Point(479, 403);
             this.checkBoxType.Name = "checkBoxType";
             this.checkBoxType.Size = new System.Drawing.Size(124, 27);
-            this.checkBoxType.TabIndex = 24;
+            this.checkBoxType.TabIndex = 9;
             this.checkBoxType.Text = "NHÂN VIÊN";
             this.checkBoxType.UseVisualStyleBackColor = true;
             // 
@@ -121,7 +119,7 @@
             this.panel9.Name = "panel9";
             this.panel9.Padding = new System.Windows.Forms.Padding(10);
             this.panel9.Size = new System.Drawing.Size(283, 48);
-            this.panel9.TabIndex = 23;
+            this.panel9.TabIndex = 0;
             // 
             // comboGender
             // 
@@ -135,7 +133,7 @@
             this.comboGender.Location = new System.Drawing.Point(10, 7);
             this.comboGender.Name = "comboGender";
             this.comboGender.Size = new System.Drawing.Size(273, 31);
-            this.comboGender.TabIndex = 0;
+            this.comboGender.TabIndex = 4;
             this.comboGender.Text = "Giới tính:";
             // 
             // panel8
@@ -148,7 +146,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(10);
             this.panel8.Size = new System.Drawing.Size(283, 48);
-            this.panel8.TabIndex = 21;
+            this.panel8.TabIndex = 0;
             // 
             // txtPhoneNumber
             // 
@@ -160,7 +158,7 @@
             this.txtPhoneNumber.Location = new System.Drawing.Point(10, 10);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(263, 24);
-            this.txtPhoneNumber.TabIndex = 7;
+            this.txtPhoneNumber.TabIndex = 6;
             this.txtPhoneNumber.Text = "Số điện thoại:";
             this.txtPhoneNumber.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPhoneNumber_MouseClick);
             // 
@@ -198,7 +196,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(10);
             this.panel7.Size = new System.Drawing.Size(579, 48);
-            this.panel7.TabIndex = 17;
+            this.panel7.TabIndex = 0;
             // 
             // txtEmail
             // 
@@ -210,7 +208,7 @@
             this.txtEmail.Location = new System.Drawing.Point(10, 10);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(559, 24);
-            this.txtEmail.TabIndex = 5;
+            this.txtEmail.TabIndex = 7;
             this.txtEmail.Text = "Email:";
             this.txtEmail.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtEmail_MouseClick);
             // 
@@ -222,7 +220,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(10);
             this.panel6.Size = new System.Drawing.Size(579, 48);
-            this.panel6.TabIndex = 22;
+            this.panel6.TabIndex = 0;
             // 
             // txtAddress
             // 
@@ -234,7 +232,7 @@
             this.txtAddress.Location = new System.Drawing.Point(10, 10);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(559, 24);
-            this.txtAddress.TabIndex = 5;
+            this.txtAddress.TabIndex = 8;
             this.txtAddress.Text = "Địa chỉ:";
             this.txtAddress.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAddress_MouseClick);
             // 
@@ -247,7 +245,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(10);
             this.panel5.Size = new System.Drawing.Size(283, 48);
-            this.panel5.TabIndex = 18;
+            this.panel5.TabIndex = 0;
             // 
             // dateTimePickerBirthDate
             // 
@@ -259,7 +257,7 @@
             this.dateTimePickerBirthDate.Location = new System.Drawing.Point(107, 10);
             this.dateTimePickerBirthDate.Name = "dateTimePickerBirthDate";
             this.dateTimePickerBirthDate.Size = new System.Drawing.Size(176, 30);
-            this.dateTimePickerBirthDate.TabIndex = 7;
+            this.dateTimePickerBirthDate.TabIndex = 5;
             // 
             // label2
             // 
@@ -280,7 +278,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(10);
             this.panel4.Size = new System.Drawing.Size(283, 48);
-            this.panel4.TabIndex = 19;
+            this.panel4.TabIndex = 0;
             // 
             // txtFullName
             // 
@@ -292,7 +290,7 @@
             this.txtFullName.Location = new System.Drawing.Point(10, 10);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(263, 24);
-            this.txtFullName.TabIndex = 5;
+            this.txtFullName.TabIndex = 3;
             this.txtFullName.Text = "Họ và tên:";
             this.txtFullName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtFullName_MouseClick);
             // 
@@ -304,7 +302,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(10);
             this.panel3.Size = new System.Drawing.Size(283, 48);
-            this.panel3.TabIndex = 20;
+            this.panel3.TabIndex = 0;
             // 
             // txtPassword
             // 
@@ -316,7 +314,7 @@
             this.txtPassword.Location = new System.Drawing.Point(10, 10);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(263, 24);
-            this.txtPassword.TabIndex = 5;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.Text = "Mật khẩu:";
             this.txtPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPassword_MouseClick);
             // 
@@ -328,7 +326,7 @@
             this.panel10.Name = "panel10";
             this.panel10.Padding = new System.Windows.Forms.Padding(10);
             this.panel10.Size = new System.Drawing.Size(283, 48);
-            this.panel10.TabIndex = 16;
+            this.panel10.TabIndex = 0;
             // 
             // txtAccount
             // 
@@ -340,7 +338,7 @@
             this.txtAccount.Location = new System.Drawing.Point(10, 10);
             this.txtAccount.Name = "txtAccount";
             this.txtAccount.Size = new System.Drawing.Size(263, 24);
-            this.txtAccount.TabIndex = 5;
+            this.txtAccount.TabIndex = 1;
             this.txtAccount.Text = "Tên đăng nhập:";
             this.txtAccount.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAccount_MouseClick);
             // 
@@ -354,24 +352,10 @@
             this.btnLogin.Location = new System.Drawing.Point(24, 440);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(579, 49);
-            this.btnLogin.TabIndex = 15;
+            this.btnLogin.TabIndex = 10;
             this.btnLogin.Text = "ĐĂNG KÝ";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(54)))));
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(817, 3);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(40, 35);
-            this.btnMinimize.TabIndex = 16;
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // btnAddAvatar
             // 
@@ -398,7 +382,7 @@
             this.btnExist.Location = new System.Drawing.Point(860, 3);
             this.btnExist.Name = "btnExist";
             this.btnExist.Size = new System.Drawing.Size(40, 35);
-            this.btnExist.TabIndex = 3;
+            this.btnExist.TabIndex = 0;
             this.btnExist.UseVisualStyleBackColor = false;
             this.btnExist.Click += new System.EventHandler(this.btnExist_Click);
             // 
@@ -465,7 +449,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnExist;
         private System.Windows.Forms.Button btnAddAvatar;
-        private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.ComboBox comboGender;
