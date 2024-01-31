@@ -16,5 +16,11 @@ namespace Views
         {
             InitializeComponent();
         }
+
+        private void panelStaff_Paint(object sender, PaintEventArgs e)
+        {
+            StaffInfo_CreateFrm f = new StaffInfo_CreateFrm();
+            f.ShowDialog();
+        }
     }
 }

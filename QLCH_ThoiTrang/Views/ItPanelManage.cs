@@ -19,10 +19,12 @@ namespace Views
 
         private void btnStaffCreate_Click(object sender, EventArgs e)
         {
-            ItStaffInfo f = new ItStaffInfo();
+            StaffInfo_CreateFrm f = new StaffInfo_CreateFrm();
+            f.ShowDialog();
+            /*ItStaffInfo f = new ItStaffInfo();
             f.TopLevel = false;
             flowPanelStaff.Controls.Add(f);
-            f.Show();
+            f.Show();*/
         }
     }
 }

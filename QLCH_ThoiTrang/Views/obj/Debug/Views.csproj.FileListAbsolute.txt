@@ -30,3 +30,4 @@ E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ProductInfo_CreateFrm.resource
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.CustomerInfo_CreateFrm.resources
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ImportGoodCreateFrm.resources
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ImportGoodInfoFrm.resources
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.StaffInfo_CreateFrm.resources
