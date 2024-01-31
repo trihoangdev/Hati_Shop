@@ -19,10 +19,8 @@ namespace Views
 
         private void btnCustomerCreate_Click(object sender, EventArgs e)
         {
-            ItCustomerInfo f = new ItCustomerInfo();
-            f.TopLevel = false;
-            flowPanelCustomer.Controls.Add(f);
-            f.Show();
+            CustomerInfo_CreateFrm f = new CustomerInfo_CreateFrm("ĐĂNG NHẬP");
+            f.ShowDialog();
         }
     }
 }

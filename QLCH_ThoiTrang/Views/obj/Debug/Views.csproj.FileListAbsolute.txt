@@ -27,3 +27,4 @@ E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.BillInfoFrm.resources
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItProductInBill.resources
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.BillCreateFrm.resources
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ProductInfo_CreateFrm.resources
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.CustomerInfo_CreateFrm.resources

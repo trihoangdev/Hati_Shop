@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelPerson = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
+            this.panelPerson.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel2
+            // panelPerson
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(131)))));
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(770, 61);
-            this.panel2.TabIndex = 25;
+            this.panelPerson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(131)))));
+            this.panelPerson.Controls.Add(this.label7);
+            this.panelPerson.Controls.Add(this.label8);
+            this.panelPerson.Controls.Add(this.label9);
+            this.panelPerson.Controls.Add(this.label10);
+            this.panelPerson.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panelPerson.Location = new System.Drawing.Point(0, 0);
+            this.panelPerson.Name = "panelPerson";
+            this.panelPerson.Size = new System.Drawing.Size(770, 61);
+            this.panelPerson.TabIndex = 25;
+            this.panelPerson.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPerson_Paint);
             // 
             // label7
             // 
@@ -99,21 +100,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(131)))));
             this.ClientSize = new System.Drawing.Size(772, 63);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelPerson);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ItCustomerInfo";
             this.Text = "ItCustomerInfo";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelPerson.ResumeLayout(false);
+            this.panelPerson.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelPerson;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
