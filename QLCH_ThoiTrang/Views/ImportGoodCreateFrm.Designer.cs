@@ -54,6 +54,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboIdNameStaff = new System.Windows.Forms.ComboBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtImportGoodId = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -63,7 +64,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboIdNameStaff = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -86,7 +86,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(8, 8);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 800);
             this.panel1.TabIndex = 2;
@@ -350,6 +350,14 @@
             this.panel2.Size = new System.Drawing.Size(450, 381);
             this.panel2.TabIndex = 1;
             // 
+            // comboIdNameStaff
+            // 
+            this.comboIdNameStaff.FormattingEnabled = true;
+            this.comboIdNameStaff.Location = new System.Drawing.Point(17, 71);
+            this.comboIdNameStaff.Name = "comboIdNameStaff";
+            this.comboIdNameStaff.Size = new System.Drawing.Size(407, 24);
+            this.comboIdNameStaff.TabIndex = 9;
+            // 
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -438,14 +446,6 @@
             this.label1.Size = new System.Drawing.Size(326, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "PHIẾU NHẬP HÀNG";
-            // 
-            // comboIdNameStaff
-            // 
-            this.comboIdNameStaff.FormattingEnabled = true;
-            this.comboIdNameStaff.Location = new System.Drawing.Point(17, 71);
-            this.comboIdNameStaff.Name = "comboIdNameStaff";
-            this.comboIdNameStaff.Size = new System.Drawing.Size(407, 24);
-            this.comboIdNameStaff.TabIndex = 9;
             // 
             // ImportGoodCreateFrm
             // 
