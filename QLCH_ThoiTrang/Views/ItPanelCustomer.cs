@@ -19,7 +19,7 @@ namespace Views
 
         private void btnCustomerCreate_Click(object sender, EventArgs e)
         {
-            CustomerInfo_CreateFrm f = new CustomerInfo_CreateFrm("ĐĂNG NHẬP");
+            CustomerInfo_CreateFrm f = new CustomerInfo_CreateFrm("THÊM MỚI");
             f.ShowDialog();
         }
     }

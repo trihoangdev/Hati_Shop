@@ -19,7 +19,7 @@ namespace Views
 
         private void btnStaffCreate_Click(object sender, EventArgs e)
         {
-            StaffInfo_CreateFrm f = new StaffInfo_CreateFrm();
+            StaffInfo_CreateFrm f = new StaffInfo_CreateFrm("THÊM MỚI");
             f.ShowDialog();
             /*ItStaffInfo f = new ItStaffInfo();
             f.TopLevel = false;
