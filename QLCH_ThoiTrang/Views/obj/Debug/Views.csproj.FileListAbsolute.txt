@@ -31,3 +31,8 @@ E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.CustomerInfo_CreateFrm.resourc
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ImportGoodCreateFrm.resources
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ImportGoodInfoFrm.resources
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.StaffInfo_CreateFrm.resources
+E:\HatiStore\QLCH_ThoiTrang\Views\bin\Debug\Controllers.dll
+E:\HatiStore\QLCH_ThoiTrang\Views\bin\Debug\Models.dll
+E:\HatiStore\QLCH_ThoiTrang\Views\bin\Debug\Controllers.pdb
+E:\HatiStore\QLCH_ThoiTrang\Views\bin\Debug\Models.pdb
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.csproj.CopyComplete

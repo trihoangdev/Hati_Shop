@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterFrm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.checkBoxType = new System.Windows.Forms.CheckBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.comboGender = new System.Windows.Forms.ComboBox();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -86,6 +87,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.checkBoxType);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel7);
@@ -99,6 +101,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(627, 515);
             this.panel2.TabIndex = 17;
+            // 
+            // checkBoxType
+            // 
+            this.checkBoxType.AutoSize = true;
+            this.checkBoxType.ForeColor = System.Drawing.Color.White;
+            this.checkBoxType.Location = new System.Drawing.Point(479, 403);
+            this.checkBoxType.Name = "checkBoxType";
+            this.checkBoxType.Size = new System.Drawing.Size(124, 27);
+            this.checkBoxType.TabIndex = 24;
+            this.checkBoxType.Text = "NHÂN VIÊN";
+            this.checkBoxType.UseVisualStyleBackColor = true;
             // 
             // panel9
             // 
@@ -338,12 +351,13 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(54)))));
-            this.btnLogin.Location = new System.Drawing.Point(24, 419);
+            this.btnLogin.Location = new System.Drawing.Point(24, 440);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(579, 49);
             this.btnLogin.TabIndex = 15;
             this.btnLogin.Text = "ĐĂNG KÝ";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnMinimize
             // 
@@ -423,6 +437,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -472,5 +487,6 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.TextBox txtAccount;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.CheckBox checkBoxType;
     }
 }

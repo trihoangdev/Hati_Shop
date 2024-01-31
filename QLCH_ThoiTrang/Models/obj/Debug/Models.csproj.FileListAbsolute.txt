@@ -1,0 +1,6 @@
+E:\HatiStore\QLCH_ThoiTrang\Models\obj\Debug\Models.csproj.AssemblyReference.cache
+E:\HatiStore\QLCH_ThoiTrang\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+E:\HatiStore\QLCH_ThoiTrang\Models\bin\Debug\Models.dll
+E:\HatiStore\QLCH_ThoiTrang\Models\bin\Debug\Models.pdb
+E:\HatiStore\QLCH_ThoiTrang\Models\obj\Debug\Models.dll
+E:\HatiStore\QLCH_ThoiTrang\Models\obj\Debug\Models.pdb

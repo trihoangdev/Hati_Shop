@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Views
 {
     public partial class LoginFrm : Form
     {
+        IOImp controller = new IOImp();
         public LoginFrm()
         {
             InitializeComponent();
@@ -62,7 +64,7 @@ namespace Views
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(txtAccount.Text == "admin")
+            if(controller.CheckLogin(txtAccount.Text,txtPassword.Text) && checkBoxAdmin.Checked)
             {
                 HomeFrm f = new HomeFrm("admin");
                 f.ShowDialog();

@@ -46,6 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnExist = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
+            this.checkBoxAdmin = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -81,6 +82,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(233)))), ((int)(((byte)(214)))));
+            this.splitContainer1.Panel2.Controls.Add(this.checkBoxAdmin);
             this.splitContainer1.Panel2.Controls.Add(this.txtForgetPassword);
             this.splitContainer1.Panel2.Controls.Add(this.txtRegister);
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
@@ -278,6 +280,18 @@
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
+            // checkBoxAdmin
+            // 
+            this.checkBoxAdmin.AutoSize = true;
+            this.checkBoxAdmin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxAdmin.ForeColor = System.Drawing.Color.Black;
+            this.checkBoxAdmin.Location = new System.Drawing.Point(21, 338);
+            this.checkBoxAdmin.Name = "checkBoxAdmin";
+            this.checkBoxAdmin.Size = new System.Drawing.Size(104, 32);
+            this.checkBoxAdmin.TabIndex = 13;
+            this.checkBoxAdmin.Text = "ADMIN";
+            this.checkBoxAdmin.UseVisualStyleBackColor = true;
+            // 
             // LoginFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -324,6 +338,7 @@
         private System.Windows.Forms.CheckBox checkBoxShowPassword;
         private System.Windows.Forms.LinkLabel txtForgetPassword;
         private System.Windows.Forms.LinkLabel txtRegister;
+        private System.Windows.Forms.CheckBox checkBoxAdmin;
     }
 }
 

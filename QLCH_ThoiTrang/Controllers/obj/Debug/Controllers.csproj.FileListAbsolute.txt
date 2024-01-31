@@ -1,0 +1,9 @@
+E:\HatiStore\QLCH_ThoiTrang\Controllers\obj\Debug\Controllers.csproj.AssemblyReference.cache
+E:\HatiStore\QLCH_ThoiTrang\Controllers\obj\Debug\Controllers.csproj.CoreCompileInputs.cache
+E:\HatiStore\QLCH_ThoiTrang\Controllers\bin\Debug\Controllers.dll
+E:\HatiStore\QLCH_ThoiTrang\Controllers\bin\Debug\Controllers.pdb
+E:\HatiStore\QLCH_ThoiTrang\Controllers\bin\Debug\Models.dll
+E:\HatiStore\QLCH_ThoiTrang\Controllers\bin\Debug\Models.pdb
+E:\HatiStore\QLCH_ThoiTrang\Controllers\obj\Debug\Controllers.csproj.CopyComplete
+E:\HatiStore\QLCH_ThoiTrang\Controllers\obj\Debug\Controllers.dll
+E:\HatiStore\QLCH_ThoiTrang\Controllers\obj\Debug\Controllers.pdb

@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Models;
+using Controllers;
 namespace Views
 {
     public partial class RegisterFrm : Form
     {
+        private IOImp ioImp = new IOImp();
         public RegisterFrm()
         {
             InitializeComponent();
@@ -77,6 +79,31 @@ namespace Views
             MessageBox.Show("Chức năng đang phát triển", "Thông báo");
         }
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string username = txtAccount.Text;
+            string password = txtPassword.Text;
+            string name = txtFullName.Text;
+            string email = txtEmail.Text;
+            string phone = txtPhoneNumber.Text;
+            string address = txtAddress.Text;
+            string gender = comboGender.SelectedItem.ToString();
+            DateTime birthDate = dateTimePickerBirthDate.Value;
+            string avatarPath = "NO";
+            if (checkBoxType.Checked)
+            {
+                Staff staff = new Staff(username, password, name, gender, birthDate, phone, email, address, avatarPath, "Nhân viên");
+                ioImp.CreateNewStaff(staff);
+            }
+            else
+            {
+                Customer customer = new Customer(username, password, name, gender, birthDate, phone, email, address, avatarPath);
 
+                ioImp.CreateNewCustomer(customer);
+            }
+
+            MessageBox.Show("Đăng ký thành công!");
+            this.Dispose();
+        }
     }
 }
