@@ -27,11 +27,12 @@ CREATE PROCEDURE CreateNewStaff
 	@PhoneNumber varchar(10),
 	@Email varchar(100),
 	@Address nvarchar(200),
-	@AvatarPath nvarchar(MAX)
+	@AvatarPath nvarchar(MAX),
+	@Role nvarchar(50)
 AS
 BEGIN
-    INSERT Customer (Id,Username,Password,FullName,Gender,BirthDate,PhoneNumber,Email,Address,AvatarPath)
-	VALUES (@Id,@Username,@Password, @FullName,@Gender,@BirthDate,@PhoneNumber,@Email,@Address,@AvatarPath)
+    INSERT Staff (Id,Username,Password,FullName,Gender,BirthDate,PhoneNumber,Email,Address,AvatarPath, Role)
+	VALUES (@Id,@Username,@Password, @FullName,@Gender,@BirthDate,@PhoneNumber,@Email,@Address,@AvatarPath,@Role)
 END;
 
 --Kiểm tra login
@@ -50,3 +51,59 @@ BEGIN
 		Password = @Password
 END;
 
+--Đọc các thông tin về username
+CREATE PROCEDURE LoadUsername
+AS
+BEGIN
+	SELECT 
+		Username
+	FROM 
+		Staff
+	UNION
+	SELECT 
+		Username
+	FROM 
+		Customer
+END;
+
+--Đọc các thông tin về Customer
+CREATE PROC LoadCustomer
+AS
+BEGIN
+	SELECT 
+		Id,
+		Username,
+		Password,
+		FullName,
+		Gender,
+		BirthDate,
+		PhoneNumber,
+		Email,
+		Address,
+		AvatarPath,
+		Revenue,
+		Rank
+	FROM 
+		Customer
+END
+
+
+--Đọc các thông tin về Staff
+CREATE PROC LoadStaff
+AS
+BEGIN
+	SELECT 
+		Id,
+		Username,
+		Password,
+		FullName,
+		Gender,
+		BirthDate,
+		PhoneNumber,
+		Email,
+		Address,
+		AvatarPath,
+		Role
+	FROM 
+		Staff
+END

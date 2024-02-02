@@ -14,6 +14,9 @@ namespace Views
     public partial class RegisterFrm : Form
     {
         private IOImp ioImp = new IOImp();
+        List<String> usernames;
+        List<Staff> staffs;
+        List<Customer> customers;
         public RegisterFrm()
         {
             InitializeComponent();
@@ -81,29 +84,101 @@ namespace Views
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            bool success = true;
+            CheckInputImp check = new CheckInputImp();
+            usernames = ioImp.LoadAllUsername();
             string username = txtAccount.Text;
             string password = txtPassword.Text;
             string name = txtFullName.Text;
             string email = txtEmail.Text;
             string phone = txtPhoneNumber.Text;
             string address = txtAddress.Text;
-            string gender = comboGender.SelectedItem.ToString();
+            string gender = "Khác";
+
             DateTime birthDate = dateTimePickerBirthDate.Value;
             string avatarPath = "NO";
-            if (checkBoxType.Checked)
+            if (comboGender.SelectedIndex < 0)
             {
-                Staff staff = new Staff(username, password, name, gender, birthDate, phone, email, address, avatarPath, "Nhân viên");
-                ioImp.CreateNewStaff(staff);
+                MessageBox.Show("Vui lòng chọn giới tính!");
+                success = false;
+            }
+            else if (!check.IsUsernameValid(username))
+            {
+                MessageBox.Show("Thông tin username không hợp lệ!");
+                success = false;
+            }
+            else if (check.IsUsernameExist(username, usernames))
+            {
+                MessageBox.Show("username đã tồn tại!");
+                success = false;
+            }
+            else if (!check.IsPasswordValid(password))
+            {
+                MessageBox.Show("Thông tin password không hợp lệ!");
+                success = false;
+            }
+            else if (!check.IsNameValid(name))
+            {
+                MessageBox.Show("Họ và tên không hợp lệ!");
+                success = false;
+            }
+            else if (!check.IsEmailValid(email))
+            {
+                MessageBox.Show("Email không hợp lệ!");
+                success = false;
+            }
+            else if (!check.IsPhoneValid(phone))
+            {
+                MessageBox.Show("SĐT không hợp lệ! Bắt đầu bằng 03,05,07,08,09 và có 10 chữ số");
+                success = false;
             }
             else
             {
-                Customer customer = new Customer(username, password, name, gender, birthDate, phone, email, address, avatarPath);
-
-                ioImp.CreateNewCustomer(customer);
+                gender = comboGender.SelectedItem.ToString();
             }
+            if (success)
+            {
+                if (checkBoxType.Checked)
+                {
+                    var currId = GetCurrId(staffs);
+                    Staff staff = new Staff(++currId, username, password, name, gender,
+                        birthDate, phone, email, address, avatarPath, "Nhân viên");
+                    ioImp.CreateNewStaff(staff);
+                }
+                else
+                {
+                    var currId = GetCurrId(customers);
+                    Customer customer = new Customer(++currId, username, password,
+                        name, gender, birthDate, phone, email, address, avatarPath);
+                    ioImp.CreateNewCustomer(customer);
+                }
+                MessageBox.Show("Đăng ký thành công!");
+                this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("Đăng ký thất bại!");
+            }
+        }
 
-            MessageBox.Show("Đăng ký thành công!");
-            this.Dispose();
+        private int GetCurrId(List<Staff> staffs)
+        {
+            if (staffs.Count == 0)
+                return 0;
+            return staffs[staffs.Count - 1].IdInt;
+        }
+        private int GetCurrId(List<Customer> customers)
+        {
+            if (customers.Count == 0)
+                return 0;
+            return customers[customers.Count - 1].IdInt;
+        }
+
+        private void RegisterFrm_Load(object sender, EventArgs e)
+        {
+            usernames = ioImp.LoadAllUsername();
+            staffs = ioImp.LoadAllStaff();
+            customers = ioImp.LoadAllCustomer();
         }
     }
 }

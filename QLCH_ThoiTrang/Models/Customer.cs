@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.ConstrainedExecution;
@@ -10,19 +11,31 @@ namespace Models
     public class Customer : Person
     {
         private static int AutoId { get; set; } = 1;
-        public string Id { get; set; }
+        public int IdInt {  get; set; }
         public int Revenue { get; set; } //doanh thu
         public string Rank { get; set; }
-        public Customer(string username, string password, string name,
+
+        public Customer(int curId, string username, string password, string name,
             string gender, DateTime birthdate, string phoneNumber,
             string email, string address, string avatarPath) : 
             base(username, password,name,gender,birthdate,phoneNumber,email,
                 address,avatarPath) 
         {
+            AutoId = curId;
             Id = "KH" +AutoId++;
+            IdInt = GetLastId(Id);
         }
-
-
+        public Customer(string id, string username, string password, string name,
+            string gender, DateTime birthdate, string phoneNumber,
+            string email, string address, string avatarPath, int revenue,string rank) :
+            base(username, password, name, gender, birthdate, phoneNumber, email,
+                address, avatarPath)
+        {
+            Id = id;
+            IdInt = GetLastId(Id);
+            Revenue = revenue; 
+            Rank = rank;
+        }
 
         /// <summary>
         /// Phương thức set Rank cho người dùng
@@ -38,5 +51,7 @@ namespace Models
             else if (Revenue < 50_000_000)
                 Rank = "KIM CƯƠNG";
         }
+
+        
     }
 }

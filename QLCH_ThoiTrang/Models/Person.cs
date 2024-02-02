@@ -8,7 +8,7 @@ namespace Models
 {
     public class Person
     {
-        
+        public string Id {  get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }
@@ -34,7 +34,11 @@ namespace Models
             this.Address = address;
             this.AvatarPath = avatarPath;
         }
-
+        public int GetLastId(string idStr)
+        {
+            var idInt = int.Parse(idStr.Substring(2));
+            return idInt;
+        }
 
     }
 }

@@ -13,7 +13,11 @@ namespace Controllers
     public interface IOController
     {
         bool CheckLogin(string username, string password);
-        void CreateNewCustomer(Customer customer); 
+        void CreateNewCustomer(Customer customer);
+        List<String> LoadAllUsername();
+        List<Customer> LoadAllCustomer();
+        List<Staff> LoadAllStaff();
+
 
     }
     public class IOImp : IOController
@@ -23,6 +27,7 @@ namespace Controllers
         //Thêm mới khách hàng từ trang register
         public void CreateNewCustomer(Customer customer)
         {
+
             using (SqlConnection connection = new SqlConnection(connStr))
             {
                 connection.Open();
@@ -41,12 +46,25 @@ namespace Controllers
                     command.Parameters.AddWithValue("@Address", customer.Address);
                     command.Parameters.AddWithValue("@AvatarPath", customer.AvatarPath);
 
-                    //thực thi
-                    command.ExecuteNonQuery();
-
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in CreateNewCustomer: " + ex.Message);
+                    }
+                    finally
+                    {
+                        if (connection.State == ConnectionState.Open)
+                        {
+                            connection.Close();
+                        }
+                    }
                 }
             }
         }
+        //Thêm mới nhân viên từ trang register
         public void CreateNewStaff(Staff staff)
         {
             using (SqlConnection connection = new SqlConnection(connStr))
@@ -66,14 +84,30 @@ namespace Controllers
                     command.Parameters.AddWithValue("@Email", staff.Email);
                     command.Parameters.AddWithValue("@Address", staff.Address);
                     command.Parameters.AddWithValue("@AvatarPath", staff.AvatarPath);
+                    command.Parameters.AddWithValue("@Role", staff.Role);
 
                     //thực thi
-                    command.ExecuteNonQuery();
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in CreateNewCustomer: " + ex.Message);
+                    }
+                    finally
+                    {
+                        if (connection.State == ConnectionState.Open)
+                        {
+                            connection.Close();
+                        }
+                    }
 
                 }
             }
         }
-        public bool CheckLogin(string username, string password) 
+        //Kiểm tra username và password đã tồn tại trong hệ thống chưa
+        public bool CheckLogin(string username, string password)
         {
             using (SqlConnection connection = new SqlConnection(connStr))
             {
@@ -104,6 +138,99 @@ namespace Controllers
             }
         }
 
-        
+        //Load các username có trong hệ thống
+        public List<String> LoadAllUsername()
+        {
+            List<String> usernames = new List<String>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("LoadUsername", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            usernames.Add(reader["Username"].ToString());
+                        }
+                    }
+                }
+            }
+            return usernames;
+        }
+        public List<Customer> LoadAllCustomer()
+        {
+            List<Customer> customers = new List<Customer>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("LoadCustomer", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var id = reader["Id"].ToString();
+                            var username = reader["Username"].ToString();
+                            var password = reader["Password"].ToString();
+                            var fullName = reader["FullName"].ToString();
+                            var gender = reader["Gender"].ToString();
+                            var birthDate = (DateTime)reader["BirthDate"];
+                            var phone = reader["PhoneNumber"].ToString();
+                            var email = reader["Email"].ToString();
+                            var address = reader["Address"].ToString();
+                            var avatarPath = reader["AvatarPath"].ToString();
+                            int revenue = 0;
+
+                            if (reader["Revenue"] != DBNull.Value)
+                                revenue = Convert.ToInt32(reader["Revenue"]);
+                            string rank = reader["Rank"].ToString();
+
+                            Customer customer = new Customer(id, username, password, fullName,
+                                gender, birthDate, phone, email, address, avatarPath, revenue, rank);
+                            customers.Add(customer);
+                        }
+                    }
+                }
+            }
+            return customers;
+        }
+
+        public List<Staff> LoadAllStaff()
+        {
+            List<Staff> staffs = new List<Staff>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("LoadStaff", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var id = reader["Id"].ToString();
+                            var username = reader["Username"].ToString();
+                            var password = reader["Password"].ToString();
+                            var fullName = reader["FullName"].ToString();
+                            var gender = reader["Gender"].ToString();
+                            var birthDate = (DateTime)reader["BirthDate"];
+                            var phone = reader["PhoneNumber"].ToString();
+                            var email = reader["Email"].ToString();
+                            var address = reader["Address"].ToString();
+                            var avatarPath = reader["AvatarPath"].ToString();
+                            var role = reader["Role"].ToString();
+
+                            Staff staff = new Staff(id, username, password, fullName,
+                                gender, birthDate, phone, email, address, avatarPath, role);
+                            staffs.Add(staff);
+                        }
+                    }
+                }
+            }
+            return staffs;
+        }
     }
 }
