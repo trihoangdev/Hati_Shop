@@ -15,6 +15,8 @@ namespace Views
     {
         private IOImp ioImp = new IOImp();
         List<String> usernames;
+        List<String> emails;
+        List<String> phones;
         List<Staff> staffs;
         List<Customer> customers;
         public RegisterFrm()
@@ -87,6 +89,8 @@ namespace Views
             bool success = true;
             CheckInputImp check = new CheckInputImp();
             usernames = ioImp.LoadAllUsername();
+            emails = ioImp.LoadAllEmail();
+            phones = ioImp.LoadAllPhoneNumber();
             string username = txtAccount.Text;
             string password = txtPassword.Text;
             string name = txtFullName.Text;
@@ -127,9 +131,19 @@ namespace Views
                 MessageBox.Show("Email không hợp lệ!");
                 success = false;
             }
+            else if (check.IsEmailExist(email, emails))
+            {
+                MessageBox.Show("Email đã tồn tại!");
+                success = false;
+            }
             else if (!check.IsPhoneValid(phone))
             {
                 MessageBox.Show("SĐT không hợp lệ! Bắt đầu bằng 03,05,07,08,09 và có 10 chữ số");
+                success = false;
+            }
+            else if (check.IsEmailExist(phone, phones))
+            {
+                MessageBox.Show("SĐT đã tồn tại!");
                 success = false;
             }
             else
@@ -138,20 +152,15 @@ namespace Views
             }
             if (success)
             {
-                if (checkBoxType.Checked)
-                {
-                    var currId = GetCurrId(staffs);
-                    Staff staff = new Staff(++currId, username, password, name, gender,
-                        birthDate, phone, email, address, avatarPath, "Nhân viên");
-                    ioImp.CreateNewStaff(staff);
-                }
-                else
-                {
-                    var currId = GetCurrId(customers);
-                    Customer customer = new Customer(++currId, username, password,
-                        name, gender, birthDate, phone, email, address, avatarPath);
-                    ioImp.CreateNewCustomer(customer);
-                }
+
+                var currId = GetCurrId(staffs);
+                Staff staff = new Staff(++currId, username, password, name, gender,
+                    birthDate, phone, email, address, avatarPath, "Nhân viên");
+                ioImp.CreateNewStaff(staff);
+                /* var currId = GetCurrId(customers);
+                 Customer customer = new Customer(++currId, username, password,
+                     name, gender, birthDate, phone, email, address, avatarPath);
+                 ioImp.CreateNewCustomer(customer);*/
                 MessageBox.Show("Đăng ký thành công!");
                 this.Dispose();
             }
@@ -167,12 +176,12 @@ namespace Views
                 return 0;
             return staffs[staffs.Count - 1].IdInt;
         }
-        private int GetCurrId(List<Customer> customers)
+        /*private int GetCurrId(List<Customer> customers)
         {
             if (customers.Count == 0)
                 return 0;
             return customers[customers.Count - 1].IdInt;
-        }
+        }*/
 
         private void RegisterFrm_Load(object sender, EventArgs e)
         {

@@ -15,6 +15,8 @@ namespace Controllers
         bool CheckLogin(string username, string password);
         void CreateNewCustomer(Customer customer);
         List<String> LoadAllUsername();
+        List<String> LoadAllEmail();
+        List<String> LoadAllPhoneNumber();
         List<Customer> LoadAllCustomer();
         List<Staff> LoadAllStaff();
 
@@ -137,7 +139,6 @@ namespace Controllers
                 }
             }
         }
-
         //Load các username có trong hệ thống
         public List<String> LoadAllUsername()
         {
@@ -158,6 +159,47 @@ namespace Controllers
                 }
             }
             return usernames;
+        }
+        //load các gmail có trong hệ thống
+        public List<String> LoadAllEmail()
+        {
+            List<String> emails = new List<String>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("LoadEmail", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            emails.Add(reader["Email"].ToString());
+                        }
+                    }
+                }
+            }
+            return emails;
+        }
+        public List<string> LoadAllPhoneNumber()
+        {
+            List<String> phones = new List<String>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("LoadPhone", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            phones.Add(reader["PhoneNumber"].ToString());
+                        }
+                    }
+                }
+            }
+            return phones;
         }
         public List<Customer> LoadAllCustomer()
         {
@@ -197,7 +239,6 @@ namespace Controllers
             }
             return customers;
         }
-
         public List<Staff> LoadAllStaff()
         {
             List<Staff> staffs = new List<Staff>();
@@ -232,5 +273,6 @@ namespace Controllers
             }
             return staffs;
         }
+
     }
 }

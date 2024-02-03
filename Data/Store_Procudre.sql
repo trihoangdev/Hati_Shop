@@ -66,6 +66,36 @@ BEGIN
 		Customer
 END;
 
+--Đọc các thông tin về email
+CREATE PROCEDURE LoadEmail
+AS
+BEGIN
+	SELECT 
+		Email
+	FROM 
+		Staff
+	UNION
+	SELECT 
+		Email
+	FROM 
+		Customer
+END;
+
+--Đọc các thông tin về SĐT
+CREATE PROCEDURE LoadPhone
+AS
+BEGIN
+	SELECT 
+		PhoneNumber
+	FROM 
+		Staff
+	UNION
+	SELECT 
+		PhoneNumber
+	FROM 
+		Customer
+END;
+
 --Đọc các thông tin về Customer
 CREATE PROC LoadCustomer
 AS

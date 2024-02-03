@@ -15,9 +15,18 @@ namespace Controllers
         bool IsPasswordValid(string password);
         bool IsEmailValid(string email);
         bool IsPhoneValid(string phone);
+        bool IsPhoneExist(string phone, List<String> phones);
+        bool IsEmailExist(string email, List<String> emails);
     }
     public class CheckInputImp : CheckInputController
     {
+        public bool IsEmailExist(string email, List<string> emails)
+        {
+            for (int i = 0; i < emails.Count; i++)
+                if (emails[i] == email)
+                    return true;
+            return false;
+        }
 
         public bool IsEmailValid(string email)
         {
@@ -32,6 +41,14 @@ namespace Controllers
         public bool IsPasswordValid(string password)
         {
             return Regex.IsMatch(password, @"^(.{0,7}|[^0-9]*|[^A-Z])$");
+        }
+
+        public bool IsPhoneExist(string phone, List<string> phones)
+        {
+            for (int i = 0; i < phones.Count; i++)
+                if (phones[i] == phone)
+                    return true;
+            return false;
         }
 
         public bool IsPhoneValid(string phone)
