@@ -35,20 +35,25 @@ BEGIN
 	VALUES (@Id,@Username,@Password, @FullName,@Gender,@BirthDate,@PhoneNumber,@Email,@Address,@AvatarPath,@Role)
 END;
 
---Kiểm tra login
+--Kiểm tra login của nhân viên và quản lý
 CREATE PROCEDURE CheckLogin
 	@Username varchar(50),
-	@Password varchar(100)
+	@Password varchar(100),
+	@Role nvarchar(50)
 AS
 BEGIN
     SELECT 
 		Username,
 		Password
-	FROM Customer
+		Role
+	FROM 
+		Staff
 	WHERE
 		Username = @Username
 		AND
 		Password = @Password
+		AND 
+		Role = @Role
 END;
 
 --Đọc các thông tin về username

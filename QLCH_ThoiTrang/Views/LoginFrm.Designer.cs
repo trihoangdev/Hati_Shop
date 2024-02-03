@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checkBoxAdmin = new System.Windows.Forms.CheckBox();
+            this.checkBoxManager = new System.Windows.Forms.CheckBox();
             this.txtForgetPassword = new System.Windows.Forms.LinkLabel();
             this.txtRegister = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -82,7 +82,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(233)))), ((int)(((byte)(214)))));
-            this.splitContainer1.Panel2.Controls.Add(this.checkBoxAdmin);
+            this.splitContainer1.Panel2.Controls.Add(this.checkBoxManager);
             this.splitContainer1.Panel2.Controls.Add(this.txtForgetPassword);
             this.splitContainer1.Panel2.Controls.Add(this.txtRegister);
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
@@ -131,17 +131,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // checkBoxAdmin
+            // checkBoxManager
             // 
-            this.checkBoxAdmin.AutoSize = true;
-            this.checkBoxAdmin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxAdmin.ForeColor = System.Drawing.Color.Black;
-            this.checkBoxAdmin.Location = new System.Drawing.Point(21, 338);
-            this.checkBoxAdmin.Name = "checkBoxAdmin";
-            this.checkBoxAdmin.Size = new System.Drawing.Size(104, 32);
-            this.checkBoxAdmin.TabIndex = 3;
-            this.checkBoxAdmin.Text = "ADMIN";
-            this.checkBoxAdmin.UseVisualStyleBackColor = true;
+            this.checkBoxManager.AutoSize = true;
+            this.checkBoxManager.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxManager.ForeColor = System.Drawing.Color.Black;
+            this.checkBoxManager.Location = new System.Drawing.Point(21, 338);
+            this.checkBoxManager.Name = "checkBoxManager";
+            this.checkBoxManager.Size = new System.Drawing.Size(120, 32);
+            this.checkBoxManager.TabIndex = 3;
+            this.checkBoxManager.Text = "QUẢN LÝ";
+            this.checkBoxManager.UseVisualStyleBackColor = true;
             // 
             // txtForgetPassword
             // 
@@ -338,7 +338,7 @@
         private System.Windows.Forms.CheckBox checkBoxShowPassword;
         private System.Windows.Forms.LinkLabel txtForgetPassword;
         private System.Windows.Forms.LinkLabel txtRegister;
-        private System.Windows.Forms.CheckBox checkBoxAdmin;
+        private System.Windows.Forms.CheckBox checkBoxManager;
     }
 }
 

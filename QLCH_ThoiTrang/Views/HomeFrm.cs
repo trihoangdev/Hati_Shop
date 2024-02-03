@@ -9,29 +9,29 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Security.Principal;
-
+using Models;
 namespace Views
 {
     public partial class HomeFrm : Form
     {
         private Form currentPanelForm;
-        public HomeFrm(string person)
+        public HomeFrm(Staff staff)
         {
-            if(person == "admin")
+            if(staff.Role == "QUẢN LÝ")
             {
                 InitializeComponent();
-                FormManagerLoad();
+                FormManagerLoad(staff);
                 CenterToParent();
             }
-            else if(person == "staff")
+            else if(staff.Role == "NHÂN VIÊN")
             {
                 InitializeComponent();
-                FormStaffLoad();
+                FormStaffLoad(staff);
                 CenterToParent();
             }
         }
 
-        private void FormStaffLoad()
+        private void FormStaffLoad(Staff staff)
         {
             //ẩn 2 nút thống kê, quản lý
             btnStatistic.Visible = false;
@@ -45,11 +45,21 @@ namespace Views
         }
 
         //những việc cần làm khi load trang lên
-        private void FormManagerLoad()
+        private void FormManagerLoad(Staff staff)
         {
+            ShowCommonInfo(staff);
             //Hiển thị panel của home
             ShowPanelHome();
         }
+
+        //Hiển thị các thông tin chung của cả nhân viên và quản lý
+        private void ShowCommonInfo(Staff staff)
+        {
+            txtName.Text = staff.Name;
+            txtRole.Text = staff.Role;
+            pictureAvatar.Image = Image.FromFile(staff.AvatarPath);
+        }
+
         //Hiển thị panel của home
         private void ShowPanelHome()
         {

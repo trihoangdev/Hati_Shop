@@ -64,16 +64,25 @@ namespace Views
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(controller.CheckLogin(txtAccount.Text,txtPassword.Text) && checkBoxAdmin.Checked)
+            string role;
+            if (checkBoxManager.Checked)
             {
-                HomeFrm f = new HomeFrm("admin");
+                role = "QUẢN LÝ";
+            }
+            else
+                role = "NHÂN VIÊN";
+            var staff = controller.CheckLogin(txtAccount.Text, txtPassword.Text, role);
+            if (staff != null)
+            {
+                HomeFrm f = new HomeFrm(staff);
                 f.ShowDialog();
             }
             else
             {
-                HomeFrm f = new HomeFrm("staff");
-                f.ShowDialog();
+                MessageBox.Show("Thông tin tài khoản hoặc mật khẩu không chính xác!",
+                    "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }
+
         }
 
         private void txtRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

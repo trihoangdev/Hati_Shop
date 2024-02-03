@@ -100,7 +100,7 @@ namespace Views
             string gender = "Khác";
 
             DateTime birthDate = dateTimePickerBirthDate.Value;
-            string avatarPath = "NO";
+            string avatarPath = "E:\\HatiStore\\images\\CAT.jpg";
             if (comboGender.SelectedIndex < 0)
             {
                 MessageBox.Show("Vui lòng chọn giới tính!");
@@ -152,10 +152,9 @@ namespace Views
             }
             if (success)
             {
-
                 var currId = GetCurrId(staffs);
                 Staff staff = new Staff(++currId, username, password, name, gender,
-                    birthDate, phone, email, address, avatarPath, "Nhân viên");
+                    birthDate, phone, email, address, avatarPath, "NHÂN VIÊN");
                 ioImp.CreateNewStaff(staff);
                 /* var currId = GetCurrId(customers);
                  Customer customer = new Customer(++currId, username, password,

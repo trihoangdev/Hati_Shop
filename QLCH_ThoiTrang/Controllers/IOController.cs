@@ -9,18 +9,15 @@ using Models;
 
 namespace Controllers
 {
-
     public interface IOController
     {
-        bool CheckLogin(string username, string password);
+        Staff CheckLogin(string username, string password, string role);
         void CreateNewCustomer(Customer customer);
         List<String> LoadAllUsername();
         List<String> LoadAllEmail();
         List<String> LoadAllPhoneNumber();
         List<Customer> LoadAllCustomer();
         List<Staff> LoadAllStaff();
-
-
     }
     public class IOImp : IOController
     {
@@ -105,37 +102,6 @@ namespace Controllers
                         }
                     }
 
-                }
-            }
-        }
-        //Kiểm tra username và password đã tồn tại trong hệ thống chưa
-        public bool CheckLogin(string username, string password)
-        {
-            using (SqlConnection connection = new SqlConnection(connStr))
-            {
-                connection.Open();
-                using (SqlCommand command = new SqlCommand("CheckLogin", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    // Truyền tham số cho stored procedure
-                    command.Parameters.AddWithValue("@Username", username);
-                    command.Parameters.AddWithValue("@Password", password);
-
-                    // Thực hiện stored procedure và kiểm tra kết quả
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.HasRows)
-                        {
-                            // Đăng nhập thành công
-                            return true;
-                        }
-                        else
-                        {
-                            // Đăng nhập thất bại
-                            return false;
-                        }
-                    }
                 }
             }
         }
@@ -273,6 +239,48 @@ namespace Controllers
             }
             return staffs;
         }
+        //Kiểm tra username và password đã tồn tại trong hệ thống chưa
+        public Staff CheckLogin(string username, string password,string role)
+        {
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("CheckLogin", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
 
+                    // Truyền tham số cho stored procedure
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@Password", password);
+                    command.Parameters.AddWithValue("@Role", role);
+
+                    // Thực hiện stored procedure và kiểm tra kết quả
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            // Đăng nhập thành công nếu return staff, null nếu ko tìm thấy
+                            return FindStaffByUsername(username);
+                        }
+                        else
+                        {
+                            // Đăng nhập thất bại
+                            return null;
+                        }
+                    }
+                }
+            }
+        }
+
+        private Staff FindStaffByUsername(string username)
+        {
+            var staffs = LoadAllStaff();
+            foreach(var i in staffs)
+            {
+                if (i.Username == username)
+                    return i;
+            }
+            return null;
+        }
     }
 }
