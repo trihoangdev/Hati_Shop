@@ -15,15 +15,17 @@ namespace Views
     public partial class HomeFrm : Form
     {
         private Form currentPanelForm;
+        public Staff Staff { get; set; }
         public HomeFrm(Staff staff)
         {
-            if(staff.Role == "QUẢN LÝ")
+            Staff = staff;
+            if(Staff.Role == "QUẢN LÝ")
             {
                 InitializeComponent();
                 FormManagerLoad(staff);
                 CenterToParent();
             }
-            else if(staff.Role == "NHÂN VIÊN")
+            else if(Staff.Role == "NHÂN VIÊN")
             {
                 InitializeComponent();
                 FormStaffLoad(staff);
@@ -205,7 +207,7 @@ namespace Views
                 currentPanelForm.Close();  // Đóng Form trước khi Dispose
                 currentPanelForm.Dispose();
             }
-            ItPanelSetting f = new ItPanelSetting();
+            ItPanelSetting f = new ItPanelSetting(Staff);
             if (f.Parent != null)
             {
                 f.Parent.Controls.Remove(f);

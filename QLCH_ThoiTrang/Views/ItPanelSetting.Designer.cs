@@ -35,7 +35,7 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.txtAccount = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -59,7 +59,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.btnChangePicture = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureAvatar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelBill.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -75,7 +75,7 @@
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBill
@@ -144,26 +144,26 @@
             // 
             this.panel13.BackColor = System.Drawing.Color.White;
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Controls.Add(this.txtAccount);
+            this.panel13.Controls.Add(this.txtUsername);
             this.panel13.Location = new System.Drawing.Point(14, 43);
             this.panel13.Name = "panel13";
             this.panel13.Padding = new System.Windows.Forms.Padding(10);
             this.panel13.Size = new System.Drawing.Size(257, 48);
             this.panel13.TabIndex = 21;
             // 
-            // txtAccount
+            // txtUsername
             // 
-            this.txtAccount.BackColor = System.Drawing.Color.White;
-            this.txtAccount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAccount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtAccount.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAccount.ForeColor = System.Drawing.Color.Gray;
-            this.txtAccount.Location = new System.Drawing.Point(10, 10);
-            this.txtAccount.Name = "txtAccount";
-            this.txtAccount.Size = new System.Drawing.Size(235, 24);
-            this.txtAccount.TabIndex = 5;
-            this.txtAccount.Text = "Tên đăng nhập:";
-            this.txtAccount.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAccount_MouseClick);
+            this.txtUsername.BackColor = System.Drawing.Color.White;
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.Gray;
+            this.txtUsername.Location = new System.Drawing.Point(10, 10);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(235, 24);
+            this.txtUsername.TabIndex = 5;
+            this.txtUsername.Text = "Tên đăng nhập:";
+            this.txtUsername.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAccount_MouseClick);
             // 
             // panel10
             // 
@@ -210,7 +210,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btnChangePicture);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pictureAvatar);
             this.panel1.Location = new System.Drawing.Point(3, 135);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(797, 434);
@@ -446,15 +446,15 @@
             this.btnChangePicture.UseVisualStyleBackColor = false;
             this.btnChangePicture.Click += new System.EventHandler(this.btnChangePicture_Click);
             // 
-            // pictureBox1
+            // pictureAvatar
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(41, 67);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pictureAvatar.Image")));
+            this.pictureAvatar.Location = new System.Drawing.Point(41, 67);
+            this.pictureAvatar.Name = "pictureAvatar";
+            this.pictureAvatar.Size = new System.Drawing.Size(150, 150);
+            this.pictureAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureAvatar.TabIndex = 0;
+            this.pictureAvatar.TabStop = false;
             // 
             // label1
             // 
@@ -478,6 +478,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ItPanelSetting";
             this.Text = "ItPanelSetting";
+            this.Load += new System.EventHandler(this.ItPanelSetting_Load);
             this.panelBill.ResumeLayout(false);
             this.panelBill.PerformLayout();
             this.panel11.ResumeLayout(false);
@@ -502,7 +503,7 @@
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -512,7 +513,7 @@
         private System.Windows.Forms.Panel panelBill;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnChangePicture;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureAvatar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button1;
@@ -540,6 +541,6 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.TextBox txtAccount;
+        private System.Windows.Forms.TextBox txtUsername;
     }
 }

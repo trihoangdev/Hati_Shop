@@ -7,20 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Models;
 
 namespace Views
 {
     public partial class ItPanelSetting : Form
     {
-        public ItPanelSetting()
+        string avatarPath;
+        Staff Staff { get; set; }
+        public ItPanelSetting(Staff staff)
         {
+            this.Staff = staff;
             InitializeComponent();
         }
 
         private void txtAccount_MouseClick(object sender, MouseEventArgs e)
         {
-            if (txtAccount.Text == "Tên đăng nhập:")
-                txtAccount.Text = "";
+            if (txtUsername.Text == "Tên đăng nhập:")
+                txtUsername.Text = "";
         }
 
         private void txtPassword_MouseClick(object sender, MouseEventArgs e)
@@ -58,7 +62,42 @@ namespace Views
 
         private void btnChangePicture_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chức năng đang phát triển", "Thông báo");
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files (*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif|All files (*.*)|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    string selectedImagePath = openFileDialog.FileName;
+
+                    // Hiển thị ảnh trong PictureBox
+                    pictureAvatar.Image = new Bitmap(selectedImagePath);
+                    avatarPath = selectedImagePath;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Đã xảy ra lỗi khi chọn ảnh: " + ex.Message, "Lỗi");
+                }
+            }
+        }
+        //Load các thông tin sẵn có của tài khoản
+        private void ItPanelSetting_Load(object sender, EventArgs e)
+        {
+            pictureAvatar.Image = Image.FromFile(Staff.AvatarPath);
+            txtFullName.Text = Staff.Name;
+            if (Staff.Gender == "Nam")
+                comboGender.SelectedIndex = 0;
+            else if (Staff.Gender == "Nữ")
+                comboGender.SelectedIndex = 1;
+            dateTimePickerBirthDate.Value = Staff.BirthDate;
+            txtPhoneNumber.Text = Staff.PhoneNumber;
+            txtEmail.Text = Staff.Email;
+            txtAddress.Text = Staff.Address;
+            txtUsername.Text = Staff.Username;
+            txtPassword.Text = Staff.Password;
+            txtPassword.Enabled = false;
+            txtPassword.PasswordChar = '*';
         }
     }
 }
