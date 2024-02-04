@@ -19,6 +19,7 @@ namespace Views
         List<String> phones;
         List<Staff> staffs;
         List<Customer> customers;
+        string avatarPath;
         public RegisterFrm()
         {
             InitializeComponent();
@@ -81,7 +82,24 @@ namespace Views
 
         private void btnAddAvatar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chức năng đang phát triển", "Thông báo");
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files (*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif|All files (*.*)|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    string selectedImagePath = openFileDialog.FileName;
+
+                    // Hiển thị ảnh trong PictureBox
+                    pictureAvatar.Image = new Bitmap(selectedImagePath);
+                    avatarPath = selectedImagePath;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Đã xảy ra lỗi khi chọn ảnh: " + ex.Message, "Lỗi");
+                }
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -100,7 +118,6 @@ namespace Views
             string gender = "Khác";
 
             DateTime birthDate = dateTimePickerBirthDate.Value;
-            string avatarPath = "E:\\HatiStore\\images\\CAT.jpg";
             if (comboGender.SelectedIndex < 0)
             {
                 MessageBox.Show("Vui lòng chọn giới tính!");

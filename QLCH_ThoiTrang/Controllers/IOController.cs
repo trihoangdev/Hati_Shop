@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -13,11 +14,13 @@ namespace Controllers
     {
         Staff CheckLogin(string username, string password, string role);
         void CreateNewCustomer(Customer customer);
+        void CreateNewStaff(Staff staff);
         List<String> LoadAllUsername();
         List<String> LoadAllEmail();
         List<String> LoadAllPhoneNumber();
         List<Customer> LoadAllCustomer();
         List<Staff> LoadAllStaff();
+
     }
     public class IOImp : IOController
     {
@@ -282,5 +285,7 @@ namespace Controllers
             }
             return null;
         }
+
+        
     }
 }

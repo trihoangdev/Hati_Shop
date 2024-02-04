@@ -33,6 +33,9 @@ namespace Views
 
         private void FormStaffLoad(Staff staff)
         {
+            //Hiển thị các thông tin chung
+            ShowCommonInfo(staff);
+
             //ẩn 2 nút thống kê, quản lý
             btnStatistic.Visible = false;
             btnManage.Visible = false;
