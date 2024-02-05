@@ -142,3 +142,28 @@ BEGIN
 	FROM 
 		Staff
 END
+
+--Sửa thông tin cá nhân của Nhân viên
+CREATE PROC EditStaffInfo
+	@Id varchar(50),
+	@FullName nvarchar(50),
+	@Gender nvarchar(4),
+	@BirthDate datetime,
+	@PhoneNumber varchar(10),
+	@Email varchar(100),
+	@Address nvarchar(200),
+	@AvatarPath nvarchar(MAX)
+AS
+BEGIN
+UPDATE Staff
+SET
+	FullName = @FullName,
+	Gender = @Gender,
+	BirthDate = @BirthDate,
+	PhoneNumber = @PhoneNumber,
+	Email = @Email,
+	Address = @Address,
+	AvatarPath = @AvatarPath
+WHERE 
+	Id = @Id
+END

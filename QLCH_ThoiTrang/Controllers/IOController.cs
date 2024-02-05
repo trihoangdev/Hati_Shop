@@ -20,6 +20,7 @@ namespace Controllers
         List<String> LoadAllPhoneNumber();
         List<Customer> LoadAllCustomer();
         List<Staff> LoadAllStaff();
+        void EditStaffInfo(Staff staff);
 
     }
     public class IOImp : IOController
@@ -243,7 +244,7 @@ namespace Controllers
             return staffs;
         }
         //Kiểm tra username và password đã tồn tại trong hệ thống chưa
-        public Staff CheckLogin(string username, string password,string role)
+        public Staff CheckLogin(string username, string password, string role)
         {
             using (SqlConnection connection = new SqlConnection(connStr))
             {
@@ -278,7 +279,7 @@ namespace Controllers
         private Staff FindStaffByUsername(string username)
         {
             var staffs = LoadAllStaff();
-            foreach(var i in staffs)
+            foreach (var i in staffs)
             {
                 if (i.Username == username)
                     return i;
@@ -286,6 +287,43 @@ namespace Controllers
             return null;
         }
 
-        
+        public void EditStaffInfo(Staff staff)
+        {
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("EditStaffInfo", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@Id", staff.Id);
+                    command.Parameters.AddWithValue("@FullName", staff.Name);
+                    command.Parameters.AddWithValue("@Gender", staff.Gender);
+                    command.Parameters.AddWithValue("@BirthDate", staff.BirthDate);
+                    command.Parameters.AddWithValue("@PhoneNumber", staff.PhoneNumber);
+                    command.Parameters.AddWithValue("@Email", staff.Email);
+                    command.Parameters.AddWithValue("@Address", staff.Address);
+                    command.Parameters.AddWithValue("@AvatarPath", staff.AvatarPath);
+                    //thực thi
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in EditStaffInfo: " + ex.Message);
+                    }
+                    finally
+                    {
+                        if (connection.State == ConnectionState.Open)
+                        {
+                            connection.Close();
+                        }
+                    }
+
+                }
+            }
+            
+        }
     }
 }

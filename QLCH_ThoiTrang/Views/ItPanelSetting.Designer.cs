@@ -42,7 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSaveInfo = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.comboGender = new System.Windows.Forms.ComboBox();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -218,7 +218,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnSaveInfo);
             this.panel3.Controls.Add(this.panel9);
             this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.panel7);
@@ -230,18 +230,19 @@
             this.panel3.Size = new System.Drawing.Size(546, 428);
             this.panel3.TabIndex = 2;
             // 
-            // button1
+            // btnSaveInfo
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(233)))), ((int)(((byte)(214)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(15, 354);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(513, 50);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "CẬP NHẬT THÔNG TIN";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSaveInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(233)))), ((int)(((byte)(214)))));
+            this.btnSaveInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveInfo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveInfo.ForeColor = System.Drawing.Color.Black;
+            this.btnSaveInfo.Location = new System.Drawing.Point(15, 354);
+            this.btnSaveInfo.Name = "btnSaveInfo";
+            this.btnSaveInfo.Size = new System.Drawing.Size(513, 50);
+            this.btnSaveInfo.TabIndex = 3;
+            this.btnSaveInfo.Text = "CẬP NHẬT THÔNG TIN";
+            this.btnSaveInfo.UseVisualStyleBackColor = false;
+            this.btnSaveInfo.Click += new System.EventHandler(this.btnSaveInfo_Click);
             // 
             // panel9
             // 
@@ -516,7 +517,7 @@
         private System.Windows.Forms.PictureBox pictureAvatar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSaveInfo;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.ComboBox comboGender;
         private System.Windows.Forms.Panel panel8;

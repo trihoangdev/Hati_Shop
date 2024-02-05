@@ -19,13 +19,13 @@ namespace Views
         public HomeFrm(Staff staff)
         {
             Staff = staff;
-            if(Staff.Role == "QUẢN LÝ")
+            if (Staff.Role == "QUẢN LÝ")
             {
                 InitializeComponent();
                 FormManagerLoad(staff);
                 CenterToParent();
             }
-            else if(Staff.Role == "NHÂN VIÊN")
+            else if (Staff.Role == "NHÂN VIÊN")
             {
                 InitializeComponent();
                 FormStaffLoad(staff);
@@ -33,7 +33,13 @@ namespace Views
             }
         }
 
-        private void FormStaffLoad(Staff staff)
+        private void SetChange(Staff staff)
+        {
+            txtName.Text = staff.Name;
+            txtRole.Text = staff.Role;
+            pictureAvatar.Image = Image.FromFile(staff.AvatarPath);
+        }
+        public void FormStaffLoad(Staff staff)
         {
             //Hiển thị các thông tin chung
             ShowCommonInfo(staff);
@@ -50,7 +56,7 @@ namespace Views
         }
 
         //những việc cần làm khi load trang lên
-        private void FormManagerLoad(Staff staff)
+        public void FormManagerLoad(Staff staff)
         {
             ShowCommonInfo(staff);
             //Hiển thị panel của home
@@ -58,7 +64,7 @@ namespace Views
         }
 
         //Hiển thị các thông tin chung của cả nhân viên và quản lý
-        private void ShowCommonInfo(Staff staff)
+        public void ShowCommonInfo(Staff staff)
         {
             txtName.Text = staff.Name;
             txtRole.Text = staff.Role;
@@ -207,7 +213,7 @@ namespace Views
                 currentPanelForm.Close();  // Đóng Form trước khi Dispose
                 currentPanelForm.Dispose();
             }
-            ItPanelSetting f = new ItPanelSetting(Staff);
+            ItPanelSetting f = new ItPanelSetting(this, Staff);
             if (f.Parent != null)
             {
                 f.Parent.Controls.Remove(f);

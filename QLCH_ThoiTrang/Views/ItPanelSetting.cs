@@ -4,20 +4,26 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Models;
-
+using Controllers;
 namespace Views
 {
     public partial class ItPanelSetting : Form
     {
         string avatarPath;
         Staff Staff { get; set; }
-        public ItPanelSetting(Staff staff)
+        IOImp controller { get; set; }
+        private HomeFrm parentFrm;
+        public ItPanelSetting(HomeFrm parent, Staff staff)
         {
             this.Staff = staff;
+            avatarPath = Staff.AvatarPath;
+            controller = new IOImp();
+            parentFrm = parent;
             InitializeComponent();
         }
 
@@ -98,6 +104,37 @@ namespace Views
             txtPassword.Text = Staff.Password;
             txtPassword.Enabled = false;
             txtPassword.PasswordChar = '*';
+        }
+
+        private void btnSaveInfo_Click(object sender, EventArgs e)
+        {
+            Staff.Name = txtFullName.Text;
+            Staff.Email = txtEmail.Text;
+            Staff.Address = txtAddress.Text;
+            Staff.AvatarPath = avatarPath;
+            if (comboGender.SelectedIndex == 0)
+            {
+                Staff.Gender = "Nam";
+            }
+            else
+            {
+                Staff.Gender = "Nữ";
+            }
+            Staff.BirthDate = dateTimePickerBirthDate.Value;
+            Staff.PhoneNumber = txtPhoneNumber.Text;
+            var res = MessageBox.Show("Bạn có chắc chắn muốn lưu thông tin mới?",
+                "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (res == DialogResult.OK)
+            {
+                controller.EditStaffInfo(Staff);
+                ChangeHandler(Staff);
+                MessageBox.Show("Lưu thông tin nhân viên thành công");
+            }
+        }
+
+        private void ChangeHandler(Staff staff)
+        {
+            parentFrm.ShowCommonInfo(staff);
         }
     }
 }
