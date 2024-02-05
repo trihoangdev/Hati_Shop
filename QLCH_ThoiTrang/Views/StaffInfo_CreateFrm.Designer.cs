@@ -36,7 +36,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtStaffPhone = new System.Windows.Forms.TextBox();
-            this.txtStaffId = new System.Windows.Forms.TextBox();
+            this.txtStaffUsername = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,6 +48,8 @@
             this.comboStaffRole = new System.Windows.Forms.ComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnResetPassword = new System.Windows.Forms.Button();
+            this.txtStaffEmail = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnExist)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +57,7 @@
             // 
             this.dateTimeStaffBirthDate.CustomFormat = "dd/MM/yyyy";
             this.dateTimeStaffBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeStaffBirthDate.Location = new System.Drawing.Point(61, 357);
+            this.dateTimeStaffBirthDate.Location = new System.Drawing.Point(61, 345);
             this.dateTimeStaffBirthDate.Name = "dateTimeStaffBirthDate";
             this.dateTimeStaffBirthDate.Size = new System.Drawing.Size(254, 30);
             this.dateTimeStaffBirthDate.TabIndex = 63;
@@ -63,7 +65,7 @@
             // comboStaffGender
             // 
             this.comboStaffGender.FormattingEnabled = true;
-            this.comboStaffGender.Location = new System.Drawing.Point(365, 265);
+            this.comboStaffGender.Location = new System.Drawing.Point(365, 251);
             this.comboStaffGender.Name = "comboStaffGender";
             this.comboStaffGender.Size = new System.Drawing.Size(254, 31);
             this.comboStaffGender.TabIndex = 62;
@@ -75,7 +77,7 @@
             this.btnCreateUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.btnCreateUpdate.Location = new System.Drawing.Point(68, 558);
+            this.btnCreateUpdate.Location = new System.Drawing.Point(68, 598);
             this.btnCreateUpdate.Name = "btnCreateUpdate";
             this.btnCreateUpdate.Size = new System.Drawing.Size(234, 57);
             this.btnCreateUpdate.TabIndex = 61;
@@ -84,7 +86,7 @@
             // 
             // txtStaffName
             // 
-            this.txtStaffName.Location = new System.Drawing.Point(365, 174);
+            this.txtStaffName.Location = new System.Drawing.Point(365, 157);
             this.txtStaffName.Name = "txtStaffName";
             this.txtStaffName.Size = new System.Drawing.Size(254, 30);
             this.txtStaffName.TabIndex = 58;
@@ -93,7 +95,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(360, 221);
+            this.label7.Location = new System.Drawing.Point(360, 205);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(109, 28);
             this.label7.TabIndex = 55;
@@ -103,7 +105,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(360, 129);
+            this.label3.Location = new System.Drawing.Point(360, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 28);
             this.label3.TabIndex = 57;
@@ -111,23 +113,23 @@
             // 
             // txtStaffPhone
             // 
-            this.txtStaffPhone.Location = new System.Drawing.Point(61, 265);
+            this.txtStaffPhone.Location = new System.Drawing.Point(61, 251);
             this.txtStaffPhone.Name = "txtStaffPhone";
             this.txtStaffPhone.Size = new System.Drawing.Size(254, 30);
             this.txtStaffPhone.TabIndex = 54;
             // 
-            // txtStaffId
+            // txtStaffUsername
             // 
-            this.txtStaffId.Location = new System.Drawing.Point(61, 173);
-            this.txtStaffId.Name = "txtStaffId";
-            this.txtStaffId.Size = new System.Drawing.Size(254, 30);
-            this.txtStaffId.TabIndex = 53;
+            this.txtStaffUsername.Location = new System.Drawing.Point(61, 157);
+            this.txtStaffUsername.Name = "txtStaffUsername";
+            this.txtStaffUsername.Size = new System.Drawing.Size(254, 30);
+            this.txtStaffUsername.TabIndex = 53;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(56, 416);
+            this.label6.Location = new System.Drawing.Point(56, 393);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 28);
             this.label6.TabIndex = 52;
@@ -137,7 +139,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(56, 312);
+            this.label5.Location = new System.Drawing.Point(56, 299);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 28);
             this.label5.TabIndex = 51;
@@ -147,7 +149,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(56, 220);
+            this.label4.Location = new System.Drawing.Point(56, 205);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(160, 28);
             this.label4.TabIndex = 50;
@@ -157,17 +159,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(56, 128);
+            this.label2.Location = new System.Drawing.Point(56, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 28);
+            this.label2.Size = new System.Drawing.Size(179, 28);
             this.label2.TabIndex = 49;
-            this.label2.Text = "MÃ NHÂN VIÊN";
+            this.label2.Text = "TÊN ĐĂNG NHẬP";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(161, 60);
+            this.label1.Location = new System.Drawing.Point(161, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(396, 45);
             this.label1.TabIndex = 48;
@@ -186,7 +188,7 @@
             // 
             // txtStaffAdress
             // 
-            this.txtStaffAdress.Location = new System.Drawing.Point(61, 461);
+            this.txtStaffAdress.Location = new System.Drawing.Point(61, 439);
             this.txtStaffAdress.Name = "txtStaffAdress";
             this.txtStaffAdress.Size = new System.Drawing.Size(558, 30);
             this.txtStaffAdress.TabIndex = 64;
@@ -195,7 +197,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(360, 312);
+            this.label9.Location = new System.Drawing.Point(360, 299);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 28);
             this.label9.TabIndex = 65;
@@ -204,7 +206,7 @@
             // comboStaffRole
             // 
             this.comboStaffRole.FormattingEnabled = true;
-            this.comboStaffRole.Location = new System.Drawing.Point(365, 357);
+            this.comboStaffRole.Location = new System.Drawing.Point(365, 348);
             this.comboStaffRole.Name = "comboStaffRole";
             this.comboStaffRole.Size = new System.Drawing.Size(254, 31);
             this.comboStaffRole.TabIndex = 66;
@@ -216,7 +218,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.btnDelete.Location = new System.Drawing.Point(372, 558);
+            this.btnDelete.Location = new System.Drawing.Point(372, 598);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(234, 57);
             this.btnDelete.TabIndex = 67;
@@ -230,18 +232,37 @@
             this.btnResetPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResetPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResetPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.btnResetPassword.Location = new System.Drawing.Point(200, 635);
+            this.btnResetPassword.Location = new System.Drawing.Point(200, 675);
             this.btnResetPassword.Name = "btnResetPassword";
             this.btnResetPassword.Size = new System.Drawing.Size(275, 57);
             this.btnResetPassword.TabIndex = 68;
             this.btnResetPassword.Text = "ĐẶT LẠI MẬT KHẨU";
             this.btnResetPassword.UseVisualStyleBackColor = false;
             // 
+            // txtStaffEmail
+            // 
+            this.txtStaffEmail.Location = new System.Drawing.Point(61, 533);
+            this.txtStaffEmail.Name = "txtStaffEmail";
+            this.txtStaffEmail.Size = new System.Drawing.Size(558, 30);
+            this.txtStaffEmail.TabIndex = 70;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.AutoSize = true;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(56, 487);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(72, 28);
+            this.txtEmail.TabIndex = 69;
+            this.txtEmail.Text = "EMAIL";
+            // 
             // StaffInfo_CreateFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 737);
+            this.Controls.Add(this.txtStaffEmail);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnResetPassword);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.comboStaffRole);
@@ -254,7 +275,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtStaffPhone);
-            this.Controls.Add(this.txtStaffId);
+            this.Controls.Add(this.txtStaffUsername);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -282,7 +303,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtStaffPhone;
-        private System.Windows.Forms.TextBox txtStaffId;
+        private System.Windows.Forms.TextBox txtStaffUsername;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -294,5 +315,7 @@
         private System.Windows.Forms.ComboBox comboStaffRole;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnResetPassword;
+        private System.Windows.Forms.TextBox txtStaffEmail;
+        private System.Windows.Forms.Label txtEmail;
     }
 }
