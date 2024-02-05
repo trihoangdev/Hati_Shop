@@ -8,6 +8,8 @@
 *.userosscache
 *.suo
 *.sln.docstates
+*.vsidx
+*.cache
 
 # User-specific files (Mono)
 *.userprefs
