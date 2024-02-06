@@ -153,6 +153,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ItPanelManage";
             this.Text = "ItPanelManage";
+            this.Load += new System.EventHandler(this.ItPanelManage_Load);
             this.panelProduct.ResumeLayout(false);
             this.panelProduct.PerformLayout();
             this.panel3.ResumeLayout(false);

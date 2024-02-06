@@ -247,7 +247,7 @@ namespace Views
             currentPanelForm = f;
         }
 
-        private void btnManage_Click(object sender, EventArgs e)
+        public void btnManage_Click(object sender, EventArgs e)
         {
             // Kiểm tra xem trong Panel2 đã có Form nào chưa
             if (currentPanelForm != null && !currentPanelForm.IsDisposed)

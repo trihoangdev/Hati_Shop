@@ -231,6 +231,7 @@
             this.btnDelete.TabIndex = 67;
             this.btnDelete.Text = "XOÁ";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnResetPassword
             // 

@@ -35,9 +35,9 @@
             this.txtAddress = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.Label();
             this.txtFullName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureAvatar = new System.Windows.Forms.PictureBox();
             this.panelStaff.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // panelStaff
@@ -48,12 +48,12 @@
             this.panelStaff.Controls.Add(this.txtAddress);
             this.panelStaff.Controls.Add(this.txtPhone);
             this.panelStaff.Controls.Add(this.txtFullName);
-            this.panelStaff.Controls.Add(this.pictureBox1);
+            this.panelStaff.Controls.Add(this.pictureAvatar);
             this.panelStaff.Location = new System.Drawing.Point(0, 0);
             this.panelStaff.Name = "panelStaff";
             this.panelStaff.Size = new System.Drawing.Size(391, 121);
             this.panelStaff.TabIndex = 3;
-            this.panelStaff.Paint += new System.Windows.Forms.PaintEventHandler(this.panelStaff_Paint);
+            this.panelStaff.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelStaff_MouseClick);
             // 
             // label2
             // 
@@ -108,15 +108,15 @@
             this.txtFullName.TabIndex = 1;
             this.txtFullName.Text = "Hoàng Minh Trí";
             // 
-            // pictureBox1
+            // pictureAvatar
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pictureAvatar.Image")));
+            this.pictureAvatar.Location = new System.Drawing.Point(12, 11);
+            this.pictureAvatar.Name = "pictureAvatar";
+            this.pictureAvatar.Size = new System.Drawing.Size(100, 100);
+            this.pictureAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureAvatar.TabIndex = 0;
+            this.pictureAvatar.TabStop = false;
             // 
             // ItStaffInfo
             // 
@@ -129,9 +129,10 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ItStaffInfo";
             this.Text = "ItStaffInfo";
+            this.Load += new System.EventHandler(this.ItStaffInfo_Load);
             this.panelStaff.ResumeLayout(false);
             this.panelStaff.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -143,7 +144,7 @@
         private System.Windows.Forms.Label txtAddress;
         private System.Windows.Forms.Label txtPhone;
         private System.Windows.Forms.Label txtFullName;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureAvatar;
         private System.Windows.Forms.Label label2;
     }
 }
