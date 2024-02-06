@@ -13,7 +13,8 @@ namespace Views
 {
     public partial class LoginFrm : Form
     {
-        IOImp controller = new IOImp();
+        CommonController commonController = new CommonController();
+        StaffController staffController = new StaffController();
         public LoginFrm()
         {
             InitializeComponent();
@@ -71,7 +72,7 @@ namespace Views
             }
             else
                 role = "NHÂN VIÊN";
-            var staff = controller.CheckLogin(txtAccount.Text, txtPassword.Text, role);
+            var staff = staffController.CheckLogin(txtAccount.Text, txtPassword.Text, role);
             if (staff != null)
             {
                 HomeFrm f = new HomeFrm(staff);

@@ -13,7 +13,9 @@ namespace Views
 {
     public partial class RegisterFrm : Form
     {
-        private IOImp ioImp = new IOImp();
+        private CommonController commonController = new CommonController();
+        private StaffController staffController = new StaffController();
+        private CustomerController customerController = new CustomerController();
         List<String> usernames;
         List<String> emails;
         List<String> phones;
@@ -23,7 +25,13 @@ namespace Views
         public RegisterFrm()
         {
             InitializeComponent();
+            Initialize();
             CenterToParent();
+        }
+
+        private void Initialize()
+        {
+            avatarPath = commonController.GetDefaultAvatarPath();
         }
 
         private void btnExist_Click(object sender, EventArgs e)
@@ -106,9 +114,9 @@ namespace Views
         {
             bool success = true;
             CheckInputImp check = new CheckInputImp();
-            usernames = ioImp.LoadAllUsername();
-            emails = ioImp.LoadAllEmail();
-            phones = ioImp.LoadAllPhoneNumber();
+            usernames = commonController.LoadAllUsername();
+            emails = commonController.LoadAllEmail();
+            phones = commonController.LoadAllPhoneNumber();
             string username = txtAccount.Text;
             string password = txtPassword.Text;
             string name = txtFullName.Text;
@@ -169,14 +177,14 @@ namespace Views
             }
             if (success)
             {
-                var currId = GetCurrId(staffs);
+                var currId = staffController.GetCurrId(staffs);
                 Staff staff = new Staff(++currId, username, password, name, gender,
                     birthDate, phone, email, address, avatarPath, "NHÂN VIÊN");
-                ioImp.CreateNewStaff(staff);
+                staffController.CreateNewStaff(staff);
                 /* var currId = GetCurrId(customers);
                  Customer customer = new Customer(++currId, username, password,
                      name, gender, birthDate, phone, email, address, avatarPath);
-                 ioImp.CreateNewCustomer(customer);*/
+                 commonController.CreateNewCustomer(customer);*/
                 MessageBox.Show("Đăng ký thành công!");
                 this.Dispose();
             }
@@ -186,24 +194,11 @@ namespace Views
             }
         }
 
-        private int GetCurrId(List<Staff> staffs)
-        {
-            if (staffs.Count == 0)
-                return 0;
-            return staffs[staffs.Count - 1].IdInt;
-        }
-        /*private int GetCurrId(List<Customer> customers)
-        {
-            if (customers.Count == 0)
-                return 0;
-            return customers[customers.Count - 1].IdInt;
-        }*/
-
         private void RegisterFrm_Load(object sender, EventArgs e)
         {
-            usernames = ioImp.LoadAllUsername();
-            staffs = ioImp.LoadAllStaff();
-            customers = ioImp.LoadAllCustomer();
+            usernames = commonController.LoadAllUsername();
+            staffs = staffController.LoadAllStaff();
+            customers = customerController.LoadAllCustomer();
         }
     }
 }

@@ -65,6 +65,9 @@
             // comboStaffGender
             // 
             this.comboStaffGender.FormattingEnabled = true;
+            this.comboStaffGender.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
             this.comboStaffGender.Location = new System.Drawing.Point(365, 251);
             this.comboStaffGender.Name = "comboStaffGender";
             this.comboStaffGender.Size = new System.Drawing.Size(254, 31);
@@ -83,6 +86,7 @@
             this.btnCreateUpdate.TabIndex = 61;
             this.btnCreateUpdate.Text = "CẬP NHẬT";
             this.btnCreateUpdate.UseVisualStyleBackColor = false;
+            this.btnCreateUpdate.Click += new System.EventHandler(this.btnCreateUpdate_Click);
             // 
             // txtStaffName
             // 
@@ -206,6 +210,9 @@
             // comboStaffRole
             // 
             this.comboStaffRole.FormattingEnabled = true;
+            this.comboStaffRole.Items.AddRange(new object[] {
+            "NHÂN VIÊN",
+            "QUẢN LÝ"});
             this.comboStaffRole.Location = new System.Drawing.Point(365, 348);
             this.comboStaffRole.Name = "comboStaffRole";
             this.comboStaffRole.Size = new System.Drawing.Size(254, 31);

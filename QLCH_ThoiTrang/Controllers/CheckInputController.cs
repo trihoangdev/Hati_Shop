@@ -30,7 +30,7 @@ namespace Controllers
 
         public bool IsEmailValid(string email)
         {
-            return Regex.IsMatch(email, "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$");
+            return Regex.IsMatch(email, @"^[a-zA-Z0-9_]+[A-Za-z0-9.-]+\@[a-z0-9]+\.[a-z]{2,4}$");
         }
 
         public bool IsNameValid(string name)

@@ -16,13 +16,13 @@ namespace Views
     {
         string avatarPath;
         Staff Staff { get; set; }
-        IOImp controller { get; set; }
+        CommonController commonController = new CommonController();
+        StaffController staffController = new StaffController();
         private HomeFrm parentFrm;
         public ItPanelSetting(HomeFrm parent, Staff staff)
         {
             this.Staff = staff;
             avatarPath = Staff.AvatarPath;
-            controller = new IOImp();
             parentFrm = parent;
             InitializeComponent();
         }
@@ -126,7 +126,7 @@ namespace Views
                 "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (res == DialogResult.OK)
             {
-                controller.EditStaffInfo(Staff);
+                staffController.EditStaffInfo(Staff);
                 ChangeHandler(Staff);
                 MessageBox.Show("Lưu thông tin nhân viên thành công");
             }
