@@ -152,7 +152,8 @@ CREATE PROC EditStaffInfo
 	@PhoneNumber varchar(10),
 	@Email varchar(100),
 	@Address nvarchar(200),
-	@AvatarPath nvarchar(MAX)
+	@AvatarPath nvarchar(MAX),
+	@Role nvarchar(50)
 AS
 BEGIN
 UPDATE Staff
@@ -163,7 +164,8 @@ UPDATE Staff
 		PhoneNumber = @PhoneNumber,
 		Email = @Email,
 		Address = @Address,
-		AvatarPath = @AvatarPath
+		AvatarPath = @AvatarPath,
+		Role = @Role
 	WHERE 
 		Id = @Id
 END
