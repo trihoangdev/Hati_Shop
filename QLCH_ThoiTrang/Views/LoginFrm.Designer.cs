@@ -155,6 +155,7 @@
             this.txtForgetPassword.TabIndex = 7;
             this.txtForgetPassword.TabStop = true;
             this.txtForgetPassword.Text = "QUÊN MẬT KHẨU";
+            this.txtForgetPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.txtForgetPassword_LinkClicked);
             // 
             // txtRegister
             // 

@@ -244,8 +244,9 @@
             this.btnResetPassword.Name = "btnResetPassword";
             this.btnResetPassword.Size = new System.Drawing.Size(275, 57);
             this.btnResetPassword.TabIndex = 68;
-            this.btnResetPassword.Text = "ĐẶT LẠI MẬT KHẨU";
+            this.btnResetPassword.Text = "LẤY LẠI MẬT KHẨU";
             this.btnResetPassword.UseVisualStyleBackColor = false;
+            this.btnResetPassword.Click += new System.EventHandler(this.btnResetPassword_Click);
             // 
             // txtStaffEmail
             // 

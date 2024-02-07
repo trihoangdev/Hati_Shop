@@ -254,5 +254,10 @@ namespace Views
                 }
             }
         }
+
+        private void btnResetPassword_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"Mật khẩu cho tài khoản này là {Staff.Password}");
+        }
     }
 }

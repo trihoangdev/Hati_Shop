@@ -92,6 +92,9 @@ namespace Views
             frm.ShowDialog();
         }
 
-
+        private void txtForgetPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Vui lòng liên hệ quản lý để lấy lại mật khẩu!");
+        }
     }
 }
