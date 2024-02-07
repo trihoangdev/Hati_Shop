@@ -165,6 +165,7 @@ namespace Controllers
                     command.Parameters.AddWithValue("@Email", staff.Email);
                     command.Parameters.AddWithValue("@Address", staff.Address);
                     command.Parameters.AddWithValue("@AvatarPath", staff.AvatarPath);
+                    command.Parameters.AddWithValue("@Role", staff.Role);
                     //thực thi
                     try
                     {

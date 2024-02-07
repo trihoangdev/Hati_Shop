@@ -88,7 +88,7 @@ namespace Views
             string phone = txtStaffPhone.Text;
             string address = txtStaffAdress.Text;
             string gender = "Khác";
-            string role = "NHÂN VIÊN";
+            string role;
             string avatarPath = Staff.AvatarPath;
             DateTime birthDate = dateTimeStaffBirthDate.Value;
             if (comboStaffRole.SelectedIndex < 0)
@@ -131,15 +131,7 @@ namespace Views
             {
                 gender = comboStaffGender.SelectedItem.ToString();
             }
-            if (comboStaffRole.SelectedIndex == 0)
-
-                role = "NHÂN VIÊN";
-            else if (comboStaffRole.SelectedIndex == 1)
-                role = "QUẢN LÝ";
-            else
-            {
-                role = "NHÂN VIÊN";
-            }
+            role = comboStaffRole.SelectedItem.ToString();
             if (success)
             {
                 Staff.Name = name;
@@ -152,8 +144,8 @@ namespace Views
                 Staff.PhoneNumber = phone;
                 staffController.EditStaffInfo(Staff);
                 MessageBox.Show("Cập nhật thông tin thành công!");
-                ItPanelManage f = new ItPanelManage();
-                f.ItPanelManage_Load(this, null);
+                /*ItPanelManage f = new ItPanelManage();
+                f.ItPanelManage_Load(this, null);*/
                 this.Dispose();
             }
             else
@@ -221,11 +213,12 @@ namespace Views
             {
                 gender = comboStaffGender.SelectedItem.ToString();
             }
+            string role = comboStaffRole.SelectedItem.ToString();
             if (success)
             {
                 var currId = staffController.GetCurrId(staffs);
                 Staff staff = new Staff(++currId, username, "123", name, gender,
-                    birthDate, phone, email, address, avatarPath, "NHÂN VIÊN");
+                    birthDate, phone, email, address, avatarPath, role);
                 staffController.CreateNewStaff(staff);
                 MessageBox.Show("Đăng ký thành công! Mật khẩu mặc định là '123'");
 
@@ -240,17 +233,25 @@ namespace Views
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            var res = MessageBox.Show("Bạn có chắc chắn muốn xoá nhân viên này?",
+            if (comboStaffRole.SelectedIndex == 1)
+            {
+                MessageBox.Show("Không thể xoá quản lý",
+                    "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                var res = MessageBox.Show("Bạn có chắc chắn muốn xoá nhân viên này?",
                 "Thông báo",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (res == DialogResult.Yes)
-            {
-                staffController.RemoveStaff(staffs,txtStaffUsername.Text);
-                var removeStaff = staffController.FindStaffByUsername(txtStaffUsername.Text);
-                staffs.Remove(removeStaff);
-                ItPanelManage f = new ItPanelManage();
-                f.ItPanelManage_Load(this, null);
-                this.Dispose();
+                if (res == DialogResult.Yes)
+                {
+                    staffController.RemoveStaff(staffs, txtStaffUsername.Text);
+                    var removeStaff = staffController.FindStaffByUsername(txtStaffUsername.Text);
+                    staffs.Remove(removeStaff);
+                    ItPanelManage f = new ItPanelManage();
+                    f.ItPanelManage_Load(this, null);
+                    this.Dispose();
+                }
             }
         }
     }
