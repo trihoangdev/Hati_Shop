@@ -88,25 +88,19 @@ namespace Views
                 txtAddress.Text = "";
         }
 
+        private string[] predefinedImagePaths = { "E:\\HatiStore\\images\\Avatars\\man.png", "E:\\HatiStore\\images\\Avatars\\woman.png" };
+
         private void btnAddAvatar_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image Files (*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif|All files (*.*)|*.*";
+            SelectImageFrm selectImageForm = new SelectImageFrm("E:\\HatiStore\\images\\Avatars\\man.png",
+                "E:\\HatiStore\\images\\Avatars\\woman.png");
+            selectImageForm.ShowDialog();
 
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            string selectedImagePath = selectImageForm.GetSelectedImagePath();
+            if (!string.IsNullOrEmpty(selectedImagePath))
             {
-                try
-                {
-                    string selectedImagePath = openFileDialog.FileName;
-
-                    // Hiển thị ảnh trong PictureBox
-                    pictureAvatar.Image = new Bitmap(selectedImagePath);
-                    avatarPath = selectedImagePath;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Đã xảy ra lỗi khi chọn ảnh: " + ex.Message, "Lỗi");
-                }
+                pictureAvatar.Image = new Bitmap(selectedImagePath);
+                avatarPath = selectedImagePath;
             }
         }
 

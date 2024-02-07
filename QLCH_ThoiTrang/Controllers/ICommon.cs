@@ -82,7 +82,7 @@ namespace Controllers
         }
         public string GetDefaultAvatarPath()
         {
-            return "E:\\HatiStore\\images\\CAT.jpg";
+            return "E:\\HatiStore\\images\\Avatars\\man.png";
         }
     }
 }
