@@ -156,14 +156,23 @@ CREATE PROC EditStaffInfo
 AS
 BEGIN
 UPDATE Staff
-SET
-	FullName = @FullName,
-	Gender = @Gender,
-	BirthDate = @BirthDate,
-	PhoneNumber = @PhoneNumber,
-	Email = @Email,
-	Address = @Address,
-	AvatarPath = @AvatarPath
-WHERE 
-	Id = @Id
+	SET
+		FullName = @FullName,
+		Gender = @Gender,
+		BirthDate = @BirthDate,
+		PhoneNumber = @PhoneNumber,
+		Email = @Email,
+		Address = @Address,
+		AvatarPath = @AvatarPath
+	WHERE 
+		Id = @Id
+END
+
+--Xoá nhân viên khỏi danh sách thông qua username
+CREATE PROC RemoveStaffByUsername
+	@Username varchar(50)
+AS
+BEGIN
+	DELETE FROM Staff
+	WHERE Username = @Username
 END

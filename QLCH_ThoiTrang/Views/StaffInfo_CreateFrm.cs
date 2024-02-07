@@ -32,8 +32,6 @@ namespace Views
             txtStaffUsername.Enabled = false;
             FillData(staff);
         }
-
-
         //tạo form thêm mới
         public StaffInfo_CreateFrm()
         {
@@ -242,14 +240,18 @@ namespace Views
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            txtStaffUsername.Text = "";
-            txtStaffAdress.Text = "";
-            txtStaffEmail.Text = "";
-            txtStaffName.Text = "";
-            txtStaffPhone.Text = "";
-            comboStaffGender.SelectedIndex = -1;
-            comboStaffRole.SelectedIndex = -1;
-            dateTimeStaffBirthDate.Value = DateTime.Now;
+            var res = MessageBox.Show("Bạn có chắc chắn muốn xoá nhân viên này?",
+                "Thông báo",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                staffController.RemoveStaff(staffs,txtStaffUsername.Text);
+                var removeStaff = staffController.FindStaffByUsername(txtStaffUsername.Text);
+                staffs.Remove(removeStaff);
+                ItPanelManage f = new ItPanelManage();
+                f.ItPanelManage_Load(this, null);
+                this.Dispose();
+            }
         }
     }
 }

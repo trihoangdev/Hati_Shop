@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace Controllers
 {
@@ -13,12 +14,14 @@ namespace Controllers
     {
         Staff CheckLogin(string username, string password, string role);
         int GetCurrId(List<Staff> staffs);
-        
+
         List<Staff> LoadAllStaff();
         void CreateNewStaff(Staff staff);
         void EditStaffInfo(Staff staff);
+        void RemoveStaff(List<Staff> staffs, string username);
+        
     }
-    public class StaffController: IStaff
+    public class StaffController : IStaff
     {
         private string connStr = "Data Source=hoangminhtri;Initial Catalog=HatiShop;Integrated Security=True";
         public int GetCurrId(List<Staff> staffs)
@@ -28,7 +31,7 @@ namespace Controllers
             return staffs[staffs.Count - 1].IdInt;
         }
 
-       
+
         public void CreateNewStaff(Staff staff)
         {
             using (SqlConnection connection = new SqlConnection(connStr))
@@ -135,7 +138,7 @@ namespace Controllers
                 }
             }
         }
-        private Staff FindStaffByUsername(string username)
+        public Staff FindStaffByUsername(string username)
         {
             var staffs = LoadAllStaff();
             foreach (var i in staffs)
@@ -183,6 +186,45 @@ namespace Controllers
             }
 
         }
+
+        public void RemoveStaff(List<Staff> staffs, string username)
+        {
+            for (int i = 0; i < staffs.Count; i++)
+            {
+                if (staffs[i].Username == username)
+                {
+                    using (SqlConnection connection = new SqlConnection(connStr))
+                    {
+                        connection.Open();
+                        using (SqlCommand command = new SqlCommand("RemoveStaffByUsername", connection))
+                        {
+                            command.CommandType = CommandType.StoredProcedure;
+
+                            command.Parameters.AddWithValue("@Username", staffs[i].Username);
+                            
+                            //thực thi
+                            try
+                            {
+                                command.ExecuteNonQuery();
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine("Error in EditStaffInfo: " + ex.Message);
+                            }
+                            finally
+                            {
+                                if (connection.State == ConnectionState.Open)
+                                {
+                                    connection.Close();
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
     }
 
 }
