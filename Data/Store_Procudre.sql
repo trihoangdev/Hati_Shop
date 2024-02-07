@@ -178,3 +178,16 @@ BEGIN
 	DELETE FROM Staff
 	WHERE Username = @Username
 END
+
+--Đổi mật khẩu của nhân viên
+CREATE PROC EditStaffPassword
+	@Username varchar(50),
+	@Password varchar(100)
+AS
+BEGIN
+	UPDATE Staff
+	SET
+		Password = @Password
+	WHERE 
+		Username = @Username
+END

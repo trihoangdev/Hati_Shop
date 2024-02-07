@@ -128,5 +128,11 @@ namespace Views
         {
             parentFrm.ShowCommonInfo(staff);
         }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            ChangePasswordFrm f = new ChangePasswordFrm(Staff);
+            f.ShowDialog();
+        }
     }
 }

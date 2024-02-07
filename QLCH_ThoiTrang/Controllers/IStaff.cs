@@ -14,12 +14,12 @@ namespace Controllers
     {
         Staff CheckLogin(string username, string password, string role);
         int GetCurrId(List<Staff> staffs);
-
         List<Staff> LoadAllStaff();
         void CreateNewStaff(Staff staff);
         void EditStaffInfo(Staff staff);
         void RemoveStaff(List<Staff> staffs, string username);
-        
+        void EditStaffPassword(Staff staff);
+
     }
     public class StaffController : IStaff
     {
@@ -30,7 +30,6 @@ namespace Controllers
                 return 0;
             return staffs[staffs.Count - 1].IdInt;
         }
-
 
         public void CreateNewStaff(Staff staff)
         {
@@ -185,9 +184,7 @@ namespace Controllers
 
                 }
             }
-
         }
-
         public void RemoveStaff(List<Staff> staffs, string username)
         {
             for (int i = 0; i < staffs.Count; i++)
@@ -202,7 +199,7 @@ namespace Controllers
                             command.CommandType = CommandType.StoredProcedure;
 
                             command.Parameters.AddWithValue("@Username", staffs[i].Username);
-                            
+
                             //thực thi
                             try
                             {
@@ -222,6 +219,37 @@ namespace Controllers
 
                         }
                     }
+                }
+            }
+        }
+        public void EditStaffPassword(Staff staff)
+        {
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("EditStaffPassword", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@Username", staff.Username);
+                    command.Parameters.AddWithValue("@Password", staff.Password);
+                    //thực thi
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in EditStaffPassword: " + ex.Message);
+                    }
+                    finally
+                    {
+                        if (connection.State == ConnectionState.Open)
+                        {
+                            connection.Close();
+                        }
+                    }
+
                 }
             }
         }

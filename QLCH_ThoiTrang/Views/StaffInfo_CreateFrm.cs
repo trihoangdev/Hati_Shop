@@ -79,7 +79,7 @@ namespace Views
         private void UpdateStaffHandler()
         {
             bool success = true;
-            CheckInputImp check = new CheckInputImp();
+            CheckInputController check = new CheckInputController();
             emails = commonController.LoadAllEmail();
             phones = commonController.LoadAllPhoneNumber();
             string username = txtStaffUsername.Text;
@@ -157,7 +157,7 @@ namespace Views
         private void CreateNewStaffHandler()
         {
             bool success = true;
-            CheckInputImp check = new CheckInputImp();
+            CheckInputController check = new CheckInputController();
             usernames = commonController.LoadAllUsername();
             emails = commonController.LoadAllEmail();
             phones = commonController.LoadAllPhoneNumber();

@@ -107,7 +107,7 @@ namespace Views
         private void btnLogin_Click(object sender, EventArgs e)
         {
             bool success = true;
-            CheckInputImp check = new CheckInputImp();
+            CheckInputController check = new CheckInputController();
             usernames = commonController.LoadAllUsername();
             emails = commonController.LoadAllEmail();
             phones = commonController.LoadAllPhoneNumber();
