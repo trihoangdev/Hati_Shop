@@ -191,3 +191,125 @@ BEGIN
 	WHERE 
 		Username = @Username
 END
+
+--Tìm theo tên
+CREATE PROC FindByName
+	@Fullname nvarchar(50),
+	@Table varchar(50)
+AS
+BEGIN
+	IF @Table = 'Staff'
+	BEGIN
+		SELECT
+			Id, Username, Password, Fullname, Gender, BirthDate, PhoneNumber, Email, Address, AvatarPath, Role
+		FROM 
+			Staff
+		WHERE
+			Fullname LIKE N'%' + @Fullname + '%'
+	END
+	ELSE IF @Table = 'Customer'
+	BEGIN
+		SELECT
+			Id, Username, Password, Fullname, Gender, BirthDate, PhoneNumber, Email, Address, AvatarPath, NULL AS Revenue, NULL AS Rank
+		FROM 
+			Customer
+		WHERE
+			Fullname LIKE N'%' + @Fullname + '%'
+	END
+END
+
+--Tìm theo năm sinh
+CREATE PROC FindByBirthDate
+	@BirthDate nvarchar(50),
+	@Table varchar(50)
+AS
+BEGIN
+	IF @Table = 'Staff'
+	BEGIN
+		SELECT
+			Id, Username, Password, Fullname, Gender, BirthDate, PhoneNumber, Email, Address, AvatarPath, Role
+		FROM 
+			Staff
+		WHERE
+			YEAR(BirthDate) = @BirthDate
+	END
+	ELSE IF @Table = 'Customer'
+	BEGIN
+		SELECT
+			Id, Username, Password, Fullname, Gender, BirthDate, PhoneNumber, Email, Address, AvatarPath, NULL AS Revenue, NULL AS Rank
+		FROM 
+			Customer
+		WHERE
+			YEAR(BirthDate) = @BirthDate
+	END
+END
+
+
+--Tìm theo giới tính
+CREATE PROC FindByGender
+	@Gender nvarchar(4),
+	@Table varchar(50)
+AS
+BEGIN
+	IF @Table = 'Staff'
+	BEGIN
+		SELECT
+			Id, Username, Password, Fullname, Gender, BirthDate, PhoneNumber, Email, Address, AvatarPath, Role
+		FROM 
+			Staff
+		WHERE
+			Gender = @Gender
+	END
+	ELSE IF @Table = 'Customer'
+	BEGIN
+		SELECT
+			Id, Username, Password, Fullname, Gender, BirthDate, PhoneNumber, Email, Address, AvatarPath, NULL AS Revenue, NULL AS Rank
+		FROM 
+			Customer
+		WHERE
+			Gender = @Gender
+	END
+END
+
+--Tìm theo username
+CREATE PROC FindByUsername
+	@Username varchar(50),
+	@Table varchar(50)
+AS
+BEGIN
+	IF @Table = 'Staff'
+	BEGIN
+		SELECT
+			Id, Username, Password, Fullname, Gender, BirthDate, PhoneNumber, Email, Address, AvatarPath, Role
+		FROM 
+			Staff
+		WHERE
+			Username LIKE N'%' + @Username + '%'
+	END
+	ELSE IF @Table = 'Customer'
+	BEGIN
+		SELECT
+			Id, Username, Password, Fullname, Gender, BirthDate, PhoneNumber, Email, Address, AvatarPath, NULL AS Revenue, NULL AS Rank
+		FROM 
+			Customer
+		WHERE
+			Username LIKE N'%' + @Username + '%'
+	END
+END
+
+--Tìm theo chức vụ
+CREATE PROC FindByRole
+	@Role nvarchar(50),
+	@Table varchar(50)
+AS
+BEGIN
+	IF @Table = 'Staff'
+	BEGIN
+		SELECT
+			Id, Username, Password, Fullname, Gender, BirthDate, PhoneNumber, Email, Address, AvatarPath, Role
+		FROM 
+			Staff
+		WHERE
+			Role = @Role
+	END
+END

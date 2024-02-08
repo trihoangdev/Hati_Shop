@@ -101,6 +101,8 @@
             this.txtStaffFind.Size = new System.Drawing.Size(330, 31);
             this.txtStaffFind.TabIndex = 5;
             this.txtStaffFind.Text = "Tìm kiếm:";
+            this.txtStaffFind.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtStaffFind_MouseClick);
+            this.txtStaffFind.TextChanged += new System.EventHandler(this.txtStaffFind_TextChanged);
             // 
             // panel4
             // 
@@ -115,6 +117,12 @@
             // comboStaffFind
             // 
             this.comboStaffFind.FormattingEnabled = true;
+            this.comboStaffFind.Items.AddRange(new object[] {
+            "Theo tên",
+            "Theo năm sinh",
+            "Theo giới tính",
+            "Theo username",
+            "Theo chức vụ"});
             this.comboStaffFind.Location = new System.Drawing.Point(6, 31);
             this.comboStaffFind.Name = "comboStaffFind";
             this.comboStaffFind.Size = new System.Drawing.Size(252, 31);

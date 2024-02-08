@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using System.Xml.Linq;
 
 namespace Controllers
 {
@@ -19,7 +20,11 @@ namespace Controllers
         void EditStaffInfo(Staff staff);
         void RemoveStaff(List<Staff> staffs, string username);
         void EditStaffPassword(Staff staff);
-
+        List<Staff> FindStaffByName(string name, string table);
+        List<Staff> FindStaffByBirthDate(string year, string table);
+        List<Staff> FindStaffByGender(string gender, string table);
+        List<Staff> FindStaffByUsername(string username, string table);
+        List<Staff> FindStaffByRole(string role, string table);
     }
     public class StaffController : IStaff
     {
@@ -30,7 +35,6 @@ namespace Controllers
                 return 0;
             return staffs[staffs.Count - 1].IdInt;
         }
-
         public void CreateNewStaff(Staff staff)
         {
             using (SqlConnection connection = new SqlConnection(connStr))
@@ -253,7 +257,225 @@ namespace Controllers
                 }
             }
         }
+        public List<Staff> FindStaffByName(string name, string table)
+        {
+            List<Staff> staffs = new List<Staff>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("FindByName", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Fullname", name);
+                    command.Parameters.AddWithValue("@Table", table);
+                    //thực thi và đọc kết quả
+                    try
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var id = reader["Id"].ToString();
+                                var username = reader["Username"].ToString();
+                                var password = reader["Password"].ToString();
+                                var fullName = reader["FullName"].ToString();
+                                var gender = reader["Gender"].ToString();
+                                var birthDate = (DateTime)reader["BirthDate"];
+                                var phone = reader["PhoneNumber"].ToString();
+                                var email = reader["Email"].ToString();
+                                var address = reader["Address"].ToString();
+                                var avatarPath = reader["AvatarPath"].ToString();
+                                var role = reader["Role"].ToString();
+                                Staff staff = new Staff(id, username, password, fullName,
+                                    gender, birthDate, phone, email, address, avatarPath, role);
+                                staffs.Add(staff);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in FindStaffByName: " + ex.Message);
+                    }
+                }
+            }
+            return staffs;
+        }
 
+        public List<Staff> FindStaffByBirthDate(string year, string table)
+        {
+            List<Staff> staffs = new List<Staff>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("FindByBirthDate", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@BirthDate", year);
+                    command.Parameters.AddWithValue("@Table", table);
+                    //thực thi và đọc kết quả
+                    try
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var id = reader["Id"].ToString();
+                                var username = reader["Username"].ToString();
+                                var password = reader["Password"].ToString();
+                                var fullName = reader["FullName"].ToString();
+                                var gender = reader["Gender"].ToString();
+                                var birthDate = (DateTime)reader["BirthDate"];
+                                var phone = reader["PhoneNumber"].ToString();
+                                var email = reader["Email"].ToString();
+                                var address = reader["Address"].ToString();
+                                var avatarPath = reader["AvatarPath"].ToString();
+                                var role = reader["Role"].ToString();
+                                Staff staff = new Staff(id, username, password, fullName,
+                                    gender, birthDate, phone, email, address, avatarPath, role);
+                                staffs.Add(staff);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in FindStaffByName: " + ex.Message);
+                    }
+                }
+            }
+            return staffs;
+        }
+
+        public List<Staff> FindStaffByGender(string genderFind, string table)
+        {
+            List<Staff> staffs = new List<Staff>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("FindByGender", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Gender", genderFind);
+                    command.Parameters.AddWithValue("@Table", table);
+                    //thực thi và đọc kết quả
+                    try
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var id = reader["Id"].ToString();
+                                var username = reader["Username"].ToString();
+                                var password = reader["Password"].ToString();
+                                var fullName = reader["FullName"].ToString();
+                                var gender = reader["Gender"].ToString();
+                                var birthDate = (DateTime)reader["BirthDate"];
+                                var phone = reader["PhoneNumber"].ToString();
+                                var email = reader["Email"].ToString();
+                                var address = reader["Address"].ToString();
+                                var avatarPath = reader["AvatarPath"].ToString();
+                                var role = reader["Role"].ToString();
+                                Staff staff = new Staff(id, username, password, fullName,
+                                    gender, birthDate, phone, email, address, avatarPath, role);
+                                staffs.Add(staff);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in FindStaffByName: " + ex.Message);
+                    }
+                }
+            }
+            return staffs;
+        }
+
+        public List<Staff> FindStaffByUsername(string usernameFind, string table)
+        {
+            List<Staff> staffs = new List<Staff>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("FindByUsername", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Username", usernameFind);
+                    command.Parameters.AddWithValue("@Table", table);
+                    //thực thi và đọc kết quả
+                    try
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var id = reader["Id"].ToString();
+                                var username = reader["Username"].ToString();
+                                var password = reader["Password"].ToString();
+                                var fullName = reader["FullName"].ToString();
+                                var gender = reader["Gender"].ToString();
+                                var birthDate = (DateTime)reader["BirthDate"];
+                                var phone = reader["PhoneNumber"].ToString();
+                                var email = reader["Email"].ToString();
+                                var address = reader["Address"].ToString();
+                                var avatarPath = reader["AvatarPath"].ToString();
+                                var role = reader["Role"].ToString();
+                                Staff staff = new Staff(id, username, password, fullName,
+                                    gender, birthDate, phone, email, address, avatarPath, role);
+                                staffs.Add(staff);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in FindStaffByName: " + ex.Message);
+                    }
+                }
+            }
+            return staffs;
+        }
+
+        public List<Staff> FindStaffByRole(string roleFind, string table)
+        {
+            List<Staff> staffs = new List<Staff>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("FindByRole", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Role", roleFind);
+                    command.Parameters.AddWithValue("@Table", table);
+                    //thực thi và đọc kết quả
+                    try
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var id = reader["Id"].ToString();
+                                var username = reader["Username"].ToString();
+                                var password = reader["Password"].ToString();
+                                var fullName = reader["FullName"].ToString();
+                                var gender = reader["Gender"].ToString();
+                                var birthDate = (DateTime)reader["BirthDate"];
+                                var phone = reader["PhoneNumber"].ToString();
+                                var email = reader["Email"].ToString();
+                                var address = reader["Address"].ToString();
+                                var avatarPath = reader["AvatarPath"].ToString();
+                                var role = reader["Role"].ToString();
+                                Staff staff = new Staff(id, username, password, fullName,
+                                    gender, birthDate, phone, email, address, avatarPath, role);
+                                staffs.Add(staff);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in FindStaffByName: " + ex.Message);
+                    }
+                }
+            }
+            return staffs;
+        }
     }
 
 }
