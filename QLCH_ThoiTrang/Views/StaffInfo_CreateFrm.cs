@@ -167,7 +167,7 @@ namespace Views
             string phone = txtStaffPhone.Text;
             string address = txtStaffAdress.Text;
             string gender = "Khác";
-            string avatarPath = commonController.GetDefaultAvatarPath();
+            
             DateTime birthDate = dateTimeStaffBirthDate.Value;
             if (comboStaffRole.SelectedIndex < 0)
             {
@@ -214,6 +214,7 @@ namespace Views
                 gender = comboStaffGender.SelectedItem.ToString();
             }
             string role = comboStaffRole.SelectedItem.ToString();
+            string avatarPath = commonController.GetDefaultAvatarPath();
             if (success)
             {
                 var currId = staffController.GetCurrId(staffs);

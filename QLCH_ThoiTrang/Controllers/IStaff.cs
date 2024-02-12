@@ -33,7 +33,18 @@ namespace Controllers
         {
             if (staffs.Count == 0)
                 return 0;
-            return staffs[staffs.Count - 1].IdInt;
+            List<int> idIntList = GetListIdInt(staffs);
+            return idIntList[idIntList.Count - 1];
+        }
+        private List<int> GetListIdInt(List<Staff> staffs)
+        {
+            List<int> list = new List<int>();
+            foreach (var staff in staffs)
+            {
+                list.Add(staff.IdInt);
+            }
+            list.Sort();
+            return list;
         }
         public void CreateNewStaff(Staff staff)
         {

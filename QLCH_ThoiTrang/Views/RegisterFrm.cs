@@ -168,6 +168,8 @@ namespace Views
             else
             {
                 gender = comboGender.SelectedItem.ToString();
+                if (gender == "Nữ")
+                    avatarPath = "E:\\HatiStore\\images\\Avatars\\woman.png";
             }
             if (success)
             {
@@ -175,10 +177,6 @@ namespace Views
                 Staff staff = new Staff(++currId, username, password, name, gender,
                     birthDate, phone, email, address, avatarPath, "NHÂN VIÊN");
                 staffController.CreateNewStaff(staff);
-                /* var currId = GetCurrId(customers);
-                 Customer customer = new Customer(++currId, username, password,
-                     name, gender, birthDate, phone, email, address, avatarPath);
-                 commonController.CreateNewCustomer(customer);*/
                 MessageBox.Show("Đăng ký thành công!");
                 this.Dispose();
             }
