@@ -48,6 +48,7 @@
             this.panelPerson.Name = "panelPerson";
             this.panelPerson.Size = new System.Drawing.Size(770, 61);
             this.panelPerson.TabIndex = 25;
+            this.panelPerson.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelPerson_MouseClick);
             // 
             // txtAddress
             // 

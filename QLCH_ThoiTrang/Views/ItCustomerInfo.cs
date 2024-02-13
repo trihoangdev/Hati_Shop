@@ -27,5 +27,11 @@ namespace Views
             txtAddress.Text = Customer.Address;
             txtPhone.Text = Customer.PhoneNumber;
         }
+
+        private void panelPerson_MouseClick(object sender, MouseEventArgs e)
+        {
+            CustomerInfo_CreateFrm f = new CustomerInfo_CreateFrm(Customer);
+            f.ShowDialog();
+        }
     }
 }

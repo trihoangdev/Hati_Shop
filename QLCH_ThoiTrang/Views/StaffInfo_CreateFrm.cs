@@ -144,8 +144,6 @@ namespace Views
                 Staff.PhoneNumber = phone;
                 staffController.EditStaffInfo(Staff);
                 MessageBox.Show("Cập nhật thông tin thành công!");
-                /*ItPanelManage f = new ItPanelManage();
-                f.ItPanelManage_Load(this, null);*/
                 this.Dispose();
             }
             else

@@ -1,5 +1,4 @@
 --Tạo mới khách hàng
-
 CREATE PROCEDURE CreateNewCustomer
 	@Id varchar(50),
 	@Username varchar(50),
@@ -169,6 +168,35 @@ UPDATE Staff
 		Address = @Address,
 		AvatarPath = @AvatarPath,
 		Role = @Role
+	WHERE 
+		Id = @Id
+END
+
+--Sửa thông tin cá nhân của Khách hàng
+CREATE PROC EditCustomerInfo
+	@Id varchar(50),
+	@FullName nvarchar(50),
+	@Gender nvarchar(4),
+	@BirthDate datetime,
+	@PhoneNumber varchar(10),
+	@Email varchar(100),
+	@Address nvarchar(200),
+	@AvatarPath nvarchar(MAX),
+	@Revenue int,
+	@Rank nvarchar(50)
+AS
+BEGIN
+UPDATE Customer
+	SET
+		FullName = @FullName,
+		Gender = @Gender,
+		BirthDate = @BirthDate,
+		PhoneNumber = @PhoneNumber,
+		Email = @Email,
+		Address = @Address,
+		AvatarPath = @AvatarPath,
+		Revenue = @Revenue,
+		Rank = @Rank
 	WHERE 
 		Id = @Id
 END

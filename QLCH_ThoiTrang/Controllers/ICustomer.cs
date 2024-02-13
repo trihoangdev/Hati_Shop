@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace Controllers
 {
@@ -14,6 +15,7 @@ namespace Controllers
         void CreateNewCustomer(Customer customer);
         List<Customer> LoadAllCustomer();
         int GetCurrId(List<Customer> customers);
+        void EditCustomerInfo(Customer customer);
 
     }
     public class CustomerController : ICustomer
@@ -113,6 +115,46 @@ namespace Controllers
             }
             list.Sort();
             return list;
+        }
+
+        public void EditCustomerInfo(Customer customer)
+        {
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("EditCustomerInfo", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@Id", customer.Id);
+                    command.Parameters.AddWithValue("@FullName", customer.Name);
+                    command.Parameters.AddWithValue("@Gender", customer.Gender);
+                    command.Parameters.AddWithValue("@BirthDate", customer.BirthDate);
+                    command.Parameters.AddWithValue("@PhoneNumber", customer.PhoneNumber);
+                    command.Parameters.AddWithValue("@Email", customer.Email);
+                    command.Parameters.AddWithValue("@Address", customer.Address);
+                    command.Parameters.AddWithValue("@AvatarPath", customer.AvatarPath);
+                    command.Parameters.AddWithValue("@Revenue", customer.Revenue);
+                    command.Parameters.AddWithValue("@Rank", customer.Rank);
+                    //thực thi
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in EditStaffInfo: " + ex.Message);
+                    }
+                    finally
+                    {
+                        if (connection.State == ConnectionState.Open)
+                        {
+                            connection.Close();
+                        }
+                    }
+
+                }
+            }
         }
     }
 }
