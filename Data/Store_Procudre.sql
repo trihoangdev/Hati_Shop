@@ -241,7 +241,7 @@ BEGIN
 	ELSE IF @Table = 'Customer'
 	BEGIN
 		SELECT
-			Id, Username, Password, Fullname, Gender, BirthDate, PhoneNumber, Email, Address, AvatarPath, NULL AS Revenue, NULL AS Rank
+			Id, Username, Password, Fullname, Gender, BirthDate, PhoneNumber, Email, Address, AvatarPath,Revenue,Rank
 		FROM 
 			Customer
 		WHERE
@@ -267,7 +267,7 @@ BEGIN
 	ELSE IF @Table = 'Customer'
 	BEGIN
 		SELECT
-			Id, Username, Password, Fullname, Gender, BirthDate, PhoneNumber, Email, Address, AvatarPath, NULL AS Revenue, NULL AS Rank
+			Id, Username, Password, Fullname, Gender, BirthDate, PhoneNumber, Email, Address, AvatarPath, Revenue, Rank
 		FROM 
 			Customer
 		WHERE
@@ -294,7 +294,7 @@ BEGIN
 	ELSE IF @Table = 'Customer'
 	BEGIN
 		SELECT
-			Id, Username, Password, Fullname, Gender, BirthDate, PhoneNumber, Email, Address, AvatarPath, NULL AS Revenue, NULL AS Rank
+			Id, Username, Password, Fullname, Gender, BirthDate, PhoneNumber, Email, Address, AvatarPath, Revenue, Rank
 		FROM 
 			Customer
 		WHERE

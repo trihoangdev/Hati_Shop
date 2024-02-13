@@ -165,6 +165,8 @@
             this.txtCustomerFind.Size = new System.Drawing.Size(330, 31);
             this.txtCustomerFind.TabIndex = 5;
             this.txtCustomerFind.Text = "Tìm kiếm:";
+            this.txtCustomerFind.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtCustomerFind_MouseClick);
+            this.txtCustomerFind.TextChanged += new System.EventHandler(this.txtCustomerFind_TextChanged);
             // 
             // panel4
             // 
@@ -179,6 +181,10 @@
             // comboCustomerFind
             // 
             this.comboCustomerFind.FormattingEnabled = true;
+            this.comboCustomerFind.Items.AddRange(new object[] {
+            "Tên KH",
+            "Năm sinh",
+            "Giới tính"});
             this.comboCustomerFind.Location = new System.Drawing.Point(6, 31);
             this.comboCustomerFind.Name = "comboCustomerFind";
             this.comboCustomerFind.Size = new System.Drawing.Size(252, 31);

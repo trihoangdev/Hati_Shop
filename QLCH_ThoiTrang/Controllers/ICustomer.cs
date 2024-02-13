@@ -16,7 +16,9 @@ namespace Controllers
         List<Customer> LoadAllCustomer();
         int GetCurrId(List<Customer> customers);
         void EditCustomerInfo(Customer customer);
-
+        List<Customer> FindCustomerByName(string name, string table);
+        List<Customer> FindCustomerByBirthDate(int year, string table);
+        List<Customer> FindCustomerByGender(string genderStr, string table);
     }
     public class CustomerController : ICustomer
     {
@@ -155,6 +157,147 @@ namespace Controllers
 
                 }
             }
+        }
+
+        public List<Customer> FindCustomerByName(string name, string table)
+        {
+            List<Customer> customers = new List<Customer>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("FindByName", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Fullname", name);
+                    command.Parameters.AddWithValue("@Table", table);
+                    //thực thi và đọc kết quả
+                    try
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string id = reader["Id"].ToString();
+                                var username = reader["Username"].ToString();
+                                var password = reader["Password"].ToString();
+                                var fullName = reader["FullName"].ToString();
+                                var gender = reader["Gender"].ToString();
+                                var birthDate = (DateTime)reader["BirthDate"];
+                                var phone = reader["PhoneNumber"].ToString();
+                                var email = reader["Email"].ToString();
+                                var address = reader["Address"].ToString();
+                                var avatarPath = reader["AvatarPath"].ToString();
+                                int revenue = 0;
+                                if (reader["Revenue"] != DBNull.Value)
+                                    revenue = Convert.ToInt32(reader["Revenue"]);
+                                var rank = reader["Rank"].ToString();
+                                Customer customer = new Customer(id, username, password, fullName,
+                                    gender, birthDate, phone, email, address, avatarPath, revenue, rank);
+                                customers.Add(customer);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
+            }
+            return customers;
+        }
+
+        public List<Customer> FindCustomerByBirthDate(int year, string table)
+        {
+            List<Customer> customers = new List<Customer>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("FindByBirthDate", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@BirthDate", year);
+                    command.Parameters.AddWithValue("@Table", table);
+                    //thực thi và đọc kết quả
+                    try
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string id = reader["Id"].ToString();
+                                var username = reader["Username"].ToString();
+                                var password = reader["Password"].ToString();
+                                var fullName = reader["FullName"].ToString();
+                                var gender = reader["Gender"].ToString();
+                                var birthDate = (DateTime)reader["BirthDate"];
+                                var phone = reader["PhoneNumber"].ToString();
+                                var email = reader["Email"].ToString();
+                                var address = reader["Address"].ToString();
+                                var avatarPath = reader["AvatarPath"].ToString();
+                                int revenue = 0;
+                                if (reader["Revenue"] != DBNull.Value)
+                                    revenue = Convert.ToInt32(reader["Revenue"]);
+                                var rank = reader["Rank"].ToString();
+                                Customer customer = new Customer(id, username, password, fullName,
+                                    gender, birthDate, phone, email, address, avatarPath, revenue, rank);
+                                customers.Add(customer);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
+            }
+            return customers;
+        }
+
+        public List<Customer> FindCustomerByGender(string genderStr, string table)
+        {
+            List<Customer> customers = new List<Customer>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("FindByGender", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Gender", genderStr);
+                    command.Parameters.AddWithValue("@Table", table);
+                    //thực thi và đọc kết quả
+                    try
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string id = reader["Id"].ToString();
+                                var username = reader["Username"].ToString();
+                                var password = reader["Password"].ToString();
+                                var fullName = reader["FullName"].ToString();
+                                var gender = reader["Gender"].ToString();
+                                var birthDate = (DateTime)reader["BirthDate"];
+                                var phone = reader["PhoneNumber"].ToString();
+                                var email = reader["Email"].ToString();
+                                var address = reader["Address"].ToString();
+                                var avatarPath = reader["AvatarPath"].ToString();
+                                int revenue = 0;
+                                if (reader["Revenue"] != DBNull.Value)
+                                    revenue = Convert.ToInt32(reader["Revenue"]);
+                                var rank = reader["Rank"].ToString();
+                                Customer customer = new Customer(id, username, password, fullName,
+                                    gender, birthDate, phone, email, address, avatarPath, revenue, rank);
+                                customers.Add(customer);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
+            }
+            return customers;
         }
     }
 }
