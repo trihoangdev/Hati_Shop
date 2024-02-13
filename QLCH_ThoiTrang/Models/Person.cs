@@ -34,7 +34,7 @@ namespace Models
             this.Address = address;
             this.AvatarPath = avatarPath;
         }
-        public int GetLastId(string idStr)
+        public int GetIdInt(string idStr)
         {
             var idInt = int.Parse(idStr.Substring(2));
             return idInt;

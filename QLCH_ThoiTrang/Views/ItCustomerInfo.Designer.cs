@@ -29,70 +29,69 @@
         private void InitializeComponent()
         {
             this.panelPerson = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.Label();
+            this.txtPhone = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.Label();
             this.panelPerson.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelPerson
             // 
             this.panelPerson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(131)))));
-            this.panelPerson.Controls.Add(this.label7);
-            this.panelPerson.Controls.Add(this.label8);
-            this.panelPerson.Controls.Add(this.label9);
-            this.panelPerson.Controls.Add(this.label10);
+            this.panelPerson.Controls.Add(this.txtAddress);
+            this.panelPerson.Controls.Add(this.txtPhone);
+            this.panelPerson.Controls.Add(this.txtName);
+            this.panelPerson.Controls.Add(this.txtId);
             this.panelPerson.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelPerson.Location = new System.Drawing.Point(0, 0);
             this.panelPerson.Name = "panelPerson";
             this.panelPerson.Size = new System.Drawing.Size(770, 61);
             this.panelPerson.TabIndex = 25;
-            this.panelPerson.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPerson_Paint);
             // 
-            // label7
+            // txtAddress
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(512, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(173, 28);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "1 Trần Hưng Đạo";
+            this.txtAddress.AutoSize = true;
+            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.ForeColor = System.Drawing.Color.White;
+            this.txtAddress.Location = new System.Drawing.Point(512, 16);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(173, 28);
+            this.txtAddress.TabIndex = 3;
+            this.txtAddress.Text = "1 Trần Hưng Đạo";
             // 
-            // label8
+            // txtPhone
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(323, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(132, 28);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "0792352702";
+            this.txtPhone.AutoSize = true;
+            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.ForeColor = System.Drawing.Color.White;
+            this.txtPhone.Location = new System.Drawing.Point(323, 16);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(132, 28);
+            this.txtPhone.TabIndex = 2;
+            this.txtPhone.Text = "0792352702";
             // 
-            // label9
+            // txtName
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(119, 16);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 28);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Nguyễn Văn A";
+            this.txtName.AutoSize = true;
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.White;
+            this.txtName.Location = new System.Drawing.Point(119, 16);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(147, 28);
+            this.txtName.TabIndex = 1;
+            this.txtName.Text = "Nguyễn Văn A";
             // 
-            // label10
+            // txtId
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(11, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(24, 28);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "1";
+            this.txtId.AutoSize = true;
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.ForeColor = System.Drawing.Color.White;
+            this.txtId.Location = new System.Drawing.Point(11, 16);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(24, 28);
+            this.txtId.TabIndex = 0;
+            this.txtId.Text = "1";
             // 
             // ItCustomerInfo
             // 
@@ -106,6 +105,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ItCustomerInfo";
             this.Text = "ItCustomerInfo";
+            this.Load += new System.EventHandler(this.ItCustomerInfo_Load);
             this.panelPerson.ResumeLayout(false);
             this.panelPerson.PerformLayout();
             this.ResumeLayout(false);
@@ -115,9 +115,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panelPerson;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label txtAddress;
+        private System.Windows.Forms.Label txtPhone;
+        private System.Windows.Forms.Label txtName;
+        private System.Windows.Forms.Label txtId;
     }
 }

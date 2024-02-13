@@ -15,12 +15,10 @@ namespace Views
     {
         private CommonController commonController = new CommonController();
         private StaffController staffController = new StaffController();
-        private CustomerController customerController = new CustomerController();
         List<String> usernames;
         List<String> emails;
         List<String> phones;
         List<Staff> staffs;
-        List<Customer> customers;
         string avatarPath;
         public RegisterFrm()
         {
@@ -190,7 +188,6 @@ namespace Views
         {
             usernames = commonController.LoadAllUsername();
             staffs = staffController.LoadAllStaff();
-            customers = customerController.LoadAllCustomer();
         }
     }
 }

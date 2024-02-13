@@ -7,24 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Models;
 namespace Views
 {
     public partial class ItCustomerInfo : Form
     {
-        public ItCustomerInfo()
+        public Customer Customer { get; set; }
+        public ItCustomerInfo(Customer customer)
         {
             InitializeComponent();
+            Customer = customer;
         }
 
-        private void panelPerson_Paint(object sender, PaintEventArgs e)
+
+        private void ItCustomerInfo_Load(object sender, EventArgs e)
         {
-            CustomerInfo_CreateFrm f = new CustomerInfo_CreateFrm();
-            f.ShowDialog();
-            /*ItCustomerInfo f = new ItCustomerInfo();
-            f.TopLevel = false;
-            flowPanelCustomer.Controls.Add(f);
-            f.Show();*/
+            txtId.Text = Customer.Id;
+            txtName.Text = Customer.Name;
+            txtAddress.Text = Customer.Address;
+            txtPhone.Text = Customer.PhoneNumber;
         }
     }
 }

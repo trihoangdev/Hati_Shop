@@ -13,6 +13,7 @@ namespace Controllers
     {
         void CreateNewCustomer(Customer customer);
         List<Customer> LoadAllCustomer();
+        int GetCurrId(List<Customer> customers);
 
     }
     public class CustomerController : ICustomer
@@ -38,6 +39,8 @@ namespace Controllers
                     command.Parameters.AddWithValue("@Email", customer.Email);
                     command.Parameters.AddWithValue("@Address", customer.Address);
                     command.Parameters.AddWithValue("@AvatarPath", customer.AvatarPath);
+                    command.Parameters.AddWithValue("@Revenue", customer.Revenue);
+                    command.Parameters.AddWithValue("@Rank", customer.Rank);
 
                     try
                     {
@@ -81,7 +84,6 @@ namespace Controllers
                             var address = reader["Address"].ToString();
                             var avatarPath = reader["AvatarPath"].ToString();
                             int revenue = 0;
-
                             if (reader["Revenue"] != DBNull.Value)
                                 revenue = Convert.ToInt32(reader["Revenue"]);
                             string rank = reader["Rank"].ToString();
@@ -94,6 +96,23 @@ namespace Controllers
                 }
             }
             return customers;
+        }
+        public int GetCurrId(List<Customer> customers)
+        {
+            if (customers.Count == 0)
+                return 0;
+            List<int> idIntList = GetListIdInt(customers);
+            return idIntList[idIntList.Count - 1];
+        }
+        private List<int> GetListIdInt(List<Customer> customers)
+        {
+            List<int> list = new List<int>();
+            foreach (var staff in customers)
+            {
+                list.Add(staff.IdInt);
+            }
+            list.Sort();
+            return list;
         }
     }
 }

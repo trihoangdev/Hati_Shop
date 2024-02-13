@@ -17,13 +17,13 @@ namespace Models
 
         public Customer(int curId, string username, string password, string name,
             string gender, DateTime birthdate, string phoneNumber,
-            string email, string address, string avatarPath) : 
+            string email, string address, string avatarPath, int revenue, string rank) : 
             base(username, password,name,gender,birthdate,phoneNumber,email,
                 address,avatarPath) 
         {
             AutoId = curId;
             Id = "KH" +AutoId++;
-            IdInt = GetLastId(Id);
+            IdInt = GetIdInt(Id);
         }
         public Customer(string id, string username, string password, string name,
             string gender, DateTime birthdate, string phoneNumber,
@@ -32,7 +32,7 @@ namespace Models
                 address, avatarPath)
         {
             Id = id;
-            IdInt = GetLastId(Id);
+            IdInt = GetIdInt(Id);
             Revenue = revenue; 
             Rank = rank;
         }

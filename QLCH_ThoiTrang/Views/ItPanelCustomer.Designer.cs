@@ -59,7 +59,7 @@
             this.panelProduct.Controls.Add(this.label3);
             this.panelProduct.Location = new System.Drawing.Point(0, 0);
             this.panelProduct.Name = "panelProduct";
-            this.panelProduct.Size = new System.Drawing.Size(810, 789);
+            this.panelProduct.Size = new System.Drawing.Size(816, 789);
             this.panelProduct.TabIndex = 24;
             // 
             // panel1
@@ -217,6 +217,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ItPanelCustomer";
             this.Text = "ItPanelCustomer";
+            this.Load += new System.EventHandler(this.ItPanelCustomer_Load);
             this.panelProduct.ResumeLayout(false);
             this.panelProduct.PerformLayout();
             this.panel1.ResumeLayout(false);

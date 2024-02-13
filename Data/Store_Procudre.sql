@@ -1,4 +1,5 @@
 --Tạo mới khách hàng
+
 CREATE PROCEDURE CreateNewCustomer
 	@Id varchar(50),
 	@Username varchar(50),
@@ -9,11 +10,13 @@ CREATE PROCEDURE CreateNewCustomer
 	@PhoneNumber varchar(10),
 	@Email varchar(100),
 	@Address nvarchar(200),
-	@AvatarPath nvarchar(MAX)
+	@AvatarPath nvarchar(MAX),
+	@Revenue int,
+	@Rank nvarchar(50)
 AS
 BEGIN
-    INSERT Customer (Id,Username,Password,FullName,Gender,BirthDate,PhoneNumber,Email,Address,AvatarPath)
-	VALUES (@Id,@Username,@Password, @FullName,@Gender,@BirthDate,@PhoneNumber,@Email,@Address,@AvatarPath)
+    INSERT Customer (Id,Username,Password,FullName,Gender,BirthDate,PhoneNumber,Email,Address,AvatarPath, Revenue, Rank)
+	VALUES (@Id,@Username,@Password, @FullName,@Gender,@BirthDate,@PhoneNumber,@Email,@Address,@AvatarPath,@Revenue,@Rank)
 END;
 
 --Tạo mới nhân viên

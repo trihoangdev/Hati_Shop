@@ -23,7 +23,7 @@ namespace Models
             AutoId = currId;
             Id = "NV" + AutoId++;
             Role = role;
-            IdInt = GetLastId(Id);
+            IdInt = GetIdInt(Id);
         }
         public Staff(string id, string username, string password, string name,
             string gender, DateTime birthdate, string phoneNumber,
@@ -34,7 +34,7 @@ namespace Models
         {
             Id = id;
             Role = role;
-            IdInt = GetLastId(Id);
+            IdInt = GetIdInt(Id);
         }
         
     }
