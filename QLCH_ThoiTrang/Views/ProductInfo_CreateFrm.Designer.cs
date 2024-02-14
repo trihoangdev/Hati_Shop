@@ -47,11 +47,11 @@
             this.txtProductId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureProduct = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,7 +60,7 @@
             this.panel1.Controls.Add(this.btnExist);
             this.panel1.Controls.Add(this.btnAddNewProduct);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pictureProduct);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -93,7 +93,7 @@
             this.btnAddNewProduct.TabIndex = 12;
             this.btnAddNewProduct.Text = "THÊM SẢN PHẨM";
             this.btnAddNewProduct.UseVisualStyleBackColor = false;
-            this.btnAddNewProduct.Click += new System.EventHandler(this.btnDeleteBill_Click);
+            this.btnAddNewProduct.Click += new System.EventHandler(this.btnAddNewProduct_Click);
             // 
             // panel2
             // 
@@ -140,6 +140,13 @@
             // comboProductSize
             // 
             this.comboProductSize.FormattingEnabled = true;
+            this.comboProductSize.Items.AddRange(new object[] {
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL",
+            "XXXL"});
             this.comboProductSize.Location = new System.Drawing.Point(319, 234);
             this.comboProductSize.Name = "comboProductSize";
             this.comboProductSize.Size = new System.Drawing.Size(270, 31);
@@ -148,6 +155,12 @@
             // comboProductType
             // 
             this.comboProductType.FormattingEnabled = true;
+            this.comboProductType.Items.AddRange(new object[] {
+            "Quần",
+            "Áo",
+            "Nón",
+            "Giày",
+            "Combo"});
             this.comboProductType.Location = new System.Drawing.Point(319, 145);
             this.comboProductType.Name = "comboProductType";
             this.comboProductType.Size = new System.Drawing.Size(270, 31);
@@ -178,6 +191,7 @@
             // txtProductQuantity
             // 
             this.txtProductQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtProductQuantity.Enabled = false;
             this.txtProductQuantity.Location = new System.Drawing.Point(18, 235);
             this.txtProductQuantity.Name = "txtProductQuantity";
             this.txtProductQuantity.Size = new System.Drawing.Size(270, 30);
@@ -224,6 +238,7 @@
             // txtProductId
             // 
             this.txtProductId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtProductId.Enabled = false;
             this.txtProductId.Location = new System.Drawing.Point(18, 52);
             this.txtProductId.Name = "txtProductId";
             this.txtProductId.Size = new System.Drawing.Size(270, 30);
@@ -251,15 +266,16 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "MÃ SẢN PHẨM";
             // 
-            // pictureBox1
+            // pictureProduct
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(45, 232);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(269, 272);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pictureProduct.Image = ((System.Drawing.Image)(resources.GetObject("pictureProduct.Image")));
+            this.pictureProduct.Location = new System.Drawing.Point(45, 232);
+            this.pictureProduct.Name = "pictureProduct";
+            this.pictureProduct.Size = new System.Drawing.Size(269, 272);
+            this.pictureProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureProduct.TabIndex = 1;
+            this.pictureProduct.TabStop = false;
+            this.pictureProduct.Click += new System.EventHandler(this.pictureProduct_Click);
             // 
             // label1
             // 
@@ -287,7 +303,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureProduct)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -297,7 +313,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureProduct;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtProductId;

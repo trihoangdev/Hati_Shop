@@ -8,24 +8,31 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Models;
 namespace Views
 {
     public partial class ItProductInfo : Form
     {
-        public ItProductInfo()
+        private Product Product { get; set; }
+        public ItProductInfo(Product product)
         {
             InitializeComponent();
+            Product = product;
             FormLoad();
         }
 
         private void FormLoad()
         {
+            if (Product.AvatarPath != "")
+                pictureAvatar.ImageLocation = Product.AvatarPath;
+            txtName.Text = Product.Name;
+            txtPrice.Text = Product.Price.ToString() + " VNĐ";
+
             //set nằm giữa cho tên sp
             txtName.Anchor = AnchorStyles.None;
             int x = (this.ClientSize.Width - txtName.Width) / 2;
             txtName.Location = new Point(x, 205);
-            
+
             //set nằm giữa cho giá sp
             txtPrice.Anchor = AnchorStyles.None;
             int y = (this.ClientSize.Width - txtPrice.Width) / 2;
@@ -37,9 +44,9 @@ namespace Views
 
         }
 
-        private void panelProduct_Paint(object sender, PaintEventArgs e)
+        private void ItProductInfo_MouseClick(object sender, MouseEventArgs e)
         {
-            ProductInfo_CreateFrm f = new ProductInfo_CreateFrm("show");
+            ProductInfo_CreateFrm f = new ProductInfo_CreateFrm(Product);
             f.ShowDialog();
         }
     }

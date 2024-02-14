@@ -37,6 +37,22 @@ BEGIN
 	VALUES (@Id,@Username,@Password, @FullName,@Gender,@BirthDate,@PhoneNumber,@Email,@Address,@AvatarPath,@Role)
 END;
 
+--Tạo mới sản phẩm
+CREATE PROC CreateNewProduct
+	@Id varchar(50),
+	@Name nvarchar(100),
+	@Price int,
+	@Type nvarchar(50),
+	@Quantity int,
+	@Size nvarchar(10),
+	@Info nvarchar(MAX),
+	@AvatarPath nvarchar(MAX)
+AS
+BEGIN
+	INSERT Product(Id,Name,Price,Type,Quantity,Size,Info,AvatarPath)
+	VALUES(@Id,@Name,@Price,@Type,@Quantity,@Size,@Info,@AvatarPath)
+END;
+
 --Kiểm tra login của nhân viên và quản lý
 CREATE PROCEDURE CheckLogin
 	@Username varchar(50),
@@ -144,6 +160,16 @@ BEGIN
 	FROM 
 		Staff
 END
+
+--Đọc các thông tin về sản phẩm
+CREATE PROC LoadProduct
+AS
+BEGIN
+	SELECT
+		Id, Name,Price,Type,Quantity,Size,Info,AvatarPath
+	FROM Product
+END;
+
 
 --Sửa thông tin cá nhân của Nhân viên
 CREATE PROC EditStaffInfo
@@ -344,3 +370,4 @@ BEGIN
 			Role = @Role
 	END
 END
+

@@ -32,9 +32,9 @@
             this.panelProduct = new System.Windows.Forms.Panel();
             this.txtPrice = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureAvatar = new System.Windows.Forms.PictureBox();
             this.panelProduct.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // panelProduct
@@ -42,12 +42,11 @@
             this.panelProduct.BackColor = System.Drawing.Color.White;
             this.panelProduct.Controls.Add(this.txtPrice);
             this.panelProduct.Controls.Add(this.txtName);
-            this.panelProduct.Controls.Add(this.pictureBox1);
+            this.panelProduct.Controls.Add(this.pictureAvatar);
             this.panelProduct.Location = new System.Drawing.Point(0, 0);
             this.panelProduct.Name = "panelProduct";
             this.panelProduct.Size = new System.Drawing.Size(245, 280);
             this.panelProduct.TabIndex = 0;
-            this.panelProduct.Paint += new System.Windows.Forms.PaintEventHandler(this.panelProduct_Paint);
             // 
             // txtPrice
             // 
@@ -69,30 +68,31 @@
             this.txtName.TabIndex = 1;
             this.txtName.Text = "Tên sản phẩm";
             // 
-            // pictureBox1
+            // pictureAvatar
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(45, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(161, 166);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pictureAvatar.Image")));
+            this.pictureAvatar.Location = new System.Drawing.Point(45, 33);
+            this.pictureAvatar.Name = "pictureAvatar";
+            this.pictureAvatar.Size = new System.Drawing.Size(161, 166);
+            this.pictureAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureAvatar.TabIndex = 0;
+            this.pictureAvatar.TabStop = false;
             // 
             // ItProductInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(253, 281);
+            this.ClientSize = new System.Drawing.Size(246, 281);
             this.Controls.Add(this.panelProduct);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ItProductInfo";
             this.Text = "ItProductInfo";
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ItProductInfo_MouseClick);
             this.panelProduct.ResumeLayout(false);
             this.panelProduct.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -100,7 +100,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panelProduct;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureAvatar;
         private System.Windows.Forms.Label txtName;
         private System.Windows.Forms.Label txtPrice;
     }

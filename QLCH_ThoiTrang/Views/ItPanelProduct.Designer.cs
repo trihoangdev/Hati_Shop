@@ -187,6 +187,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ItPanelProduct";
             this.Text = "ItPanelProduct";
+            this.Load += new System.EventHandler(this.ItPanelProduct_Load);
             this.panelProduct.ResumeLayout(false);
             this.panelProduct.PerformLayout();
             this.panel5.ResumeLayout(false);

@@ -44,6 +44,7 @@
     <Compile Include="ICheckInput.cs" />
     <Compile Include="ICommon.cs" />
     <Compile Include="ICustomer.cs" />
+    <Compile Include="IProduct.cs" />
     <Compile Include="IStaff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
