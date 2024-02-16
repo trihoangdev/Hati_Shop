@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductInfo_CreateFrm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExist = new System.Windows.Forms.Button();
-            this.btnAddNewProduct = new System.Windows.Forms.Button();
+            this.btnAddEditProduct = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtProductMoreInfo = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -48,7 +48,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureProduct = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelHeader = new System.Windows.Forms.Label();
+            this.btnRemoveProduct = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProduct)).BeginInit();
@@ -58,10 +59,11 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.btnExist);
-            this.panel1.Controls.Add(this.btnAddNewProduct);
+            this.panel1.Controls.Add(this.btnRemoveProduct);
+            this.panel1.Controls.Add(this.btnAddEditProduct);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureProduct);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.labelHeader);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 800);
@@ -79,21 +81,21 @@
             this.btnExist.UseVisualStyleBackColor = true;
             this.btnExist.Click += new System.EventHandler(this.btnExist_Click);
             // 
-            // btnAddNewProduct
+            // btnAddEditProduct
             // 
-            this.btnAddNewProduct.BackColor = System.Drawing.Color.White;
-            this.btnAddNewProduct.FlatAppearance.BorderSize = 0;
-            this.btnAddNewProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNewProduct.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
-            this.btnAddNewProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddNewProduct.Location = new System.Drawing.Point(576, 688);
-            this.btnAddNewProduct.Name = "btnAddNewProduct";
-            this.btnAddNewProduct.Size = new System.Drawing.Size(261, 50);
-            this.btnAddNewProduct.TabIndex = 12;
-            this.btnAddNewProduct.Text = "THÊM SẢN PHẨM";
-            this.btnAddNewProduct.UseVisualStyleBackColor = false;
-            this.btnAddNewProduct.Click += new System.EventHandler(this.btnAddNewProduct_Click);
+            this.btnAddEditProduct.BackColor = System.Drawing.Color.White;
+            this.btnAddEditProduct.FlatAppearance.BorderSize = 0;
+            this.btnAddEditProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEditProduct.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEditProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
+            this.btnAddEditProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddEditProduct.Location = new System.Drawing.Point(405, 688);
+            this.btnAddEditProduct.Name = "btnAddEditProduct";
+            this.btnAddEditProduct.Size = new System.Drawing.Size(261, 50);
+            this.btnAddEditProduct.TabIndex = 12;
+            this.btnAddEditProduct.Text = "THÊM SẢN PHẨM";
+            this.btnAddEditProduct.UseVisualStyleBackColor = false;
+            this.btnAddEditProduct.Click += new System.EventHandler(this.btnAddNewProduct_Click);
             // 
             // panel2
             // 
@@ -277,16 +279,32 @@
             this.pictureProduct.TabStop = false;
             this.pictureProduct.Click += new System.EventHandler(this.pictureProduct_Click);
             // 
-            // label1
+            // labelHeader
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(563, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 45);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "SẢN PHẨM MỚI";
+            this.labelHeader.AutoSize = true;
+            this.labelHeader.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHeader.ForeColor = System.Drawing.Color.White;
+            this.labelHeader.Location = new System.Drawing.Point(563, 49);
+            this.labelHeader.Name = "labelHeader";
+            this.labelHeader.Size = new System.Drawing.Size(274, 45);
+            this.labelHeader.TabIndex = 0;
+            this.labelHeader.Text = "SẢN PHẨM MỚI";
+            // 
+            // btnRemoveProduct
+            // 
+            this.btnRemoveProduct.BackColor = System.Drawing.Color.White;
+            this.btnRemoveProduct.FlatAppearance.BorderSize = 0;
+            this.btnRemoveProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveProduct.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
+            this.btnRemoveProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemoveProduct.Location = new System.Drawing.Point(707, 688);
+            this.btnRemoveProduct.Name = "btnRemoveProduct";
+            this.btnRemoveProduct.Size = new System.Drawing.Size(261, 50);
+            this.btnRemoveProduct.TabIndex = 12;
+            this.btnRemoveProduct.Text = "XOÁ";
+            this.btnRemoveProduct.UseVisualStyleBackColor = false;
+            this.btnRemoveProduct.Click += new System.EventHandler(this.btnAddNewProduct_Click);
             // 
             // ProductInfo_CreateFrm
             // 
@@ -314,7 +332,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureProduct;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelHeader;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtProductId;
         private System.Windows.Forms.Label label8;
@@ -328,7 +346,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.RichTextBox txtProductMoreInfo;
-        private System.Windows.Forms.Button btnAddNewProduct;
+        private System.Windows.Forms.Button btnAddEditProduct;
         private System.Windows.Forms.Button btnExist;
+        private System.Windows.Forms.Button btnRemoveProduct;
     }
 }

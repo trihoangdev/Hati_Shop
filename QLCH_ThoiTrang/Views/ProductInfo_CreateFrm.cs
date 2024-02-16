@@ -20,23 +20,27 @@ namespace Views
         private CheckInputController checkInputController = new CheckInputController();
         int currId;
         string avatarPath = "";
+        
         //form khi tạo mới
         public ProductInfo_CreateFrm()
         {
             InitializeComponent();
             CenterToParent();
+            btnAddEditProduct.Location = new Point(576, 688);
+            btnRemoveProduct.Enabled = false;
+            btnRemoveProduct.Visible = false;
             products = productController.LoadAllProduct();
             currId = productController.GetCurrId(products) + 1;
             txtProductId.Text = "SP" + currId;
             txtProductQuantity.Text = "0";
         }
+        
         //form khi Show Info
         public ProductInfo_CreateFrm(Product product)
         {
             InitializeComponent();
             FormShowInfoSetting();
             CenterToParent();
-
         }
 
         //ẩn các textbox, chỉ cho xem
@@ -49,7 +53,7 @@ namespace Views
             txtProductQuantity.Enabled = false;
             comboProductSize.Enabled = false;
             comboProductType.Enabled = false;
-            btnAddNewProduct.Visible = false;
+            btnAddEditProduct.Visible = false;
         }
 
 
