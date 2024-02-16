@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace Models
 {
@@ -13,6 +14,7 @@ namespace Models
         public int IdInt { get; set; }
         public string Name { get; set; }
         public int Price { get; set; }
+        public string PriceStr { get; set; }
         public string Type { get; set; }
         public int Quantity { get; set; }
         public string Size { get; set; }
@@ -26,6 +28,7 @@ namespace Models
             IdInt = GetIdInt(Id);
             Name = name;
             Price = price;
+            PriceStr = GetPriceStr(Price);
             Type = type;
             Quantity = quantity;
             Size = size;
@@ -41,6 +44,7 @@ namespace Models
             IdInt = GetIdInt(Id);
             Name = name;
             Price = price;
+            PriceStr = GetPriceStr(Price);
             Type = type;
             Quantity = quantity;
             Size = size;
@@ -51,6 +55,32 @@ namespace Models
         {
             var idInt = int.Parse(idStr.Substring(2));
             return idInt;
+        }
+        public string GetPriceStr(int price)
+        {
+            var priceStr = price.ToString();
+            decimal number = decimal.Parse(priceStr);
+            CultureInfo cultureInfo = new CultureInfo("vi-VN"); // Chọn ngôn ngữ Việt Nam để hiển thị định dạng tiền tệ
+            string priceFormatted = string.Format(cultureInfo, "{0:C}", number); // Sử dụng định dạng tiền tệ
+            return priceFormatted;
+        }
+        public int GetPriceInt(string priceStr)
+        {
+            string currencyStr = priceStr;
+
+            // Xóa ký tự mẫu của tiền tệ (VD: "$", "€", "₫")
+            currencyStr = currencyStr.Replace("₫", "").Trim();
+
+            // Loại bỏ ký tự phân cách hàng nghìn
+            currencyStr = currencyStr.Replace(".", "");
+
+            // Thay thế dấu phân cách thập phân
+            currencyStr = currencyStr.Replace(",", ".");
+
+            // Chuyển đổi chuỗi thành số
+            decimal number = decimal.Parse(currencyStr, CultureInfo.InvariantCulture);
+
+            return (int)number;
         }
     }
 }

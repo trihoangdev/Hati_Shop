@@ -47,6 +47,7 @@
             this.panelProduct.Name = "panelProduct";
             this.panelProduct.Size = new System.Drawing.Size(245, 280);
             this.panelProduct.TabIndex = 0;
+            this.panelProduct.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelProduct_MouseClick);
             // 
             // txtPrice
             // 

@@ -20,7 +20,7 @@ namespace Views
         private CheckInputController checkInputController = new CheckInputController();
         int currId;
         string avatarPath = "";
-        
+
         //form khi tạo mới
         public ProductInfo_CreateFrm()
         {
@@ -34,26 +34,44 @@ namespace Views
             txtProductId.Text = "SP" + currId;
             txtProductQuantity.Text = "0";
         }
-        
+
         //form khi Show Info
         public ProductInfo_CreateFrm(Product product)
         {
             InitializeComponent();
             FormShowInfoSetting();
             CenterToParent();
+            labelHeader.Text = "THÔNG TIN SẢN PHẨM";
+            FillData(product);
+        }
+
+        //Show các thông tin của sản phẩm lên form
+        private void FillData(Product product)
+        {
+            txtProductId.Text = product.Id;
+            txtProductName.Text = product.Name;
+            txtProductPrice.Text = product.PriceStr;
+            txtProductQuantity.Text = product.Quantity.ToString();
+            txtProductMoreInfo.Text = product.Info;
+            if (product.Size == "S") comboProductSize.SelectedIndex = 0;
+            else if (product.Size == "M") comboProductSize.SelectedIndex = 1;
+            else if (product.Size == "L") comboProductSize.SelectedIndex = 2;
+            else if (product.Size == "XL") comboProductSize.SelectedIndex = 3;
+            else if (product.Size == "XXL") comboProductSize.SelectedIndex = 4;
+            else if (product.Size == "XXXL") comboProductSize.SelectedIndex = 5;
+
+            if (product.Type == "Quần") comboProductType.SelectedIndex = 0;
+            else if (product.Type == "Áo") comboProductType.SelectedIndex = 1;
+            else if (product.Type == "Nón") comboProductType.SelectedIndex = 2;
+            else if (product.Type == "Giày") comboProductType.SelectedIndex = 3;
+            else if (product.Type == "Combo") comboProductType.SelectedIndex = 4;
         }
 
         //ẩn các textbox, chỉ cho xem
         private void FormShowInfoSetting()
         {
             txtProductId.Enabled = false;
-            txtProductName.Enabled = false;
-            txtProductPrice.Enabled = false;
             txtProductQuantity.Enabled = false;
-            txtProductQuantity.Enabled = false;
-            comboProductSize.Enabled = false;
-            comboProductType.Enabled = false;
-            btnAddEditProduct.Visible = false;
         }
 
 
@@ -130,7 +148,7 @@ namespace Views
 
             if (success)
             {
-                Product product = new Product(id,name,price,type,quantity,size, info,avatarPath);
+                Product product = new Product(id, name, price, type, quantity, size, info, avatarPath);
                 productController.CreateNewProduct(product);
                 MessageBox.Show("Đăng ký thành công!");
                 this.Dispose();

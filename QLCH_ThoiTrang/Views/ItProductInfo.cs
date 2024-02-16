@@ -49,5 +49,11 @@ namespace Views
             ProductInfo_CreateFrm f = new ProductInfo_CreateFrm(Product);
             f.ShowDialog();
         }
+
+        private void panelProduct_MouseClick(object sender, MouseEventArgs e)
+        {
+            ProductInfo_CreateFrm f = new ProductInfo_CreateFrm(Product);
+            f.ShowDialog();
+        }
     }
 }
