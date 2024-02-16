@@ -124,11 +124,6 @@ namespace Views
             else
                 success = false;
 
-            if (!checkInputController.IsNameValid(name))
-            {
-                success = false;
-                MessageBox.Show("Tên không hợp lệ.");
-            }
             if (success)
             {
                 Product product = new Product(id,name,price,type,quantity,size, info,avatarPath);
