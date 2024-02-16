@@ -26,7 +26,7 @@ namespace Views
             if (Product.AvatarPath != "")
                 pictureAvatar.ImageLocation = Product.AvatarPath;
             txtName.Text = Product.Name;
-            txtPrice.Text = Product.Price.ToString() + " VNĐ";
+            txtPrice.Text = Product.PriceStr;
 
             //set nằm giữa cho tên sp
             txtName.Anchor = AnchorStyles.None;

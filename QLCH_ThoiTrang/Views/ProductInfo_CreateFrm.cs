@@ -66,6 +66,9 @@ namespace Views
             else if (product.Type == "Nón") comboProductType.SelectedIndex = 2;
             else if (product.Type == "Giày") comboProductType.SelectedIndex = 3;
             else if (product.Type == "Combo") comboProductType.SelectedIndex = 4;
+
+            pictureProduct.ImageLocation = product.AvatarPath;
+            avatarPath = product.AvatarPath;
         }
 
         //ẩn các textbox, chỉ cho xem
