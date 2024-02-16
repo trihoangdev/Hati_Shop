@@ -42,6 +42,7 @@ namespace Views
             FormShowInfoSetting();
             CenterToParent();
             labelHeader.Text = "THÔNG TIN SẢN PHẨM";
+            btnAddEditProduct.Text = "SỬA";
             FillData(product);
         }
 
@@ -73,8 +74,6 @@ namespace Views
             txtProductId.Enabled = false;
             txtProductQuantity.Enabled = false;
         }
-
-
 
         private void btnExist_Click(object sender, EventArgs e)
         {
@@ -108,7 +107,69 @@ namespace Views
             }
         }
 
-        private void btnAddNewProduct_Click(object sender, EventArgs e)
+        private void btnAddEditNewProduct_Click(object sender, EventArgs e)
+        {
+            if (btnAddEditProduct.Text == "THÊM SẢN PHẨM")
+                AddNewProduct();
+            else if (btnAddEditProduct.Text == "SỬA")
+                EditProduct();
+        }
+
+        //sửa sản phẩm
+        private void EditProduct()
+        {
+            bool success = true;
+            var id = txtProductId.Text;
+            var name = txtProductName.Text;
+            string priceStr = txtProductPrice.Text;
+            int price = productController.GetPriceInt(priceStr);
+            int quantity = int.Parse(txtProductQuantity.Text);
+            string info = txtProductMoreInfo.Text;
+            var type = "";
+            if (comboProductType.SelectedIndex == 0)
+                type = "Quần";
+            else if (comboProductType.SelectedIndex == 1)
+                type = "Áo";
+            else if (comboProductType.SelectedIndex == 2)
+                type = "Nón";
+            else if (comboProductType.SelectedIndex == 3)
+                type = "Giày";
+            else if (comboProductType.SelectedIndex == 4)
+                type = "Combo";
+            else
+                success = false;
+
+            var size = "";
+            if (comboProductSize.SelectedIndex == 0)
+                size = "S";
+            else if (comboProductSize.SelectedIndex == 1)
+                size = "M";
+            else if (comboProductSize.SelectedIndex == 2)
+                size = "L";
+            else if (comboProductSize.SelectedIndex == 3)
+                size = "XL";
+            else if (comboProductSize.SelectedIndex == 4)
+                size = "XXL";
+            else if (comboProductSize.SelectedIndex == 5)
+                size = "XXXL";
+            else
+                success = false;
+
+            if (success)
+            {
+                Product product = new Product(id, name, price, type, quantity, size, info, avatarPath);
+                productController.EditProductInfo(product);
+                MessageBox.Show("Sửa sản phẩm thành công! Vui lòng load lại trang để xem thông tin sản phẩm");
+                this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("Sửa sản phẩm thất bại");
+            }
+        }
+
+        //Thêm mới sản phẩm
+        private void AddNewProduct()
         {
             bool success = true;
             var id = txtProductId.Text;

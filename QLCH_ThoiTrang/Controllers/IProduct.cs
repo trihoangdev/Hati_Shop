@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Models;
 using System.Collections;
+using System.Globalization;
 namespace Controllers
 {
     public interface IProduct
@@ -15,6 +16,7 @@ namespace Controllers
         int GetCurrId(List<Product> products);
         void CreateNewProduct(Product product);
         void EditProductInfo(Product product);
+        int GetPriceInt(string priceStr);
     }
     public class ProductController : IProduct
     {
@@ -107,7 +109,59 @@ namespace Controllers
 
         public void EditProductInfo(Product product)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("EditProductInfo", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@Id", product.Id);
+                    command.Parameters.AddWithValue("@Name", product.Name);
+                    command.Parameters.AddWithValue("@Price", product.Price);
+                    command.Parameters.AddWithValue("@Type", product.Type);
+                    command.Parameters.AddWithValue("@Quantity", product.Quantity);
+                    command.Parameters.AddWithValue("@Size", product.Size);
+                    command.Parameters.AddWithValue("@Info", product.Info);
+                    command.Parameters.AddWithValue("@AvatarPath", product.AvatarPath);
+                    //thực thi
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in EditProduct: " + ex.Message);
+                    }
+                    finally
+                    {
+                        if (connection.State == ConnectionState.Open)
+                        {
+                            connection.Close();
+                        }
+                    }
+
+                }
+            }
+        }
+
+        public int GetPriceInt(string priceStr)
+        {
+            string currencyStr = priceStr;
+
+            // Xóa ký tự mẫu của tiền tệ (VD: "$", "€", "₫")
+            currencyStr = currencyStr.Replace("₫", "").Trim();
+
+            // Loại bỏ ký tự phân cách hàng nghìn
+            currencyStr = currencyStr.Replace(".", "");
+
+            // Thay thế dấu phân cách thập phân
+            currencyStr = currencyStr.Replace(",", ".");
+
+            // Chuyển đổi chuỗi thành số
+            decimal number = decimal.Parse(currencyStr, CultureInfo.InvariantCulture);
+
+            return (int)number;
         }
     }
 }

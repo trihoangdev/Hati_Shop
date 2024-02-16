@@ -227,6 +227,31 @@ UPDATE Customer
 		Id = @Id
 END
 
+--Sửa thông tin sản phẩm
+CREATE PROC EditProductInfo
+	@Id varchar(50),
+	@Name nvarchar(100),
+	@Price int,
+	@Type nvarchar(50),
+	@Quantity int,
+	@Size nvarchar(10),
+	@Info nvarchar(MAX),
+	@AvatarPath nvarchar(MAX)
+AS
+BEGIN
+	UPDATE Product
+	SET
+		Name = @Name,
+		Price = @Price,
+		Type = @Type,
+		Quantity = @Quantity,
+		Size = @Size,
+		Info = @Info,
+		AvatarPath = @AvatarPath
+	WHERE
+		Id = @Id
+END;
+
 --Xoá nhân viên khỏi danh sách thông qua username
 CREATE PROC RemoveStaffByUsername
 	@Username varchar(50)

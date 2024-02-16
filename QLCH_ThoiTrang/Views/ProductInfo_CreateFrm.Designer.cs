@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductInfo_CreateFrm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExist = new System.Windows.Forms.Button();
+            this.btnRemoveProduct = new System.Windows.Forms.Button();
             this.btnAddEditProduct = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtProductMoreInfo = new System.Windows.Forms.RichTextBox();
@@ -49,7 +50,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureProduct = new System.Windows.Forms.PictureBox();
             this.labelHeader = new System.Windows.Forms.Label();
-            this.btnRemoveProduct = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProduct)).BeginInit();
@@ -81,6 +81,21 @@
             this.btnExist.UseVisualStyleBackColor = true;
             this.btnExist.Click += new System.EventHandler(this.btnExist_Click);
             // 
+            // btnRemoveProduct
+            // 
+            this.btnRemoveProduct.BackColor = System.Drawing.Color.White;
+            this.btnRemoveProduct.FlatAppearance.BorderSize = 0;
+            this.btnRemoveProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveProduct.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
+            this.btnRemoveProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemoveProduct.Location = new System.Drawing.Point(707, 688);
+            this.btnRemoveProduct.Name = "btnRemoveProduct";
+            this.btnRemoveProduct.Size = new System.Drawing.Size(261, 50);
+            this.btnRemoveProduct.TabIndex = 12;
+            this.btnRemoveProduct.Text = "XOÁ";
+            this.btnRemoveProduct.UseVisualStyleBackColor = false;
+            // 
             // btnAddEditProduct
             // 
             this.btnAddEditProduct.BackColor = System.Drawing.Color.White;
@@ -95,7 +110,7 @@
             this.btnAddEditProduct.TabIndex = 12;
             this.btnAddEditProduct.Text = "THÊM SẢN PHẨM";
             this.btnAddEditProduct.UseVisualStyleBackColor = false;
-            this.btnAddEditProduct.Click += new System.EventHandler(this.btnAddNewProduct_Click);
+            this.btnAddEditProduct.Click += new System.EventHandler(this.btnAddEditNewProduct_Click);
             // 
             // panel2
             // 
@@ -289,22 +304,6 @@
             this.labelHeader.Size = new System.Drawing.Size(274, 45);
             this.labelHeader.TabIndex = 0;
             this.labelHeader.Text = "SẢN PHẨM MỚI";
-            // 
-            // btnRemoveProduct
-            // 
-            this.btnRemoveProduct.BackColor = System.Drawing.Color.White;
-            this.btnRemoveProduct.FlatAppearance.BorderSize = 0;
-            this.btnRemoveProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveProduct.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
-            this.btnRemoveProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemoveProduct.Location = new System.Drawing.Point(707, 688);
-            this.btnRemoveProduct.Name = "btnRemoveProduct";
-            this.btnRemoveProduct.Size = new System.Drawing.Size(261, 50);
-            this.btnRemoveProduct.TabIndex = 12;
-            this.btnRemoveProduct.Text = "XOÁ";
-            this.btnRemoveProduct.UseVisualStyleBackColor = false;
-            this.btnRemoveProduct.Click += new System.EventHandler(this.btnAddNewProduct_Click);
             // 
             // ProductInfo_CreateFrm
             // 

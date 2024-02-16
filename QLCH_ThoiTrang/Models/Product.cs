@@ -64,23 +64,6 @@ namespace Models
             string priceFormatted = string.Format(cultureInfo, "{0:C}", number); // Sử dụng định dạng tiền tệ
             return priceFormatted;
         }
-        public int GetPriceInt(string priceStr)
-        {
-            string currencyStr = priceStr;
 
-            // Xóa ký tự mẫu của tiền tệ (VD: "$", "€", "₫")
-            currencyStr = currencyStr.Replace("₫", "").Trim();
-
-            // Loại bỏ ký tự phân cách hàng nghìn
-            currencyStr = currencyStr.Replace(".", "");
-
-            // Thay thế dấu phân cách thập phân
-            currencyStr = currencyStr.Replace(",", ".");
-
-            // Chuyển đổi chuỗi thành số
-            decimal number = decimal.Parse(currencyStr, CultureInfo.InvariantCulture);
-
-            return (int)number;
-        }
     }
 }
