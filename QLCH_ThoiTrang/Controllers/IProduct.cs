@@ -17,6 +17,7 @@ namespace Controllers
         void CreateNewProduct(Product product);
         void EditProductInfo(Product product);
         int GetPriceInt(string priceStr);
+        bool RemoveProduct(string productId);
     }
     public class ProductController : IProduct
     {
@@ -60,7 +61,7 @@ namespace Controllers
                             var quantity = (int)reader["Quantity"];
                             var info = reader["Info"].ToString();
                             var avatarPath = reader["AvatarPath"].ToString();
-                            Product product = new Product(id, name,price,type,quantity,size,info,avatarPath);
+                            Product product = new Product(id, name, price, type, quantity, size, info, avatarPath);
                             products.Add(product);
                         }
                     }
@@ -162,6 +163,34 @@ namespace Controllers
             decimal number = decimal.Parse(currencyStr, CultureInfo.InvariantCulture);
 
             return (int)number;
+        }
+
+        public bool RemoveProduct(string productId)
+        {
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("RemoveProduct", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Id", productId);
+                    //thực thi
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    catch (SqlException ex)
+                    {
+                        Console.WriteLine("Error in EditProduct: " + ex.Message);
+                        return false;
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+            return true;
         }
     }
 }

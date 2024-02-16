@@ -222,5 +222,20 @@ namespace Views
                 MessageBox.Show("Thêm sản phẩm thất bại");
             }
         }
+
+        //Xoá sản phẩm
+        private void btnRemoveProduct_Click(object sender, EventArgs e)
+        {
+            var res = MessageBox.Show("Bạn có chắc chắn muốn xoá?",
+                "Thông báo", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+             if (res == DialogResult.Yes)
+                if (productController.RemoveProduct(txtProductId.Text))
+                    MessageBox.Show("Xoá sản phẩm thành công! " +
+                        "Vui lòng load lại trang để xem thông tin sản phẩm");
+                else
+                    MessageBox.Show("Xoá sản phẩm thất bại!");
+            this.Dispose();
+        }
     }
 }

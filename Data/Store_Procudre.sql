@@ -261,6 +261,15 @@ BEGIN
 	WHERE Username = @Username
 END
 
+--Xoá sản phẩm khỏi danh sách
+CREATE PROC RemoveProduct
+	@Id varchar(50)
+AS
+BEGIN
+	DELETE FROM Product
+	WHERE Id = @Id
+END
+
 --Đổi mật khẩu của nhân viên
 CREATE PROC EditStaffPassword
 	@Username varchar(50),

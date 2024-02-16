@@ -95,6 +95,7 @@
             this.btnRemoveProduct.TabIndex = 12;
             this.btnRemoveProduct.Text = "XOÁ";
             this.btnRemoveProduct.UseVisualStyleBackColor = false;
+            this.btnRemoveProduct.Click += new System.EventHandler(this.btnRemoveProduct_Click);
             // 
             // btnAddEditProduct
             // 
