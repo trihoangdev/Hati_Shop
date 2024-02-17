@@ -142,6 +142,7 @@
             this.txtProductFind.TabIndex = 5;
             this.txtProductFind.Text = "Tìm kiếm:";
             this.txtProductFind.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtProductFind_MouseClick);
+            this.txtProductFind.TextChanged += new System.EventHandler(this.txtProductFind_TextChanged);
             // 
             // panel4
             // 

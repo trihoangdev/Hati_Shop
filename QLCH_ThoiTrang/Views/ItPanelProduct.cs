@@ -26,6 +26,7 @@ namespace Views
         {
             if (txtProductFind.Text == "Tìm kiếm:")
                 txtProductFind.Text = "";
+            
         }
 
         private void btnProductFind_Click(object sender, EventArgs e)
@@ -46,6 +47,7 @@ namespace Views
                 f.Show();
             }
         }
+
         private void RemoveAll()
         {
             foreach (Control control in flowPanelProduct.Controls)
@@ -99,6 +101,27 @@ namespace Views
                         break;
                     }
 
+            }
+        }
+
+        private void txtProductFind_TextChanged(object sender, EventArgs e)
+        {
+            switch (comboProductFind.SelectedIndex)
+            {
+                case 0:
+                    {
+                        //Theo mã SP
+                        products = controller.FindProductById(txtProductFind.Text);
+                        ItPanelProduct_Load(this, null);
+                        break;
+                    }
+                case 1:
+                    {
+                        //Theo tên SP
+                        products = controller.FindProductByName(txtProductFind.Text);
+                        ItPanelProduct_Load(this, null);
+                        break;
+                    }
             }
         }
     }

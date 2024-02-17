@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Models;
 using System.Collections;
 using System.Globalization;
+using System.Reflection.Emit;
+using System.Xml.Linq;
 namespace Controllers
 {
     public interface IProduct
@@ -19,6 +21,8 @@ namespace Controllers
         int GetPriceInt(string priceStr);
         bool RemoveProduct(string productId);
         Product FindProductById(List<Product> products, string id);
+        List<Product> FindProductById(string productId);
+        List<Product> FindProductByName(string name);
         void SortIdASC(List<Product> products);
         void SortIdDESC(List<Product> products);
         void SortPriceASC(List<Product> products);
@@ -266,6 +270,84 @@ namespace Controllers
                         products[i] = products[j];
                         products[j] = temp;
                     }
+        }
+
+        public List<Product> FindProductById(string productId)
+        {
+            List<Product> products = new List<Product>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("FindProductById", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Id", productId);
+                    //thực thi và đọc kết quả
+                    try
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var id = reader["Id"].ToString();
+                                var name = reader["Name"].ToString();
+                                var price = (int)reader["Price"];
+                                var type = reader["Type"].ToString();
+                                var quantity =(int) reader["Quantity"];
+                                var size = reader["Size"].ToString();
+                                var info = reader["Info"].ToString();
+                                var avatarPath = reader["AvatarPath"].ToString();
+                                Product prod = new Product(id,name,price,type,quantity,size,info,avatarPath);
+                                products.Add(prod);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in FindProductById: " + ex.Message);
+                    }
+                }
+            }
+            return products;
+        }
+
+        public List<Product> FindProductByName(string nameStr)
+        {
+            List<Product> products = new List<Product>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("FindProductByName", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Name", nameStr);
+                    //thực thi và đọc kết quả
+                    try
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var id = reader["Id"].ToString();
+                                var name = reader["Name"].ToString();
+                                var price = (int)reader["Price"];
+                                var type = reader["Type"].ToString();
+                                var quantity = (int)reader["Quantity"];
+                                var size = reader["Size"].ToString();
+                                var info = reader["Info"].ToString();
+                                var avatarPath = reader["AvatarPath"].ToString();
+                                Product prod = new Product(id, name, price, type, quantity, size, info, avatarPath);
+                                products.Add(prod);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in FindProductById: " + ex.Message);
+                    }
+                }
+            }
+            return products;
         }
     }
 }

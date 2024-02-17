@@ -475,3 +475,26 @@ BEGIN
 	END
 END
 
+--Tìm sản phẩm theo mã
+CREATE PROC FindProductById
+	@Id varchar(50)
+AS
+BEGIN
+	SELECT
+		Id, Name,Price, Type,Quantity,Size,Info,AvatarPath
+	FROM 
+		Product
+	WHERE Id LIKE '%' + @Id + '%'
+END;
+
+--Tìm sản phẩm theo tên
+CREATE PROC FindProductByName
+	@Name varchar(50)
+AS
+BEGIN
+	SELECT
+		Id, Name,Price, Type,Quantity,Size,Info,AvatarPath
+	FROM 
+		Product
+	WHERE Name LIKE '%' + @Name + '%'
+END;
