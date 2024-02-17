@@ -19,6 +19,11 @@ namespace Controllers
         int GetPriceInt(string priceStr);
         bool RemoveProduct(string productId);
         Product FindProductById(List<Product> products, string id);
+        void SortIdASC(List<Product> products);
+        void SortIdDESC(List<Product> products);
+        void SortPriceASC(List<Product> products);
+        void SortPriceDESC(List<Product> products);
+        void SortNameASC(List<Product> products);
     }
     public class ProductController : IProduct
     {
@@ -198,9 +203,69 @@ namespace Controllers
         {
             foreach (var product in products)
             {
-                if(product.Id == id) return product;
+                if (product.Id == id) return product;
             }
             return null;
+        }
+
+        public void SortIdASC(List<Product> products)
+        {
+            for (int i = 0; i < products.Count - 1; i++)
+                for (int j = i + 1; j < products.Count; j++)
+                    if (products[i].IdInt > products[j].IdInt)
+                    {
+                        var temp = products[i];
+                        products[i] = products[j];
+                        products[j] = temp;
+                    }
+        }
+
+        public void SortIdDESC(List<Product> products)
+        {
+            for (int i = 0; i < products.Count - 1; i++)
+                for (int j = i + 1; j < products.Count; j++)
+                    if (products[i].IdInt < products[j].IdInt)
+                    {
+                        var temp = products[i];
+                        products[i] = products[j];
+                        products[j] = temp;
+                    }
+        }
+
+        public void SortPriceASC(List<Product> products)
+        {
+            for (int i = 0; i < products.Count - 1; i++)
+                for (int j = i + 1; j < products.Count; j++)
+                    if (products[i].Price > products[j].Price)
+                    {
+                        var temp = products[i];
+                        products[i] = products[j];
+                        products[j] = temp;
+                    }
+        }
+
+        public void SortPriceDESC(List<Product> products)
+        {
+            for (int i = 0; i < products.Count - 1; i++)
+                for (int j = i + 1; j < products.Count; j++)
+                    if (products[i].Price < products[j].Price)
+                    {
+                        var temp = products[i];
+                        products[i] = products[j];
+                        products[j] = temp;
+                    }
+        }
+
+        public void SortNameASC(List<Product> products)
+        {
+            for (int i = 0; i < products.Count - 1; i++)
+                for (int j = i + 1; j < products.Count; j++)
+                    if (products[i].Name.CompareTo(products[j].Name) > 0)
+                    {
+                        var temp = products[i];
+                        products[i] = products[j];
+                        products[j] = temp;
+                    }
         }
     }
 }

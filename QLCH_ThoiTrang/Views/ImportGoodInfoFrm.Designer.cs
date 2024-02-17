@@ -32,7 +32,7 @@
             this.txtTotal = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnDeleteImportGood = new System.Windows.Forms.Button();
+            this.btnExist = new System.Windows.Forms.Button();
             this.flowPanelProductInBill = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
@@ -41,6 +41,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtImportGoodId = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -64,7 +64,7 @@
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.txtTotal);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.btnDeleteImportGood);
+            this.panel1.Controls.Add(this.btnExist);
             this.panel1.Controls.Add(this.flowPanelProductInBill);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -105,21 +105,21 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "TỔNG TIỀN NHẬP:";
             // 
-            // btnDeleteImportGood
+            // btnExist
             // 
-            this.btnDeleteImportGood.BackColor = System.Drawing.Color.White;
-            this.btnDeleteImportGood.FlatAppearance.BorderSize = 0;
-            this.btnDeleteImportGood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteImportGood.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteImportGood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
-            this.btnDeleteImportGood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteImportGood.Location = new System.Drawing.Point(40, 716);
-            this.btnDeleteImportGood.Name = "btnDeleteImportGood";
-            this.btnDeleteImportGood.Size = new System.Drawing.Size(261, 50);
-            this.btnDeleteImportGood.TabIndex = 11;
-            this.btnDeleteImportGood.Text = "XOÁ";
-            this.btnDeleteImportGood.UseVisualStyleBackColor = false;
-            this.btnDeleteImportGood.Click += new System.EventHandler(this.btnDeleteImportGood_Click);
+            this.btnExist.BackColor = System.Drawing.Color.White;
+            this.btnExist.FlatAppearance.BorderSize = 0;
+            this.btnExist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExist.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
+            this.btnExist.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExist.Location = new System.Drawing.Point(40, 716);
+            this.btnExist.Name = "btnExist";
+            this.btnExist.Size = new System.Drawing.Size(261, 50);
+            this.btnExist.TabIndex = 11;
+            this.btnExist.Text = "THOÁT";
+            this.btnExist.UseVisualStyleBackColor = false;
+            this.btnExist.Click += new System.EventHandler(this.btnDeleteImportGood_Click);
             // 
             // flowPanelProductInBill
             // 
@@ -205,6 +205,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(920, 294);
             this.panel2.TabIndex = 1;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(15, 74);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(887, 31);
+            this.comboBox1.TabIndex = 8;
             // 
             // panel8
             // 
@@ -295,14 +303,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "PHIẾU NHẬP HÀNG";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(15, 74);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(887, 31);
-            this.comboBox1.TabIndex = 8;
-            // 
             // ImportGoodInfoFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -336,7 +336,7 @@
         private System.Windows.Forms.Label txtTotal;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnDeleteImportGood;
+        private System.Windows.Forms.Button btnExist;
         private System.Windows.Forms.FlowLayoutPanel flowPanelProductInBill;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label23;

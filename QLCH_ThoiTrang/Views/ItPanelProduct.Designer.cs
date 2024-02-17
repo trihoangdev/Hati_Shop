@@ -57,7 +57,7 @@
             this.panelProduct.Controls.Add(this.label3);
             this.panelProduct.Location = new System.Drawing.Point(0, 0);
             this.panelProduct.Name = "panelProduct";
-            this.panelProduct.Size = new System.Drawing.Size(810, 789);
+            this.panelProduct.Size = new System.Drawing.Size(814, 789);
             this.panelProduct.TabIndex = 23;
             // 
             // panel5
@@ -65,18 +65,25 @@
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.comboFilter);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(14, 102);
+            this.panel5.Location = new System.Drawing.Point(12, 102);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(162, 73);
+            this.panel5.Size = new System.Drawing.Size(189, 73);
             this.panel5.TabIndex = 21;
             // 
             // comboFilter
             // 
             this.comboFilter.FormattingEnabled = true;
+            this.comboFilter.Items.AddRange(new object[] {
+            "Sắp xếp theo mã SP tăng dần",
+            "Sắp xếp theo mã SP giảm dần",
+            "Sắp xếp theo giá tăng dần",
+            "Sắp xếp theo giá giảm dần",
+            "Sắp xếp theo tên SP A-Z"});
             this.comboFilter.Location = new System.Drawing.Point(6, 31);
             this.comboFilter.Name = "comboFilter";
-            this.comboFilter.Size = new System.Drawing.Size(153, 31);
+            this.comboFilter.Size = new System.Drawing.Size(180, 31);
             this.comboFilter.TabIndex = 1;
+            this.comboFilter.SelectedIndexChanged += new System.EventHandler(this.comboFilter_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -116,10 +123,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.txtProductFind);
-            this.panel3.Location = new System.Drawing.Point(363, 102);
+            this.panel3.Location = new System.Drawing.Point(384, 102);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(20, 20, 10, 10);
-            this.panel3.Size = new System.Drawing.Size(276, 73);
+            this.panel3.Size = new System.Drawing.Size(255, 73);
             this.panel3.TabIndex = 21;
             // 
             // txtProductFind
@@ -131,7 +138,7 @@
             this.txtProductFind.ForeColor = System.Drawing.Color.Gray;
             this.txtProductFind.Location = new System.Drawing.Point(20, 20);
             this.txtProductFind.Name = "txtProductFind";
-            this.txtProductFind.Size = new System.Drawing.Size(246, 31);
+            this.txtProductFind.Size = new System.Drawing.Size(225, 31);
             this.txtProductFind.TabIndex = 5;
             this.txtProductFind.Text = "Tìm kiếm:";
             this.txtProductFind.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtProductFind_MouseClick);
@@ -141,17 +148,20 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.comboProductFind);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(182, 102);
+            this.panel4.Location = new System.Drawing.Point(208, 102);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(175, 73);
+            this.panel4.Size = new System.Drawing.Size(170, 73);
             this.panel4.TabIndex = 20;
             // 
             // comboProductFind
             // 
             this.comboProductFind.FormattingEnabled = true;
-            this.comboProductFind.Location = new System.Drawing.Point(6, 31);
+            this.comboProductFind.Items.AddRange(new object[] {
+            "Theo mã SP",
+            "Theo tên SP"});
+            this.comboProductFind.Location = new System.Drawing.Point(8, 31);
             this.comboProductFind.Name = "comboProductFind";
-            this.comboProductFind.Size = new System.Drawing.Size(155, 31);
+            this.comboProductFind.Size = new System.Drawing.Size(159, 31);
             this.comboProductFind.TabIndex = 1;
             // 
             // label4
@@ -159,7 +169,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(3, 3);
+            this.label4.Location = new System.Drawing.Point(4, 3);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 23);
             this.label4.TabIndex = 0;
@@ -180,7 +190,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 793);
+            this.ClientSize = new System.Drawing.Size(817, 793);
             this.Controls.Add(this.panelProduct);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

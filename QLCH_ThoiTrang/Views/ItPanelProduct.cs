@@ -48,7 +48,58 @@ namespace Views
         }
         private void RemoveAll()
         {
-            flowPanelProduct.Controls.Clear();
+            foreach (Control control in flowPanelProduct.Controls)
+            {
+                if (control is ItProductInfo itProductInfo)
+                {
+                    // Giải phóng tài nguyên của các hình ảnh trong control ItProductInfo
+                    itProductInfo.Dispose();
+                }
+            }
+            flowPanelProduct.Controls.Clear(); // Xóa tất cả các control cũ
+        }
+
+        private void comboFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboFilter.SelectedIndex)
+            {
+                case 0:
+                    {
+                        //sắp theo mã tăng dần
+                        controller.SortIdASC(products);
+                        ItPanelProduct_Load(this, null);
+                        break;
+                    }
+                case 1:
+                    {
+                        //sắp theo mã giảm dần
+                        controller.SortIdDESC(products);
+                        ItPanelProduct_Load(this, null);
+                        break;
+                    }
+                case 2:
+                    {
+                        //sắp theo giá tăng dần
+                        controller.SortPriceASC(products);
+                        ItPanelProduct_Load(this, null);
+                        break;
+                    }
+                case 3:
+                    {
+                        //sắp theo giá giảm dần
+                        controller.SortPriceDESC(products);
+                        ItPanelProduct_Load(this, null);
+                        break;
+                    }
+                case 4:
+                    {
+                        //sắp theo tên a-z
+                        controller.SortNameASC(products);
+                        ItPanelProduct_Load(this, null);
+                        break;
+                    }
+
+            }
         }
     }
 }
