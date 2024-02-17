@@ -53,6 +53,26 @@ BEGIN
 	VALUES(@Id,@Name,@Price,@Type,@Quantity,@Size,@Info,@AvatarPath)
 END;
 
+--Tạo mới nhập hàng
+CREATE PROC CreateNewImportGood
+	@Id varchar(50),
+	@StaffId varchar(50),
+	@ProductId varchar(50),
+	@ImportTime datetime,
+	@Quantity int
+AS
+BEGIN
+	INSERT ImportGood(Id,StaffId,ProductId,ImportTime,Quantity)
+	VALUES(@Id,@StaffId,@ProductId,@ImportTime,@Quantity)
+	
+	--sửa thông tin về số lượng sản phẩm 
+	UPDATE 
+		Product
+	SET 
+		Quantity = Quantity + @Quantity
+	WHERE Id = @ProductId
+END;
+
 --Kiểm tra login của nhân viên và quản lý
 CREATE PROCEDURE CheckLogin
 	@Username varchar(50),
@@ -170,6 +190,15 @@ BEGIN
 	FROM Product
 END;
 
+--Đọc các thông tin về nhập hàng
+CREATE PROC LoadImportGood
+AS
+BEGIN
+	SELECT 
+		Id, StaffId, ProductId,ImportTime,Quantity
+	FROM
+		ImportGood
+END;
 
 --Sửa thông tin cá nhân của Nhân viên
 CREATE PROC EditStaffInfo
@@ -252,6 +281,24 @@ BEGIN
 		Id = @Id
 END;
 
+--Sửa thông tin nhập hàng
+CREATE PROC EditImportGoodInfo
+	@Id varchar(50),
+	@StaffId varchar(50),
+	@ProductId varchar(50),
+	@ImportTime datetime,
+	@Quantity int
+AS
+BEGIN
+	Update ImportGood
+	SET 
+		StaffId = @StaffId,
+		ProductId = @ProductId,
+		Quantity = @Quantity,
+		ImportTime = @ImportTime
+	WHERE Id = @Id
+END;
+
 --Xoá nhân viên khỏi danh sách thông qua username
 CREATE PROC RemoveStaffByUsername
 	@Username varchar(50)
@@ -259,6 +306,29 @@ AS
 BEGIN
 	DELETE FROM Staff
 	WHERE Username = @Username
+END
+
+--Xoá sản phẩm khỏi danh sách
+CREATE PROC RemoveProduct
+	@Id varchar(50)
+AS
+BEGIN
+	DELETE FROM Product
+	WHERE Id = @Id
+END
+
+--Xoá phiếu nhập hàng khỏi danh sách thông qua id
+CREATE PROC RemoveImportGood
+	@Id varchar(50),
+	@ProductId varchar(50),
+	@Quantity varchar(50)
+AS
+BEGIN
+	DELETE FROM ImportGood
+	WHERE Id = @Id
+	UPDATE Product
+	SET 
+		Product.Quantity -= @Quantity
 END
 
 --Xoá sản phẩm khỏi danh sách

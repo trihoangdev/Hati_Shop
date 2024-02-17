@@ -36,6 +36,6 @@ namespace Models
             Role = role;
             IdInt = GetIdInt(Id);
         }
-        
+
     }
 }

@@ -18,6 +18,7 @@ namespace Controllers
         void EditProductInfo(Product product);
         int GetPriceInt(string priceStr);
         bool RemoveProduct(string productId);
+        Product FindProductById(List<Product> products, string id);
     }
     public class ProductController : IProduct
     {
@@ -191,6 +192,15 @@ namespace Controllers
                 }
             }
             return true;
+        }
+
+        public Product FindProductById(List<Product> products, string id)
+        {
+            foreach (var product in products)
+            {
+                if(product.Id == id) return product;
+            }
+            return null;
         }
     }
 }

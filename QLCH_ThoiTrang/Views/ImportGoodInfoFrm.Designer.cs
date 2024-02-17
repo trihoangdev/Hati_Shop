@@ -47,18 +47,16 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtImportDate = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.txtId_NameStaff = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -196,11 +194,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Location = new System.Drawing.Point(40, 59);
@@ -266,25 +264,6 @@
             this.label14.TabIndex = 6;
             this.label14.Text = "THỜI GIAN";
             // 
-            // panel5
-            // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.txtId_NameStaff);
-            this.panel5.Location = new System.Drawing.Point(15, 72);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(887, 33);
-            this.panel5.TabIndex = 2;
-            // 
-            // txtId_NameStaff
-            // 
-            this.txtId_NameStaff.AutoSize = true;
-            this.txtId_NameStaff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId_NameStaff.Location = new System.Drawing.Point(4, 6);
-            this.txtId_NameStaff.Name = "txtId_NameStaff";
-            this.txtId_NameStaff.Size = new System.Drawing.Size(159, 20);
-            this.txtId_NameStaff.TabIndex = 3;
-            this.txtId_NameStaff.Text = "NV01 | Hoàng Minh Trí";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -316,6 +295,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "PHIẾU NHẬP HÀNG";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(15, 74);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(887, 31);
+            this.comboBox1.TabIndex = 8;
+            // 
             // ImportGoodInfoFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -339,8 +326,6 @@
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -366,10 +351,9 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label txtImportDate;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label txtId_NameStaff;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

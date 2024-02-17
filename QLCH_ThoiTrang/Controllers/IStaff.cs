@@ -25,6 +25,7 @@ namespace Controllers
         List<Staff> FindStaffByGender(string gender, string table);
         List<Staff> FindStaffByUsername(string username, string table);
         List<Staff> FindStaffByRole(string role, string table);
+        Staff FindStaffById(List<Staff> staffs, string id);
     }
     public class StaffController : IStaff
     {
@@ -486,6 +487,15 @@ namespace Controllers
                 }
             }
             return staffs;
+        }
+
+        public Staff FindStaffById(List<Staff> staffs, string id)
+        {
+            foreach (var staff in staffs)
+            {
+                if (staff.Id == id) return staff;
+            }
+            return null;
         }
     }
 

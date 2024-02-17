@@ -29,64 +29,90 @@
         private void InitializeComponent()
         {
             this.panelImportGood = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.txtSum = new System.Windows.Forms.Label();
+            this.txtQuantity = new System.Windows.Forms.Label();
+            this.txtProductSize = new System.Windows.Forms.Label();
+            this.txtProductName = new System.Windows.Forms.Label();
+            this.txtProductId = new System.Windows.Forms.Label();
             this.panelImportGood.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelImportGood
             // 
             this.panelImportGood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(131)))));
-            this.panelImportGood.Controls.Add(this.label6);
-            this.panelImportGood.Controls.Add(this.label7);
-            this.panelImportGood.Controls.Add(this.label8);
+            this.panelImportGood.Controls.Add(this.txtSum);
+            this.panelImportGood.Controls.Add(this.txtQuantity);
+            this.panelImportGood.Controls.Add(this.txtProductSize);
+            this.panelImportGood.Controls.Add(this.txtProductName);
+            this.panelImportGood.Controls.Add(this.txtProductId);
             this.panelImportGood.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelImportGood.Location = new System.Drawing.Point(0, 0);
             this.panelImportGood.Name = "panelImportGood";
-            this.panelImportGood.Size = new System.Drawing.Size(770, 61);
-            this.panelImportGood.TabIndex = 23;
-            this.panelImportGood.Paint += new System.Windows.Forms.PaintEventHandler(this.panelImportGood_Paint);
+            this.panelImportGood.Size = new System.Drawing.Size(917, 48);
+            this.panelImportGood.TabIndex = 25;
+            this.panelImportGood.Click += new System.EventHandler(this.panelImportGood_Click);
             // 
-            // label6
+            // txtSum
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(54)))));
-            this.label6.Location = new System.Drawing.Point(548, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 28);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "01/01/2024";
+            this.txtSum.AutoSize = true;
+            this.txtSum.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(54)))));
+            this.txtSum.Location = new System.Drawing.Point(706, 13);
+            this.txtSum.Name = "txtSum";
+            this.txtSum.Size = new System.Drawing.Size(95, 23);
+            this.txtSum.TabIndex = 2;
+            this.txtSum.Text = "Thành tiền";
             // 
-            // label7
+            // txtQuantity
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(54)))));
-            this.label7.Location = new System.Drawing.Point(216, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 28);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Nguyễn Thị B";
+            this.txtQuantity.AutoSize = true;
+            this.txtQuantity.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(54)))));
+            this.txtQuantity.Location = new System.Drawing.Point(584, 13);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(83, 23);
+            this.txtQuantity.TabIndex = 2;
+            this.txtQuantity.Text = "Số lượng";
             // 
-            // label8
+            // txtProductSize
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(54)))));
-            this.label8.Location = new System.Drawing.Point(14, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(24, 28);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "1";
+            this.txtProductSize.AutoSize = true;
+            this.txtProductSize.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(54)))));
+            this.txtProductSize.Location = new System.Drawing.Point(403, 13);
+            this.txtProductSize.Name = "txtProductSize";
+            this.txtProductSize.Size = new System.Drawing.Size(42, 23);
+            this.txtProductSize.TabIndex = 2;
+            this.txtProductSize.Text = "Size";
+            // 
+            // txtProductName
+            // 
+            this.txtProductName.AutoSize = true;
+            this.txtProductName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(54)))));
+            this.txtProductName.Location = new System.Drawing.Point(164, 13);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(119, 23);
+            this.txtProductName.TabIndex = 1;
+            this.txtProductName.Text = "Tên sản phẩm";
+            // 
+            // txtProductId
+            // 
+            this.txtProductId.AutoSize = true;
+            this.txtProductId.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(54)))));
+            this.txtProductId.Location = new System.Drawing.Point(20, 13);
+            this.txtProductId.Name = "txtProductId";
+            this.txtProductId.Size = new System.Drawing.Size(60, 23);
+            this.txtProductId.TabIndex = 0;
+            this.txtProductId.Text = "Mã SP";
             // 
             // ItImportGoodInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(131)))));
-            this.ClientSize = new System.Drawing.Size(771, 63);
+            this.ClientSize = new System.Drawing.Size(920, 50);
             this.Controls.Add(this.panelImportGood);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -102,8 +128,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panelImportGood;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label txtSum;
+        private System.Windows.Forms.Label txtQuantity;
+        private System.Windows.Forms.Label txtProductSize;
+        private System.Windows.Forms.Label txtProductName;
+        private System.Windows.Forms.Label txtProductId;
     }
 }
