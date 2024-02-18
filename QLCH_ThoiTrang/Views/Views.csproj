@@ -111,6 +111,12 @@
     <Compile Include="ItImportGoodInfo.Designer.cs">
       <DependentUpon>ItImportGoodInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItImportGoodMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItImportGoodMain.Designer.cs">
+      <DependentUpon>ItImportGoodMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItPanelCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ItImportGoodInfo.resx">
       <DependentUpon>ItImportGoodInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItImportGoodMain.resx">
+      <DependentUpon>ItImportGoodMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItPanelCustomer.resx">
       <DependentUpon>ItPanelCustomer.cs</DependentUpon>

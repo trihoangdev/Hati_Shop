@@ -23,6 +23,11 @@ namespace Views
             ImportGood = import;
             this.parentForm = parentForm;
             LoadControls();
+        }public ItImportGoodInfo(ImportGood import)
+        {
+            InitializeComponent();
+            ImportGood = import;
+            LoadControls();
         }
 
         private void LoadControls()

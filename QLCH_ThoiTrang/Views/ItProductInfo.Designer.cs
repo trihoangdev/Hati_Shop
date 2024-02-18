@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItProductInfo));
             this.panelProduct = new System.Windows.Forms.Panel();
             this.txtPrice = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.Label();
@@ -71,7 +70,6 @@
             // 
             // pictureAvatar
             // 
-            this.pictureAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pictureAvatar.Image")));
             this.pictureAvatar.Location = new System.Drawing.Point(45, 33);
             this.pictureAvatar.Name = "pictureAvatar";
             this.pictureAvatar.Size = new System.Drawing.Size(161, 166);

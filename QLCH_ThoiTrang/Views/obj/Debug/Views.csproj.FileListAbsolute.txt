@@ -47,3 +47,4 @@ E:\HatiStore\QLCH_ThoiTrang\Views\bin\Debug\Newtonsoft.Json.xml
 E:\HatiStore\QLCH_ThoiTrang\Views\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
 E:\HatiStore\QLCH_ThoiTrang\Views\bin\Debug\Twilio.xml
 E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ChangePasswordFrm.resources
+E:\HatiStore\QLCH_ThoiTrang\Views\obj\Debug\Views.ItImportGoodMain.resources

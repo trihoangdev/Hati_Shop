@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImportGoodCreateFrm));
             this.label23 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.txtTotal = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.comboIdNameStaff = new System.Windows.Forms.ComboBox();
@@ -91,29 +89,6 @@
             this.label21.Size = new System.Drawing.Size(44, 23);
             this.label21.TabIndex = 10;
             this.label21.Text = "SIZE";
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.AutoSize = true;
-            this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.ForeColor = System.Drawing.Color.White;
-            this.txtTotal.Location = new System.Drawing.Point(761, 742);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(83, 31);
-            this.txtTotal.TabIndex = 13;
-            this.txtTotal.Text = "0 VNĐ";
-            this.txtTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(543, 742);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(212, 31);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "TỔNG TIỀN NHẬP:";
             // 
             // label20
             // 
@@ -356,7 +331,7 @@
             // 
             this.flowPanelImportGood.Location = new System.Drawing.Point(40, 510);
             this.flowPanelImportGood.Name = "flowPanelImportGood";
-            this.flowPanelImportGood.Size = new System.Drawing.Size(920, 214);
+            this.flowPanelImportGood.Size = new System.Drawing.Size(920, 278);
             this.flowPanelImportGood.TabIndex = 3;
             // 
             // label1
@@ -437,10 +412,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnExist);
             this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.txtTotal);
             this.panel1.Controls.Add(this.flowPanelImportGood);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -485,8 +458,6 @@
 
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label txtTotal;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox comboIdNameStaff;

@@ -85,8 +85,8 @@ namespace Controllers
                             var productId = reader["ProductId"].ToString();
                             DateTime importTime = (DateTime)reader["ImportTime"];
                             var quantity = (int)reader["Quantity"];
-                            FindStaff(staffId);
-                            FindProduct(productId);
+                            Staff = FindStaff(staffId);
+                            Product = FindProduct(productId);
                             ImportGood import = new ImportGood(id,Staff,Product,importTime,quantity);
                             importGoods.Add(import);
                         }
@@ -96,28 +96,28 @@ namespace Controllers
             return importGoods;
         }
 
-        private void FindStaff(string staffId)
+        private Staff FindStaff(string staffId)
         {
             var staffs = new List<Staff>();
             staffs = staffController.LoadAllStaff();
             foreach(Staff staff in staffs) 
             {
-                if(staff.Id == staffId)
-                    Staff = staff;
-                break;
+                if (staff.Id == staffId)
+                    return staff;
             }
+            return null;
         }
 
-        private void FindProduct(string productId)
+        private Product FindProduct(string productId)
         {
             var products = new List<Product>();
             products = productController.LoadAllProduct();
             foreach (Product product in products)
             {
                 if (product.Id == productId)
-                    Product = product;
-                break;
+                    return product;
             }
+            return null;
         }
 
         private List<int> GetListIdInt(List<ImportGood> importGoods)

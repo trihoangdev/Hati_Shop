@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtTotal = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnExist = new System.Windows.Forms.Button();
-            this.flowPanelProductInBill = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowPanelImportGood = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -41,7 +38,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtImportGoodId = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -51,59 +47,28 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtStaff = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Controls.Add(this.txtTotal);
-            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.btnExist);
-            this.panel1.Controls.Add(this.flowPanelProductInBill);
+            this.panel1.Controls.Add(this.flowPanelImportGood);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 800);
+            this.panel1.Size = new System.Drawing.Size(1000, 576);
             this.panel1.TabIndex = 1;
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.AutoSize = true;
-            this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.ForeColor = System.Drawing.Color.White;
-            this.txtTotal.Location = new System.Drawing.Point(787, 725);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(173, 31);
-            this.txtTotal.TabIndex = 13;
-            this.txtTotal.Text = "4.080.000 VNĐ";
-            this.txtTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(417, 686);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(318, 109);
-            this.panel4.TabIndex = 12;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(103, 39);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(212, 31);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "TỔNG TIỀN NHẬP:";
             // 
             // btnExist
             // 
@@ -113,7 +78,7 @@
             this.btnExist.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
             this.btnExist.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExist.Location = new System.Drawing.Point(40, 716);
+            this.btnExist.Location = new System.Drawing.Point(366, 504);
             this.btnExist.Name = "btnExist";
             this.btnExist.Size = new System.Drawing.Size(261, 50);
             this.btnExist.TabIndex = 11;
@@ -121,12 +86,12 @@
             this.btnExist.UseVisualStyleBackColor = false;
             this.btnExist.Click += new System.EventHandler(this.btnDeleteImportGood_Click);
             // 
-            // flowPanelProductInBill
+            // flowPanelImportGood
             // 
-            this.flowPanelProductInBill.Location = new System.Drawing.Point(40, 422);
-            this.flowPanelProductInBill.Name = "flowPanelProductInBill";
-            this.flowPanelProductInBill.Size = new System.Drawing.Size(920, 249);
-            this.flowPanelProductInBill.TabIndex = 3;
+            this.flowPanelImportGood.Location = new System.Drawing.Point(40, 422);
+            this.flowPanelImportGood.Name = "flowPanelImportGood";
+            this.flowPanelImportGood.Size = new System.Drawing.Size(920, 64);
+            this.flowPanelImportGood.TabIndex = 3;
             // 
             // panel3
             // 
@@ -194,7 +159,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.panel7);
@@ -205,14 +170,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(920, 294);
             this.panel2.TabIndex = 1;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(15, 74);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(887, 31);
-            this.comboBox1.TabIndex = 8;
             // 
             // panel8
             // 
@@ -226,10 +183,10 @@
             // txtImportGoodId
             // 
             this.txtImportGoodId.AutoSize = true;
-            this.txtImportGoodId.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtImportGoodId.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtImportGoodId.Location = new System.Drawing.Point(4, 6);
             this.txtImportGoodId.Name = "txtImportGoodId";
-            this.txtImportGoodId.Size = new System.Drawing.Size(17, 20);
+            this.txtImportGoodId.Size = new System.Drawing.Size(19, 23);
             this.txtImportGoodId.TabIndex = 3;
             this.txtImportGoodId.Text = "1";
             // 
@@ -255,10 +212,10 @@
             // txtImportDate
             // 
             this.txtImportDate.AutoSize = true;
-            this.txtImportDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtImportDate.Location = new System.Drawing.Point(4, 6);
+            this.txtImportDate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtImportDate.Location = new System.Drawing.Point(4, 5);
             this.txtImportDate.Name = "txtImportDate";
-            this.txtImportDate.Size = new System.Drawing.Size(143, 20);
+            this.txtImportDate.Size = new System.Drawing.Size(163, 23);
             this.txtImportDate.TabIndex = 3;
             this.txtImportDate.Text = "01/01/2024 07:03:22";
             // 
@@ -303,21 +260,39 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "PHIẾU NHẬP HÀNG";
             // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.txtStaff);
+            this.panel5.Location = new System.Drawing.Point(16, 75);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(887, 33);
+            this.panel5.TabIndex = 7;
+            // 
+            // txtStaff
+            // 
+            this.txtStaff.AutoSize = true;
+            this.txtStaff.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStaff.Location = new System.Drawing.Point(4, 6);
+            this.txtStaff.Name = "txtStaff";
+            this.txtStaff.Size = new System.Drawing.Size(19, 23);
+            this.txtStaff.TabIndex = 3;
+            this.txtStaff.Text = "1";
+            // 
             // ImportGoodInfoFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 800);
+            this.ClientSize = new System.Drawing.Size(1000, 575);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ImportGoodInfoFrm";
             this.Text = "ImportGoodInfoFrm";
+            this.Load += new System.EventHandler(this.ImportGoodInfoFrm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -326,6 +301,8 @@
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -333,11 +310,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label txtTotal;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnExist;
-        private System.Windows.Forms.FlowLayoutPanel flowPanelProductInBill;
+        private System.Windows.Forms.FlowLayoutPanel flowPanelImportGood;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
@@ -354,6 +328,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label txtStaff;
     }
 }

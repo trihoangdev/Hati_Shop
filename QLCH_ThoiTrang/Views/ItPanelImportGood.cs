@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Models;
+using Controllers;
 namespace Views
 {
     public partial class ItPanelImportGood : Form
     {
+        private List<ImportGood> importGoods = new List<ImportGood>();
+        private ImportGoodController importGoodController = new ImportGoodController();
         public ItPanelImportGood()
         {
             InitializeComponent();
@@ -21,10 +24,18 @@ namespace Views
         {
             ImportGoodCreateFrm frm = new ImportGoodCreateFrm();
             frm.ShowDialog();
-            /*ItImportGoodInfo f = new ItImportGoodInfo();
-            f.TopLevel = false;
-            flowPanelImportGood.Controls.Add(f);
-            f.Show();*/
+        }
+
+        private void ItPanelImportGood_Load(object sender, EventArgs e)
+        {
+            importGoods = importGoodController.LoadAllImportGood();
+            foreach (var importGood in importGoods)
+            {
+                ItImportGoodMain f = new ItImportGoodMain(importGood);
+                f.TopLevel = false;
+                flowPanelImportGood.Controls.Add(f);
+                f.Show();
+            }
         }
     }
 }

@@ -64,7 +64,6 @@ namespace Views
             }
         }
 
-
         private void btnExist_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -215,13 +214,6 @@ namespace Views
             }
         }*/
 
-        private void UpdateTotal(int oldPrice, int newPrice)
-        {
-            int curPrice = GetPriceInt(txtTotal.Text);
-            curPrice -= oldPrice;
-            curPrice += newPrice;
-            txtTotal.Text = GetPriceStr(curPrice);
-        }
 
         private void AddNewImportGood()
         {
@@ -277,10 +269,6 @@ namespace Views
                 ImportGoodCreateFrm_Load(this, null);
 
                 ClearInfo();
-
-                total += f.Sum;
-                var totalStr = GetPriceStr(total);
-                txtTotal.Text = totalStr;
             }
             else
             {
@@ -345,7 +333,6 @@ namespace Views
                 //xử lý giảm tiền
                 total -= importGood.Quantity * importGood.Product.Price;
                 var totalStr = GetPriceStr(total);
-                txtTotal.Text = totalStr;
 
                 //remove khỏi flowpanel
                 // Tìm panel có ID trùng khớp

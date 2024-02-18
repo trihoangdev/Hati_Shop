@@ -203,6 +203,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ItPanelImportGood";
             this.Text = "ItPanelImportGood";
+            this.Load += new System.EventHandler(this.ItPanelImportGood_Load);
             this.panelBill.ResumeLayout(false);
             this.panelBill.PerformLayout();
             this.panel3.ResumeLayout(false);
