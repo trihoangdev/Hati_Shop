@@ -152,6 +152,8 @@
             this.txtGoodFind.Size = new System.Drawing.Size(323, 31);
             this.txtGoodFind.TabIndex = 5;
             this.txtGoodFind.Text = "Tìm kiếm:";
+            this.txtGoodFind.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtGoodFind_MouseClick);
+            this.txtGoodFind.TextChanged += new System.EventHandler(this.txtGoodFind_TextChanged);
             // 
             // panel1
             // 
@@ -166,6 +168,10 @@
             // comboGoodFind
             // 
             this.comboGoodFind.FormattingEnabled = true;
+            this.comboGoodFind.Items.AddRange(new object[] {
+            "Mã phiếu",
+            "Tên NV",
+            "Ngày nhập"});
             this.comboGoodFind.Location = new System.Drawing.Point(6, 31);
             this.comboGoodFind.Name = "comboGoodFind";
             this.comboGoodFind.Size = new System.Drawing.Size(252, 31);

@@ -498,3 +498,46 @@ BEGIN
 		Product
 	WHERE Name LIKE '%' + @Name + '%'
 END;
+
+--Tìm nhập hàng theo mã đơn
+CREATE PROC FindImportGoodById
+	@Id varchar(50)
+AS 
+BEGIN
+	SELECT 
+		Id, StaffId,ProductId,ImportTime,Quantity
+	FROM 
+		ImportGood
+	WHERE Id LIKE '%' + @Id + '%'
+END;
+
+--Tìm nhập hàng theo Tên NV
+CREATE PROC FindImportGoodByStaffName
+	@Name nvarchar(50)
+AS 
+BEGIN
+	SELECT 
+		Id, StaffId,ProductId,ImportTime,Quantity
+	FROM 
+		ImportGood
+	WHERE 
+		StaffId 
+		IN 
+		(
+		SELECT Id
+		FROM Staff
+		WHERE Staff.FullName LIKE '%' + @Name + '%'
+		)
+END;
+
+--Tìm nhập hàng theo ngày nhập
+CREATE PROC FindImportGoodByDate
+	@Date varchar(50)
+AS 
+BEGIN
+	SELECT 
+		Id, StaffId,ProductId,ImportTime,Quantity
+	FROM 
+		ImportGood
+	WHERE DAY(ImportTime) = @Date
+END;

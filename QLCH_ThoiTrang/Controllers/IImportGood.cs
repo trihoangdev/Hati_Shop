@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Remoting.Messaging;
 
 namespace Controllers
 {
@@ -16,6 +17,9 @@ namespace Controllers
         void CreateNewImportGood(ImportGood importGood);
         //void EditImportGood(ImportGood importGood);
         void RemoveImportGood(ImportGood importGood);
+        List<ImportGood> FindImportGoodById(string id);
+        List<ImportGood> FindImportGoodByStaffName(string nameStr);
+        List<ImportGood> FindImportGoodByDate(string date);
     }
     public class ImportGoodController : IImportGood
     {
@@ -162,6 +166,120 @@ namespace Controllers
 
                 }
             }
+        }
+
+        public List<ImportGood> FindImportGoodById(string idStr)
+        {
+            List<ImportGood> importGoods = new List<ImportGood>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("FindImportGoodById", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Id", idStr);
+                    //thực thi và đọc kết quả
+                    try
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var id = reader["Id"].ToString();
+                                var staffId = reader["StaffId"].ToString();
+                                var productId = reader["ProductId"].ToString();
+                                DateTime importTime = (DateTime)reader["ImportTime"];
+                                var quantity = (int)reader["Quantity"];
+                                Staff = FindStaff(staffId);
+                                Product = FindProduct(productId);
+                                ImportGood import = new ImportGood(id, Staff, Product, importTime, quantity);
+                                importGoods.Add(import);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in FindProductById: " + ex.Message);
+                    }
+                }
+            }
+            return importGoods;
+        }
+
+        public List<ImportGood> FindImportGoodByStaffName(string nameStr)
+        {
+            List<ImportGood> importGoods = new List<ImportGood>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("FindImportGoodByStaffName", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Name", nameStr);
+                    //thực thi và đọc kết quả
+                    try
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var id = reader["Id"].ToString();
+                                var staffId = reader["StaffId"].ToString();
+                                var productId = reader["ProductId"].ToString();
+                                DateTime importTime = (DateTime)reader["ImportTime"];
+                                var quantity = (int)reader["Quantity"];
+                                Staff = FindStaff(staffId);
+                                Product = FindProduct(productId);
+                                ImportGood import = new ImportGood(id, Staff, Product, importTime, quantity);
+                                importGoods.Add(import);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in FindProductById: " + ex.Message);
+                    }
+                }
+            }
+            return importGoods;
+        }
+
+        public List<ImportGood> FindImportGoodByDate(string date)
+        {
+            List<ImportGood> importGoods = new List<ImportGood>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("FindImportGoodByDate", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Date", date);
+                    //thực thi và đọc kết quả
+                    try
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var id = reader["Id"].ToString();
+                                var staffId = reader["StaffId"].ToString();
+                                var productId = reader["ProductId"].ToString();
+                                DateTime importTime = (DateTime)reader["ImportTime"];
+                                var quantity = (int)reader["Quantity"];
+                                Staff = FindStaff(staffId);
+                                Product = FindProduct(productId);
+                                ImportGood import = new ImportGood(id, Staff, Product, importTime, quantity);
+                                importGoods.Add(import);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in FindProductById: " + ex.Message);
+                    }
+                }
+            }
+            return importGoods;
         }
 
         /* public void EditImportGood(ImportGood importGood)
