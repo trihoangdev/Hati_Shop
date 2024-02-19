@@ -88,6 +88,18 @@ BEGIN
 	VALUES(@Id,@StaffId,@CustomerId,@CreationTime,@DiscountAmount,@OriginalPrice,@DiscountedTotal)
 END;
 
+--Tạo mới BillDetail
+CREATE PROC CreateNewBillDetail
+	@Id varchar(50),
+	@ProductId varchar(50),
+	@Quantity int,
+	@Total float
+AS
+BEGIN
+	INSERT BillDetail(Id,ProductId,Quantity,Total)
+	VALUES(@Id,@ProductId,@Quantity,@Total)
+END;
+
 DROP PROC PayBill
 --Thanh toán bill
 CREATE PROC PayBill
@@ -276,6 +288,15 @@ BEGIN
 		Bill
 END;
 
+--ĐỌc các thông tin về chi tiết đơn hàng
+CREATE PROC LoadBillDetail
+AS
+BEGIN
+	SELECT 
+		Id, ProductId,Quantity,Total
+	FROM 
+		BillDetail
+END;
 
 --Sửa thông tin cá nhân của Nhân viên
 CREATE PROC EditStaffInfo
@@ -634,4 +655,46 @@ BEGIN
 	FROM 
 		ImportGood
 	WHERE DAY(ImportTime) = @Date
+END;
+
+--Tìm đơn hàng theo mã đơn
+CREATE PROC FindBillById
+	@Id varchar(50)
+AS 
+BEGIN
+	SELECT 
+		Id, CustomerId,StaffId,CreationTime,DiscountAmount,OriginalPrice,DiscountedTotal
+	FROM 
+		Bill
+	WHERE Id LIKE '%' + @Id + '%'
+END;
+
+--Tìm đơn hàng theo tên KH
+ CREATE PROC FindBillByCustomerName
+	@Name nvarchar(50)
+AS 
+BEGIN
+	SELECT 
+		Id, CustomerId,StaffId,CreationTime,DiscountAmount,OriginalPrice,DiscountedTotal
+	FROM 
+		Bill
+	WHERE 
+		StaffId 
+		IN 
+		(
+		SELECT Id
+		FROM Staff
+		WHERE Staff.FullName LIKE '%' + @Name + '%'
+		)
+END;
+-- Tìm đơn hàng theo ngày nhập
+CREATE PROC FindBillByDate
+	@Date varchar(50)
+AS 
+BEGIN
+	SELECT 
+		Id, CustomerId,StaffId,CreationTime,DiscountAmount,OriginalPrice,DiscountedTotal
+	FROM 
+		Bill
+	WHERE DAY(CreationTime) = @Date
 END;

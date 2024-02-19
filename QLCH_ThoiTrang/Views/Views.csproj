@@ -99,6 +99,12 @@
     <Compile Include="ImportGoodInfoFrm.Designer.cs">
       <DependentUpon>ImportGoodInfoFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItBillInfoMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItBillInfoMain.Designer.cs">
+      <DependentUpon>ItBillInfoMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItCustomerInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,12 +170,6 @@
     </Compile>
     <Compile Include="ItPanelSetting.Designer.cs">
       <DependentUpon>ItPanelSetting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ItPanelStatistic.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ItPanelStatistic.Designer.cs">
-      <DependentUpon>ItPanelStatistic.cs</DependentUpon>
     </Compile>
     <Compile Include="ItProductInBill.cs">
       <SubType>Form</SubType>
@@ -245,6 +245,9 @@
     <EmbeddedResource Include="ImportGoodInfoFrm.resx">
       <DependentUpon>ImportGoodInfoFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ItBillInfoMain.resx">
+      <DependentUpon>ItBillInfoMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ItCustomerInfo.resx">
       <DependentUpon>ItCustomerInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,9 +280,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ItPanelSetting.resx">
       <DependentUpon>ItPanelSetting.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ItPanelStatistic.resx">
-      <DependentUpon>ItPanelStatistic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItProductInBill.resx">
       <DependentUpon>ItProductInBill.cs</DependentUpon>

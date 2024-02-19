@@ -28,9 +28,9 @@ namespace Models
             Customer = customer;
             Staff = staff;
             CreationTime = creationTime;
-            DiscountedPrice = discountAmount;
+            DiscountedPrice = discountedPrice;
             OriginalAmnount = originalAmount;
-            DiscountAmount = discountedPrice;
+            DiscountAmount = discountAmount;
         }
         public Bill(string id, string customerId, string staffId,
             DateTime creationTime, float discountAmount,

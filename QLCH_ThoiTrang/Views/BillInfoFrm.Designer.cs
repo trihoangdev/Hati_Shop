@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtTotal = new System.Windows.Forms.Label();
-            this.txtOriginalPrice = new System.Windows.Forms.Label();
-            this.txtDiscount = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnDeleteBill = new System.Windows.Forms.Button();
             this.flowPanelProductInBill = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -62,8 +55,14 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.Label();
+            this.txtOriginalPrice = new System.Windows.Forms.Label();
+            this.txtDiscountAmount = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -71,6 +70,7 @@
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,7 +78,7 @@
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.txtTotal);
             this.panel1.Controls.Add(this.txtOriginalPrice);
-            this.panel1.Controls.Add(this.txtDiscount);
+            this.panel1.Controls.Add(this.txtDiscountAmount);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.btnDeleteBill);
             this.panel1.Controls.Add(this.flowPanelProductInBill);
@@ -89,85 +89,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 800);
             this.panel1.TabIndex = 0;
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.AutoSize = true;
-            this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.ForeColor = System.Drawing.Color.White;
-            this.txtTotal.Location = new System.Drawing.Point(787, 764);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(173, 31);
-            this.txtTotal.TabIndex = 14;
-            this.txtTotal.Text = "4.080.000 VNĐ";
-            this.txtTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtOriginalPrice
-            // 
-            this.txtOriginalPrice.AutoSize = true;
-            this.txtOriginalPrice.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOriginalPrice.ForeColor = System.Drawing.Color.White;
-            this.txtOriginalPrice.Location = new System.Drawing.Point(787, 686);
-            this.txtOriginalPrice.Name = "txtOriginalPrice";
-            this.txtOriginalPrice.Size = new System.Drawing.Size(173, 31);
-            this.txtOriginalPrice.TabIndex = 13;
-            this.txtOriginalPrice.Text = "4.080.000 VNĐ";
-            this.txtOriginalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtDiscount
-            // 
-            this.txtDiscount.AutoSize = true;
-            this.txtDiscount.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiscount.ForeColor = System.Drawing.Color.White;
-            this.txtDiscount.Location = new System.Drawing.Point(830, 725);
-            this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(130, 31);
-            this.txtDiscount.TabIndex = 3;
-            this.txtDiscount.Text = "- 0.00 VNĐ";
-            this.txtDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(417, 686);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(318, 109);
-            this.panel4.TabIndex = 12;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 78);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 31);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "TỔNG TIỀN:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 31);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "GIÁ GỐC";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 31);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "GIẢM GIÁ:";
             // 
             // btnDeleteBill
             // 
@@ -181,15 +102,16 @@
             this.btnDeleteBill.Name = "btnDeleteBill";
             this.btnDeleteBill.Size = new System.Drawing.Size(261, 50);
             this.btnDeleteBill.TabIndex = 11;
-            this.btnDeleteBill.Text = "XOÁ";
+            this.btnDeleteBill.Text = "THOÁT";
             this.btnDeleteBill.UseVisualStyleBackColor = false;
             this.btnDeleteBill.Click += new System.EventHandler(this.btnDeleteBill_Click);
             // 
             // flowPanelProductInBill
             // 
+            this.flowPanelProductInBill.AutoScroll = true;
             this.flowPanelProductInBill.Location = new System.Drawing.Point(40, 568);
             this.flowPanelProductInBill.Name = "flowPanelProductInBill";
-            this.flowPanelProductInBill.Size = new System.Drawing.Size(920, 103);
+            this.flowPanelProductInBill.Size = new System.Drawing.Size(920, 120);
             this.flowPanelProductInBill.TabIndex = 3;
             // 
             // panel3
@@ -440,6 +362,85 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "HOÁ ĐƠN";
             // 
+            // txtTotal
+            // 
+            this.txtTotal.AutoSize = true;
+            this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.ForeColor = System.Drawing.Color.White;
+            this.txtTotal.Location = new System.Drawing.Point(802, 756);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(74, 28);
+            this.txtTotal.TabIndex = 24;
+            this.txtTotal.Text = "0 VNĐ";
+            this.txtTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtOriginalPrice
+            // 
+            this.txtOriginalPrice.AutoSize = true;
+            this.txtOriginalPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOriginalPrice.ForeColor = System.Drawing.Color.White;
+            this.txtOriginalPrice.Location = new System.Drawing.Point(802, 700);
+            this.txtOriginalPrice.Name = "txtOriginalPrice";
+            this.txtOriginalPrice.Size = new System.Drawing.Size(74, 28);
+            this.txtOriginalPrice.TabIndex = 23;
+            this.txtOriginalPrice.Text = "0 VNĐ";
+            this.txtOriginalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtDiscountAmount
+            // 
+            this.txtDiscountAmount.AutoSize = true;
+            this.txtDiscountAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiscountAmount.ForeColor = System.Drawing.Color.White;
+            this.txtDiscountAmount.Location = new System.Drawing.Point(802, 728);
+            this.txtDiscountAmount.Name = "txtDiscountAmount";
+            this.txtDiscountAmount.Size = new System.Drawing.Size(103, 28);
+            this.txtDiscountAmount.TabIndex = 21;
+            this.txtDiscountAmount.Text = "0.00 VNĐ";
+            this.txtDiscountAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Location = new System.Drawing.Point(472, 694);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(318, 94);
+            this.panel4.TabIndex = 22;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(3, 62);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 28);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "TỔNG TIỀN:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(3, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 28);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "GIÁ GỐC";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(3, 34);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 28);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "GIẢM GIÁ:";
+            // 
             // BillInfoFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -451,10 +452,9 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "BillInfoFrm";
             this.Text = "BillInfoFrm";
+            this.Load += new System.EventHandler(this.BillInfoFrm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -469,6 +469,8 @@
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -480,14 +482,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowPanelProductInBill;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDeleteBill;
-        private System.Windows.Forms.Label txtTotal;
-        private System.Windows.Forms.Label txtOriginalPrice;
-        private System.Windows.Forms.Label txtDiscount;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel9;
@@ -509,5 +504,12 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label txtTotal;
+        private System.Windows.Forms.Label txtOriginalPrice;
+        private System.Windows.Forms.Label txtDiscountAmount;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

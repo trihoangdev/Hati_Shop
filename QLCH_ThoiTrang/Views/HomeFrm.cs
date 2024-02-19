@@ -45,7 +45,6 @@ namespace Views
             ShowCommonInfo(staff);
 
             //ẩn 2 nút thống kê, quản lý
-            btnStatistic.Visible = false;
             btnManage.Visible = false;
 
             //đẩy nút Setting lên trên

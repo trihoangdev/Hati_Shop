@@ -113,7 +113,9 @@ namespace Views
                 GetIdOfCombo(comboProduct.SelectedItem.ToString()),
                 int.Parse(txtQuantity.Text)
                 );
+
             billDetails.Add(billDetail);
+
             //Show bill detail lên flowpanel
             ShowBillDetail(billDetail);
             UpdatePriceBill(billDetail.Total, "add");
@@ -285,11 +287,11 @@ namespace Views
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            var res = MessageBox.Show("Bạn có chắc chắn muốn thanh toán?", 
-                "Thông báo", 
+            var res = MessageBox.Show("Bạn có chắc chắn muốn thanh toán?",
+                "Thông báo",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
-            if(res ==  DialogResult.Yes)
+            if (res == DialogResult.Yes)
             {
                 Payment();
             }
@@ -298,9 +300,10 @@ namespace Views
         private void Payment()
         {
             customerController.UpdatePaymentCustomer(discountedAmount, customer.Id);
-            billController.PayBill(txtBillId.Text,originalAmount,discountAmount,
+            customers = customerController.LoadAllCustomer();
+            billController.PayBill(txtBillId.Text, originalAmount, discountAmount,
                 discountedAmount);
-            
+
             //Clear dữ liệu
             comboCustomer.Enabled = true;
             comboStaff.Enabled = true;
@@ -313,14 +316,24 @@ namespace Views
             txtPrice.Text = "0 VNĐ";
             txtQuantity.Text = "";
             txtDiscountPercent.Text = "0%";
-
-            //Reload số lượng sản phẩm
-
+            discountedAmount = 0f;
+            originalAmount = 0f;
+            discountAmount = 0f;
+            txtDiscountAmount.Text = GetPriceStr(discountAmount);
+            txtOriginalPrice.Text = GetPriceStr(originalAmount);
+            txtTotal.Text = GetPriceStr(discountedAmount);
+            txtRevenue.Text = "0 VNĐ";
 
             //update khách hàng
             customers = customerController.LoadAllCustomer();
 
             flowPanelProductInBill.Controls.Clear();
+
+            //lưu thông tin của billdetails
+            foreach(var billDetail in billDetails)
+            {
+                billController.CreateNewBillDetail(billDetail);
+            }
         }
     }
 }

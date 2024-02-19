@@ -80,7 +80,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(54)))));
-            this.label6.Location = new System.Drawing.Point(624, 16);
+            this.label6.Location = new System.Drawing.Point(589, 16);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 28);
             this.label6.TabIndex = 3;
@@ -166,6 +166,7 @@
             this.txtBillFind.TabIndex = 5;
             this.txtBillFind.Text = "Tìm kiếm:";
             this.txtBillFind.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtBillFind_MouseClick);
+            this.txtBillFind.TextChanged += new System.EventHandler(this.txtBillFind_TextChanged);
             // 
             // panel1
             // 
@@ -180,6 +181,10 @@
             // comboBillFind
             // 
             this.comboBillFind.FormattingEnabled = true;
+            this.comboBillFind.Items.AddRange(new object[] {
+            "Số HĐ",
+            "Tên KH",
+            "Ngày"});
             this.comboBillFind.Location = new System.Drawing.Point(6, 31);
             this.comboBillFind.Name = "comboBillFind";
             this.comboBillFind.Size = new System.Drawing.Size(252, 31);
@@ -217,6 +222,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ItPanelBill";
             this.Text = "ItPanelProduct";
+            this.Load += new System.EventHandler(this.ItPanelBill_Load);
             this.panelBill.ResumeLayout(false);
             this.panelBill.PerformLayout();
             this.panel3.ResumeLayout(false);

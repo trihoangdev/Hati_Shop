@@ -13,9 +13,15 @@ namespace Controllers
     {
         int GetCurrId(List<Bill> bills);
         List<Bill> LoadAllBill();
+        List<BillDetail> LoadBillDetail();
+        List<Bill> FindBillById(string idStr);
+        List<Bill> FindBillByCustomerName(string nameStr);
+        List<Bill> FindBillByDate(string date);
         void CreateNewBill(Bill bill);
+        void CreateNewBillDetail(BillDetail billDetail);
         void UpdateBill(string billId, float originalAmount, float discountAmount, float discountedAmount);
         void PayBill(string billId, float originalAmount, float discountAmount, float discountedAmount);
+
     }
     public class BillController : IBill
     {
@@ -76,6 +82,33 @@ namespace Controllers
                 }
             }
             return bills;
+        }
+
+        public List<BillDetail> LoadBillDetail()
+        {
+            List<BillDetail> billDetails = new List<BillDetail>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("LoadBillDetail", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var id = reader["Id"].ToString();
+                            var productId = reader["ProductId"].ToString();
+                            var product = FindProduct(productId);
+                            var quantity = (int)reader["Quantity"];
+                            float total = float.Parse(reader["Total"].ToString());
+                            BillDetail billDetail = new BillDetail(id, product, quantity, total);
+                            billDetails.Add(billDetail);
+                        }
+                    }
+                }
+            }
+            return billDetails;
         }
 
         private Customer FindCustomer(string customerId)
@@ -198,7 +231,7 @@ namespace Controllers
                     command.Parameters.AddWithValue("@Id", billId);
                     command.Parameters.AddWithValue("@OriginalPrice", originalAmount);
                     command.Parameters.AddWithValue("@DiscountAmount", discountAmount);
-                    command.Parameters.AddWithValue("@DiscountedTotal", discountAmount);
+                    command.Parameters.AddWithValue("@DiscountedTotal", discountedAmount);
 
                     //thực thi
                     try
@@ -219,6 +252,163 @@ namespace Controllers
 
                 }
             }
+        }
+
+        public void CreateNewBillDetail(BillDetail billDetail)
+        {
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("CreateNewBillDetail", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@Id", billDetail.Id);
+                    command.Parameters.AddWithValue("@ProductId", billDetail.Product.Id);
+                    command.Parameters.AddWithValue("@Quantity", billDetail.Quantity);
+                    command.Parameters.AddWithValue("@Total", billDetail.Total);
+                    //thực thi
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in CreateNewBillDetail: " + ex.Message);
+                    }
+                    finally
+                    {
+                        if (connection.State == ConnectionState.Open)
+                        {
+                            connection.Close();
+                        }
+                    }
+
+                }
+            }
+        }
+
+        public List<Bill> FindBillById(string idStr)
+        {
+            List<Bill> bills = new List<Bill>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("FindBillById", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Id", idStr);
+                    //thực thi và đọc kết quả
+                    try
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var id = reader["Id"].ToString();
+                                var customerId = reader["CustomerId"].ToString();
+                                var staffId = reader["StaffId"].ToString();
+                                DateTime creationTime = (DateTime)reader["CreationTime"];
+                                float discountAmount = float.Parse(reader["DiscountAmount"].ToString());
+                                float originalPrice = float.Parse(reader["OriginalPrice"].ToString());
+                                float discountedTotal = float.Parse(reader["DiscountedTotal"].ToString());
+                                Staff = FindStaff(staffId);
+                                Customer = FindCustomer(customerId);
+                                Bill bill = new Bill(id, Customer, Staff, creationTime,
+                                    discountAmount, originalPrice, discountedTotal);
+                                bills.Add(bill);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in FindProductById: " + ex.Message);
+                    }
+                }
+            }
+            return bills;
+        }
+
+        public List<Bill> FindBillByCustomerName(string nameStr)
+        {
+            List<Bill> bills = new List<Bill>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("FindBillByCustomerName", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Name", nameStr);
+                    //thực thi và đọc kết quả
+                    try
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var id = reader["Id"].ToString();
+                                var customerId = reader["CustomerId"].ToString();
+                                var staffId = reader["StaffId"].ToString();
+                                DateTime creationTime = (DateTime)reader["CreationTime"];
+                                float discountAmount = float.Parse(reader["DiscountAmount"].ToString());
+                                float originalPrice = float.Parse(reader["OriginalPrice"].ToString());
+                                float discountedTotal = float.Parse(reader["DiscountedTotal"].ToString());
+                                Staff = FindStaff(staffId);
+                                Customer = FindCustomer(customerId);
+                                Bill bill = new Bill(id, Customer, Staff, creationTime,
+                                    discountAmount, originalPrice, discountedTotal);
+                                bills.Add(bill);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in FindBillByCustomerName: " + ex.Message);
+                    }
+                }
+            }
+            return bills;
+        }
+
+        public List<Bill> FindBillByDate(string date)
+        {
+            List<Bill> bills = new List<Bill>();
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("FindBillByDate", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Date", date);
+                    //thực thi và đọc kết quả
+                    try
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var id = reader["Id"].ToString();
+                                var customerId = reader["CustomerId"].ToString();
+                                var staffId = reader["StaffId"].ToString();
+                                DateTime creationTime = (DateTime)reader["CreationTime"];
+                                float discountAmount = float.Parse(reader["DiscountAmount"].ToString());
+                                float originalPrice = float.Parse(reader["OriginalPrice"].ToString());
+                                float discountedTotal = float.Parse(reader["DiscountedTotal"].ToString());
+                                Staff = FindStaff(staffId);
+                                Customer = FindCustomer(customerId);
+                                Bill bill = new Bill(id, Customer, Staff, creationTime,
+                                    discountAmount, originalPrice, discountedTotal);
+                                bills.Add(bill);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in FindBillByDate: " + ex.Message);
+                    }
+                }
+            }
+            return bills;
         }
     }
 }

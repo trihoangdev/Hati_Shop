@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeFrm));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnManage = new System.Windows.Forms.Button();
-            this.btnStatistic = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnImportGood = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
@@ -61,7 +60,6 @@
             this.splitContainer1.Panel1.AutoScroll = true;
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(54)))));
             this.splitContainer1.Panel1.Controls.Add(this.btnManage);
-            this.splitContainer1.Panel1.Controls.Add(this.btnStatistic);
             this.splitContainer1.Panel1.Controls.Add(this.btnLogout);
             this.splitContainer1.Panel1.Controls.Add(this.btnImportGood);
             this.splitContainer1.Panel1.Controls.Add(this.btnCustomer);
@@ -93,30 +91,13 @@
             this.btnManage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
             this.btnManage.Image = ((System.Drawing.Image)(resources.GetObject("btnManage.Image")));
             this.btnManage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManage.Location = new System.Drawing.Point(3, 519);
+            this.btnManage.Location = new System.Drawing.Point(3, 461);
             this.btnManage.Name = "btnManage";
             this.btnManage.Size = new System.Drawing.Size(394, 50);
             this.btnManage.TabIndex = 20;
             this.btnManage.Text = "QUẢN LÝ";
             this.btnManage.UseVisualStyleBackColor = false;
             this.btnManage.Click += new System.EventHandler(this.btnManage_Click);
-            // 
-            // btnStatistic
-            // 
-            this.btnStatistic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(233)))), ((int)(((byte)(214)))));
-            this.btnStatistic.FlatAppearance.BorderSize = 0;
-            this.btnStatistic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStatistic.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStatistic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
-            this.btnStatistic.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistic.Image")));
-            this.btnStatistic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStatistic.Location = new System.Drawing.Point(3, 463);
-            this.btnStatistic.Name = "btnStatistic";
-            this.btnStatistic.Size = new System.Drawing.Size(394, 50);
-            this.btnStatistic.TabIndex = 19;
-            this.btnStatistic.Text = "THỐNG KÊ";
-            this.btnStatistic.UseVisualStyleBackColor = false;
-            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
             // 
             // btnLogout
             // 
@@ -195,7 +176,7 @@
             this.btnSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(54)))));
             this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
             this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(3, 575);
+            this.btnSetting.Location = new System.Drawing.Point(3, 517);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Size = new System.Drawing.Size(394, 50);
             this.btnSetting.TabIndex = 12;
@@ -300,8 +281,7 @@
         private System.Windows.Forms.Button btnBill;
         private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.Button btnProduct;
-        private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnManage;
-        private System.Windows.Forms.Button btnStatistic;
+        private System.Windows.Forms.Button btnHome;
     }
 }

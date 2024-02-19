@@ -21,12 +21,6 @@ namespace Views
             this.billDetail = billDetail;
         }
 
-        private void ItBillInfo_Click(object sender, EventArgs e)
-        {
-            BillInfoFrm f = new BillInfoFrm();
-            f.ShowDialog();
-        }
-
         private void ItBillInfo_Load(object sender, EventArgs e)
         {
             txtProductId.Text = billDetail.Product.Id;
@@ -46,7 +40,7 @@ namespace Views
         public string GetPriceStr(float price)
         {
             var priceStr = price.ToString();
-            decimal number = decimal.Parse(priceStr);
+            float number = float.Parse(priceStr);
             CultureInfo cultureInfo = new CultureInfo("vi-VN"); // Chọn ngôn ngữ Việt Nam để hiển thị định dạng tiền tệ
             string priceFormatted = string.Format(cultureInfo, "{0:C}", number); // Sử dụng định dạng tiền tệ
             return priceFormatted;

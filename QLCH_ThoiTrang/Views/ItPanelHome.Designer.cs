@@ -28,132 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItPanelHome));
             this.panelHome = new System.Windows.Forms.Panel();
-            this.panelBillDay = new System.Windows.Forms.Panel();
-            this.txtNumberOfBillDay = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelRevenueDay = new System.Windows.Forms.Panel();
-            this.txtRevenueDay = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panelProductDay = new System.Windows.Forms.Panel();
-            this.txtNumberOfProductDay = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelHome.SuspendLayout();
-            this.panelBillDay.SuspendLayout();
-            this.panelRevenueDay.SuspendLayout();
-            this.panelProductDay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelHome
             // 
             this.panelHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(54)))));
-            this.panelHome.Controls.Add(this.panelBillDay);
-            this.panelHome.Controls.Add(this.panelRevenueDay);
-            this.panelHome.Controls.Add(this.panelProductDay);
+            this.panelHome.Controls.Add(this.pictureBox1);
             this.panelHome.Location = new System.Drawing.Point(0, 0);
             this.panelHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelHome.Name = "panelHome";
             this.panelHome.Size = new System.Drawing.Size(810, 789);
             this.panelHome.TabIndex = 22;
             // 
-            // panelBillDay
+            // pictureBox1
             // 
-            this.panelBillDay.Controls.Add(this.txtNumberOfBillDay);
-            this.panelBillDay.Controls.Add(this.label1);
-            this.panelBillDay.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panelBillDay.Location = new System.Drawing.Point(28, 28);
-            this.panelBillDay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panelBillDay.Name = "panelBillDay";
-            this.panelBillDay.Size = new System.Drawing.Size(770, 230);
-            this.panelBillDay.TabIndex = 25;
-            // 
-            // txtNumberOfBillDay
-            // 
-            this.txtNumberOfBillDay.AutoSize = true;
-            this.txtNumberOfBillDay.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumberOfBillDay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.txtNumberOfBillDay.Location = new System.Drawing.Point(364, 139);
-            this.txtNumberOfBillDay.Name = "txtNumberOfBillDay";
-            this.txtNumberOfBillDay.Size = new System.Drawing.Size(43, 50);
-            this.txtNumberOfBillDay.TabIndex = 2;
-            this.txtNumberOfBillDay.Text = "0";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.label1.Location = new System.Drawing.Point(192, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(386, 41);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Số đơn bán ra trong ngày:";
-            // 
-            // panelRevenueDay
-            // 
-            this.panelRevenueDay.Controls.Add(this.txtRevenueDay);
-            this.panelRevenueDay.Controls.Add(this.label3);
-            this.panelRevenueDay.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panelRevenueDay.Location = new System.Drawing.Point(28, 283);
-            this.panelRevenueDay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panelRevenueDay.Name = "panelRevenueDay";
-            this.panelRevenueDay.Size = new System.Drawing.Size(770, 230);
-            this.panelRevenueDay.TabIndex = 24;
-            // 
-            // txtRevenueDay
-            // 
-            this.txtRevenueDay.AutoSize = true;
-            this.txtRevenueDay.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRevenueDay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.txtRevenueDay.Location = new System.Drawing.Point(364, 139);
-            this.txtRevenueDay.Name = "txtRevenueDay";
-            this.txtRevenueDay.Size = new System.Drawing.Size(43, 50);
-            this.txtRevenueDay.TabIndex = 3;
-            this.txtRevenueDay.Text = "0";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.label3.Location = new System.Drawing.Point(260, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(251, 41);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Doanh thu ngày:";
-            // 
-            // panelProductDay
-            // 
-            this.panelProductDay.Controls.Add(this.txtNumberOfProductDay);
-            this.panelProductDay.Controls.Add(this.label7);
-            this.panelProductDay.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panelProductDay.Location = new System.Drawing.Point(28, 538);
-            this.panelProductDay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panelProductDay.Name = "panelProductDay";
-            this.panelProductDay.Size = new System.Drawing.Size(770, 230);
-            this.panelProductDay.TabIndex = 23;
-            // 
-            // txtNumberOfProductDay
-            // 
-            this.txtNumberOfProductDay.AutoSize = true;
-            this.txtNumberOfProductDay.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumberOfProductDay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.txtNumberOfProductDay.Location = new System.Drawing.Point(364, 139);
-            this.txtNumberOfProductDay.Name = "txtNumberOfProductDay";
-            this.txtNumberOfProductDay.Size = new System.Drawing.Size(43, 50);
-            this.txtNumberOfProductDay.TabIndex = 5;
-            this.txtNumberOfProductDay.Text = "0";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.label7.Location = new System.Drawing.Point(171, 23);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(429, 41);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Số sản phẩm bán trong ngày:";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(804, 783);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // ItPanelHome
             // 
@@ -167,12 +67,7 @@
             this.Name = "ItPanelHome";
             this.Text = "ItPanelHome";
             this.panelHome.ResumeLayout(false);
-            this.panelBillDay.ResumeLayout(false);
-            this.panelBillDay.PerformLayout();
-            this.panelRevenueDay.ResumeLayout(false);
-            this.panelRevenueDay.PerformLayout();
-            this.panelProductDay.ResumeLayout(false);
-            this.panelProductDay.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,14 +75,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelHome;
-        private System.Windows.Forms.Panel panelBillDay;
-        private System.Windows.Forms.Panel panelRevenueDay;
-        private System.Windows.Forms.Panel panelProductDay;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label txtNumberOfBillDay;
-        private System.Windows.Forms.Label txtRevenueDay;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label txtNumberOfProductDay;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

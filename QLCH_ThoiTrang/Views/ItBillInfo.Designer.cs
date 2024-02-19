@@ -113,7 +113,6 @@
             this.Name = "ItBillInfo";
             this.Text = "ItProductInfo";
             this.Load += new System.EventHandler(this.ItBillInfo_Load);
-            this.Click += new System.EventHandler(this.ItBillInfo_Click);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
