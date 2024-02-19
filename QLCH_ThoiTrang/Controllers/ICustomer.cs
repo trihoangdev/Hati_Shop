@@ -19,6 +19,8 @@ namespace Controllers
         List<Customer> FindCustomerByName(string name, string table);
         List<Customer> FindCustomerByBirthDate(int year, string table);
         List<Customer> FindCustomerByGender(string genderStr, string table);
+        Customer FindCustomerById(List<Customer> customers, string id);
+        void UpdatePaymentCustomer(float discountedAmount, string id);
     }
     public class CustomerController : ICustomer
     {
@@ -298,6 +300,46 @@ namespace Controllers
                 }
             }
             return customers;
+        }
+
+        public Customer FindCustomerById(List<Customer> customers, string id)
+        {
+            foreach (Customer customer in customers)
+                if (customer.Id == id)
+                    return customer;
+            return null;
+        }
+
+        public void UpdatePaymentCustomer(float discountedAmount, string id)
+        {
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("UpdatePaymentCustomer", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@DiscountedTotal", discountedAmount);
+                    command.Parameters.AddWithValue("@Id", id);
+                    //thực thi
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in UpdatePaymentCustomer: " + ex.Message);
+                    }
+                    finally
+                    {
+                        if (connection.State == ConnectionState.Open)
+                        {
+                            connection.Close();
+                        }
+                    }
+
+                }
+            }
         }
     }
 }

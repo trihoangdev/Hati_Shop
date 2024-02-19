@@ -91,7 +91,8 @@ namespace Controllers
                             var quantity = (int)reader["Quantity"];
                             Staff = FindStaff(staffId);
                             Product = FindProduct(productId);
-                            ImportGood import = new ImportGood(id,Staff,Product,importTime,quantity);
+                            ImportGood import = new ImportGood(id,Staff,
+                                Product,importTime,quantity);
                             importGoods.Add(import);
                         }
                     }

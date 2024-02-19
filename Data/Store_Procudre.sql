@@ -73,6 +73,72 @@ BEGIN
 	WHERE Id = @ProductId
 END;
 
+--Tạo mới bill
+CREATE PROC CreateNewBill
+	@Id varchar(50),
+	@StaffId varchar(50),
+	@CustomerId varchar(50),
+	@CreationTime datetime,
+	@DiscountAmount float,
+	@OriginalPrice float,
+	@DiscountedTotal float
+AS
+BEGIN
+	INSERT Bill(Id,StaffId,CustomerId,CreationTime,DiscountAmount,OriginalPrice,DiscountedTotal)
+	VALUES(@Id,@StaffId,@CustomerId,@CreationTime,@DiscountAmount,@OriginalPrice,@DiscountedTotal)
+END;
+
+DROP PROC PayBill
+--Thanh toán bill
+CREATE PROC PayBill
+	@Id varchar(50),
+	@OriginalPrice float,
+	@DiscountAmount float,
+	@DiscountedTotal float
+AS
+BEGIN
+	--Update Bill
+	UPDATE Bill
+	SET
+		OriginalPrice = @OriginalPrice,
+		DiscountAmount = @DiscountAmount,
+		DiscountedTotal = @DiscountedTotal 
+	WHERE 
+		Id = @Id
+END;
+
+DROP PROC UpdatePaymentCustomer
+--Update revenue cho khách hàng
+CREATE PROC UpdatePaymentCustomer
+	@DiscountedTotal float,
+	@Id varchar(50)
+AS 
+BEGIN
+	UPDATE Customer
+	SET
+		Customer.Revenue = Customer.Revenue + @DiscountedTotal,
+		Customer.Rank = CASE
+                    WHEN Revenue < 5000000 THEN N'ĐỒNG'
+                    WHEN Revenue < 10000000 AND Revenue > 5000000 THEN N'BẠC'
+					WHEN Revenue < 20000000 AND Revenue > 10000000 THEN N'VÀNG'
+					ELSE N'KIM CƯƠNG'
+               END
+	WHERE Customer.Id = @Id
+END;
+
+--Update số lượng sản phẩm sau khi thêm vào giỏ hàng
+CREATE PROC UpdateProduct
+	@Id varchar(50),
+	@Quantity int
+AS
+BEGIN
+	UPDATE Product
+	SET
+	Quantity = @Quantity
+	WHERE
+	Id = @Id
+END;
+
 --Kiểm tra login của nhân viên và quản lý
 CREATE PROCEDURE CheckLogin
 	@Username varchar(50),
@@ -200,6 +266,17 @@ BEGIN
 		ImportGood
 END;
 
+--ĐỌc các thông tin về đơn hàng
+CREATE PROC LoadBill
+AS
+BEGIN
+	SELECT 
+		Id, CustomerId,StaffId,CreationTime,DiscountAmount,OriginalPrice,DiscountedTotal
+	FROM 
+		Bill
+END;
+
+
 --Sửa thông tin cá nhân của Nhân viên
 CREATE PROC EditStaffInfo
 	@Id varchar(50),
@@ -297,6 +374,23 @@ BEGIN
 		Quantity = @Quantity,
 		ImportTime = @ImportTime
 	WHERE Id = @Id
+END;
+
+--Sửa/Update Bill
+CREATE PROC UpdateBill
+	@Id varchar(50),
+	@OriginalPrice float,
+	@DiscountAmount float,
+	@DiscountedTotal float
+AS
+BEGIN
+	UPDATE Bill
+	SET
+		OriginalPrice = OriginalPrice +  @OriginalPrice,
+		DiscountAmount = DiscountAmount + @DiscountAmount,
+		DiscountedTotal = DiscountedTotal + @DiscountedTotal 
+	WHERE 
+		Id = @Id
 END;
 
 --Xoá nhân viên khỏi danh sách thông qua username

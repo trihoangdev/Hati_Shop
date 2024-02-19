@@ -74,7 +74,6 @@ namespace Views
             dateTimeBirthDate.Value = customer.BirthDate;
         }
 
-
         private void btnExist_Click(object sender, EventArgs e)
         {
             var msg = "Bạn có chắc chắn muốn thoát?";

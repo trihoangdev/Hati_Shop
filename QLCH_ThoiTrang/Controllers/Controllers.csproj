@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBill.cs" />
     <Compile Include="ICheckInput.cs" />
     <Compile Include="ICommon.cs" />
     <Compile Include="ICustomer.cs" />

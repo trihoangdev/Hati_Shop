@@ -28,6 +28,7 @@ namespace Controllers
         void SortPriceASC(List<Product> products);
         void SortPriceDESC(List<Product> products);
         void SortNameASC(List<Product> products);
+        void UpdateProduct(Product product);
     }
     public class ProductController : IProduct
     {
@@ -348,6 +349,38 @@ namespace Controllers
                 }
             }
             return products;
+        }
+
+        public void UpdateProduct(Product product)
+        {
+            using (SqlConnection connection = new SqlConnection(connStr))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("UpdateProduct", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@Id", product.Id);
+                    command.Parameters.AddWithValue("@Quantity", product.Quantity);
+                    //thực thi
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error in UpdateProduct: " + ex.Message);
+                    }
+                    finally
+                    {
+                        if (connection.State == ConnectionState.Open)
+                        {
+                            connection.Close();
+                        }
+                    }
+
+                }
+            }
         }
     }
 }

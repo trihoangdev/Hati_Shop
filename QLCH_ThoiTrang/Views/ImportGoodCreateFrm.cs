@@ -69,11 +69,6 @@ namespace Views
             this.Dispose();
         }
 
-        private void btnAddNewBill_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
         private void ImportGoodCreateFrm_Load(object sender, EventArgs e)
         {
             staffs = staffController.LoadAllStaff();

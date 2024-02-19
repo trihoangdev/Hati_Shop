@@ -37,9 +37,6 @@ namespace Models
             ImportTime = importTime;
             Quantity = quantity;
         }
-
-
-
         public ImportGood(int currId, string staffId,
             string productId, DateTime importTime, int quantity)
         {
