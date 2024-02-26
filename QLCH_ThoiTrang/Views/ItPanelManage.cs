@@ -47,6 +47,14 @@ namespace Views
 
         private void RemoveAll()
         {
+            foreach (Control control in flowPanelStaff.Controls)
+            {
+                if (control is ItStaffInfo itStaff)
+                {
+                    // Giải phóng tài nguyên của các hình ảnh trong control ItStaffInfo
+                    itStaff.Dispose();
+                }
+            }
             flowPanelStaff.Controls.Clear();
         }
 
