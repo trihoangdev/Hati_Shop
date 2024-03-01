@@ -7,3 +7,12 @@ E:\HatiStore\QLCH_ThoiTrang\Controllers\obj\Debug\Controllers.csproj.CoreCompile
 E:\HatiStore\QLCH_ThoiTrang\Controllers\obj\Debug\Controllers.csproj.CopyComplete
 E:\HatiStore\QLCH_ThoiTrang\Controllers\obj\Debug\Controllers.dll
 E:\HatiStore\QLCH_ThoiTrang\Controllers\obj\Debug\Controllers.pdb
+D:\HatiStore\QLCH_ThoiTrang\Controllers\bin\Debug\Controllers.dll
+D:\HatiStore\QLCH_ThoiTrang\Controllers\bin\Debug\Controllers.pdb
+D:\HatiStore\QLCH_ThoiTrang\Controllers\bin\Debug\Models.dll
+D:\HatiStore\QLCH_ThoiTrang\Controllers\bin\Debug\Models.pdb
+D:\HatiStore\QLCH_ThoiTrang\Controllers\obj\Debug\Controllers.csproj.AssemblyReference.cache
+D:\HatiStore\QLCH_ThoiTrang\Controllers\obj\Debug\Controllers.csproj.CoreCompileInputs.cache
+D:\HatiStore\QLCH_ThoiTrang\Controllers\obj\Debug\Controllers.csproj.CopyComplete
+D:\HatiStore\QLCH_ThoiTrang\Controllers\obj\Debug\Controllers.dll
+D:\HatiStore\QLCH_ThoiTrang\Controllers\obj\Debug\Controllers.pdb

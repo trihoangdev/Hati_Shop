@@ -86,12 +86,12 @@ namespace Views
                 txtAddress.Text = "";
         }
 
-        private string[] predefinedImagePaths = { "E:\\HatiStore\\images\\Avatars\\man.png", "E:\\HatiStore\\images\\Avatars\\woman.png" };
+        private string[] predefinedImagePaths = { "D:\\HatiStore\\images\\Avatars\\man.png", "D:\\HatiStore\\images\\Avatars\\woman.png" };
 
         private void btnAddAvatar_Click(object sender, EventArgs e)
         {
-            SelectImageFrm selectImageForm = new SelectImageFrm("E:\\HatiStore\\images\\Avatars\\man.png",
-                "E:\\HatiStore\\images\\Avatars\\woman.png");
+            SelectImageFrm selectImageForm = new SelectImageFrm("D:\\HatiStore\\images\\Avatars\\man.png",
+                "D:\\HatiStore\\images\\Avatars\\woman.png");
             selectImageForm.ShowDialog();
 
             string selectedImagePath = selectImageForm.GetSelectedImagePath();
@@ -167,7 +167,7 @@ namespace Views
             {
                 gender = comboGender.SelectedItem.ToString();
                 if (gender == "Nữ")
-                    avatarPath = "E:\\HatiStore\\images\\Avatars\\woman.png";
+                    avatarPath = "D:\\HatiStore\\images\\Avatars\\woman.png";
             }
             if (success)
             {
